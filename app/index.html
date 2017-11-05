@@ -1,87 +1,397 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700' rel='stylesheet' type='text/css'>
-  <title>Clear View Escapes</title>
-  <meta name="keywords" content="Travel planning, travel bundles, travel escapes">
-  <meta name="description" content="Your clarity. One trip away. We create soul restoring journeys that inspire you to be you.">
-</head>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="Personal website of Olga Fomin, a front-end web developer, who enjoys creating beautiful, responsive websites of the highest quality.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Olga Fomin / Portfolio</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,600,700|Stalemate" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,600" rel="stylesheet">
+    <!-- <script src="https://use.fontawesome.com/97ea7e5223.js"></script> -->
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+
 <body>
-  <header>
-    <img src="assets/images/icons/clear-view-escapes.svg">
-    <a href="#">Get in Touch</a>
-    <nav>
-      <ul>
-        <li><a href="#our-beginning">Our Beginning</a></li>
-        <li><a href="#features">Features</a></li>
-        <li><a href="#testimonials">Testimonials</a></li>
-      </ul>
-    </nav>
-  </header>
+	<div id="back"></div>
 
-  <div class="large-hero">
-    <img src="assets/images/hero--large.jpg">
-    <h1>Your clarity.</h1>
-    <h2>One trip away.</h2>
-    <p>We create soul restoring journeys that inspire you to be you.</p>
-    <p><a href="#">Get Started Today</a></p>
-  </div>
+	<header>
+		<div class="logo-div">
+			<nav class="custom-navbar">
+				<ul class="list-unstyled list-inline ">
+					<li><a href="#portfolio" class="portfolio-link">portfolio</a></li> <i class="fa fa-circle-o" aria-hidden="true"></i>
+					<li><a href="#about" class="about-link">about me</a></li>
+				</ul>
+			</nav>
 
-  <div id="our-beginning">
-    <h2>The first trip we planned was our own.</h2>
-    <h3>Ever since, we&rsquo;ve been working to make travel better for everyone.</h3>
-    <img src="assets/images/first-trip.jpg" alt="Couple walking down a street.">
-    <img src="assets/images/our-start.jpg" alt="Our founder, Jane Doe">
-    <h2>Here&rsquo;s how we got started&hellip;</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, <a href="#">quis nostrud exercitation</a> ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    <p>Duis aute irure dolor in <strong>reprehenderit in</strong> voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum velit esse cillum <strong>dolore eu fugiat.</strong></p>
-  </div>
+			<h1 class="name-heading">Olga Fomin</h1>
+			<p>Front-End Developer</p>
 
-  <div id="features">
-    <img src="assets/images/icons/star.svg">
-    <h2>Our Features</h2>
-  
-    <img src="assets/images/icons/rain.svg">
-    <h3>We&rsquo;ll Watch the Weather</h3>
-    <p>Download our app and we&rsquo;ll send you a notice if it&rsquo;s about to rain in the next 20 minutes around your current location. A good rain can be refreshing, but sometimes you just want to stay dry.</p>
+			<div class="social-icons">
+				<ul  class="list-unstyled list-inline">
+					<li><a href="https://www.linkedin.com/in/olga-fomin-18926510a"><i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a></li>
+					<li><a href="https://github.com/IoPhoenix/"><i class="fa fa-github-alt fa-2x" aria-hidden="true"></i></a></li>
+					<li><a href="mailto:olga.fomin26@gmail.com"><i class="fa fa-pencil fa-2x" aria-hidden="true"></i></a></li>
+				</ul>
+			</div>
+		</div> <!-- ./logo-div -->
+	</header> 
 
-    <img src="assets/images/icons/globe.svg">
-    <h3>Global Guides</h3>
-    <p>We&rsquo;ve scoured the entire planet for the best retreats and beautiful vistas. If there&rsquo;s a corner of the world you want to escape to we know the most scenic and inspiring locations.</p>
 
-    <img src="assets/images/icons/wifi.svg">
-    <h3>Wi-Fi Waypoints</h3>
-    <p>We only send you on trips to places we can personally vouch for as being amazing. Which means we&rsquo;ve mapped out where local wi-fi spots are and marked them in our app&rsquo;s map view.</p>
 
-    <img src="assets/images/icons/fire.svg">
-    <h3>Survival Kit</h3>
-    <p>Everytime you book an escape with us we send you a survival kit with the finest materials. The kit will allow you to setup a tent, start a fire, scratch your own back and lower your taxes.</p>
-  </div>
 
-  <div id="testimonials">
-    <img src="assets/images/icons/comment.svg">
-    <h2>Real Testimonials</h2>
+<!-- =================== PORTFOLIO =================== -->
 
-    <img src="assets/images/testimonial-jane.jpg">
-    <h3>Jane Doe</h3>
-    <h3>9 Time Escaper</h3>
-    <p>&ldquo;Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&rdquo;</p>
+<section class="container-fluid portfolio-section" id="portfolio">
+	<div class="row position-relative">
 
-    <img src="assets/images/testimonial-john.jpg">
-    <h3>John Smith</h3>
-    <h3>4 Time Escaper</h3>
-    <p>&ldquo;Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur.&rdquo;</p>
+	<h2 class="text-center section-heading">Latest Work</h2>
+		<div class="section-line"></div>
+		
+		<div class="col-sm-4 portfolio-item" data-project="project1">
+			<div class="portfolio-image" id="project1-portfolio-image"></div>
+				<div class="hover-mask">
+					<div class="portfolio-item-inner portfolio-item-inner-first center-block">
+						<h3 class="portfolio-item-title">CBRC</h3>
+						<div class="portfolio-item-desc">Redesign of the California Bird Records Committee's website</div>
+					</div>
+				</div>
+		</div>
 
-    <img src="assets/images/testimonial-cat.jpg">
-    <h3>Cat McKitty</h3>
-    <h3>6 Time Escaper</h3>
-    <p>&ldquo;Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut.&rdquo;</p>
-  </div>
 
-  <footer>
-    <p>Copyright &copy; 2016 Clear View Escapes. All rights reserved. <a href="#">Get in Touch</a></p>
-  </footer>
+		<div class="col-sm-4 portfolio-item" data-project="project2" >
+			<div class="portfolio-image" id="project2-portfolio-image"></div>
+				<div class="hover-mask">
+					<div class="portfolio-item-inner">
+						<h3 class="portfolio-item-title">Personal website and blog</h3>
+						<div class="portfolio-item-desc">Website and blog of a teacher</div>
+					</div>
+				</div>
+		</div>
+
+		<div class="col-sm-4 portfolio-item" data-project="project3">
+			<div class="portfolio-image" id="project3-portfolio-image"></div>
+				<div class="hover-mask">
+					<div class="portfolio-item-inner">
+						<h3 class="portfolio-item-title">UX Researcher's Portfolio</h3>
+						<div class="portfolio-item-desc">Professional portfolio</div>
+					</div>
+				</div>
+		</div>
+	</div> <!--/.row-->
+
+
+
+<!-- =================== PROJECTS: CONTENT =================== -->
+
+	<!-- =================== PROJECT #1 =================== -->
+
+	<div class="project-content" id="project1">
+		<h2 class="text-center section-heading">CBRC</h2>
+		<div class="section-line"></div>
+
+		<div class="project-mockups">
+			<div class="project-image img-responsive center-block" id="project1-image"></div>
+		</div>
+
+		<div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+			<p>
+				The redesign of the website for the <a href="http://www.wfo-cbrc.org" target="_blank">California Bird Records Committee</a> was conducted by 
+				the students of San Francisco City College during one semester. As a team of students from visual design and 
+				web development departments, we worked together to create a completely new look for the website. Another important
+				task was to allow users to access and send records from their mobile devices.
+			</p>
+			<p>
+				My most challenging goal was to present the requested data from the database in a clear and 
+				attractive way. As a result, the table allows easy access to information and adjusts 
+				to the size of the device.
+			</p>
+			</div>
+
+			<div class="col-sm-10 col-sm-offset-1">
+				<div class="row">
+					<div class="col-sm-8">
+						<img src="images/project1/cbrc_table_tablet.png" alt="iPad mockup with table reflecting database search results" class="img-responsive center-block pull-right">
+					</div>
+					<div class="col-sm-4">
+						<img src="images/project1/cbrc_table_mobile.png" alt="Smartphone mockup with table reflecting database search results" class="img-responsive center-block pull-left">
+					</div>
+				</div> 
+			</div>
+
+
+			<div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+				<p>Another important task was to transform the Rare Bird Gallery into the 
+					visually appealing page with the search option. The user can now filter images by the bird name,
+					 zoom and slide through images. 
+				</p>
+			</div>
+
+			<div class="col-sm-10 col-sm-offset-1">
+				<div class="row position-relative">
+					<div class="col-sm-6">
+							<img src="images/project1/cbrc_gallery.png" alt="iPad mockup showing Rare Bird Gallery page" class="cbrc-gallery img-responsive center-block">
+						</div>
+
+						<i class="fa fa-chevron-right fa-2x hidden-xs" aria-hidden="true"></i>
+
+					<div class="col-sm-6">
+							<img src="images/project1/cbrc_gallery_image_zoom.png" alt="Smartphone mockup showing Rare Bird Gallery page" class="cbrc-gallery img-responsive center-block">
+						</div>
+				</div> 
+			</div>
+			
+			<div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+				<br>
+				<h3>My contribution</h3>
+				<ul>
+					<li>Clean, responsive design</li>
+					<li>Reports and lists pages</li>
+					<li>Layout and functionality for the Rare Bird Gallery</li>
+					<li>New look and structure for the database query results</li>
+				</ul>
+			</div>
+		<span class="close-button">Close</span>
+
+		<div class="col-sm-6 col-sm-offset-3 text-center magic-spell">
+			<a href="#"><i class="fa fa-magic fa-lg" aria-hidden="true"></i> <span>Reducio</span></a>
+		</div>
+	</div>
+
+
+	<!-- =================== PROJECT #2 =================== -->
+
+	<div class="project-content" id="project2">
+		<h2 class="text-center section-heading">Personal website and blog</h2>
+		<div class="section-line"></div>
+
+		<div class="project-mockups col-md-12 text-center">
+			<div class="project-image img-responsive center-block" id="project2-image"></div>
+		</div>
+
+		<div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+			<p>
+				During this project, I created a <a href="http://www.svetlanastupina.info/" target="_blank"> personal website and a blog</a> for the school teacher using Ruby on Rails, Bootstrap, and PostgreSQL.
+				Besides providing introductory and contact information, the client needed a blog-like solution for posting
+				educational resources, summaries of the lessons, useful links, and any other school-related data.
+			</p>
+			<p>
+				The author has access to the author's console, has the ability to create, edit and delete posts, attach media, add tags, links, etc. 
+				Users can read posts, search them by categories, date or keywords and share them on social networks. 
+				The website is intended for Russian-speaking users.
+			</p>
+		</div>
+		
+
+		<div class="col-sm-8 col-sm-offset-2">
+			<div class="row position-relative">
+					<div class="col-sm-6">
+						<img src="images/project2/full_post.png" alt="Smartphone mockup showing a single post with social share buttons and tags" class="img-responsive center-block pull-right">
+					</div>
+				
+					<div class="col-sm-6">
+						<img src="images/project2/tags_archive.png" alt="Smartphone mockup showing tags, archive and recent posts fields" class="img-responsive center-block pull-left">
+					</div>
+			</div> <!-- /.row -->
+		</div>
+
+		<div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+			<br>
+			<h3>Features</h3>
+			<ul>
+				<li>Smooth, responsive design</li>
+				<li>Blog featuring search option, tags, social share buttons</li>
+				<li>Blog login and logout </li>
+				<li>TinyMCE text editor in Russian</li>
+			</ul>
+		</div>
+		<span class="close-button">Close</span>
+		
+		
+		<div class="col-sm-6 col-sm-offset-3 text-center magic-spell">
+			<a href="#"><i class="fa fa-magic fa-lg" aria-hidden="true"></i> <span>Reducio</span> </a>
+		</div>
+	</div> <!-- / #project2 -->
+
+
+	<!-- =================== PROJECT #3 =================== -->
+
+	<div class="project-content" id="project3">
+			<h2 class="text-center section-heading">Professional Portfolio</h2>
+			<div class="section-line"></div>
+			<div class="project-mockups">
+				<div class="project-image img-responsive center-block" id="project3-image"></div>
+			</div>
+
+			<div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+				<p>The client, a <a href="http://annavinogradova.com/" target="_blank">UX researcher and designer</a>, needed a clean, straightforward solution
+					to showcase her work. The project-based design focuses on demonstrating the final product
+					and relevant documents such as user flow, competitive analysis, wireframes, etc. The biggest challenge
+					was to display a lot of visual content in a simplistic, yet attractive way for the convenience of 
+					potential users and employers. 
+				</p>
+
+				<h3>Features</h3>
+				<ul>
+					<li>Image slider for showcasing the final product</li>
+					<li>Responsiveness to different screen sizes</li>
+					<li>Vivid colors and easy to comprehend design</li>
+				</ul>
+
+				<h3>What I learned</h3>
+				<ul>
+					<li>Sketch</li>
+					<li>Invision</li>
+					<li>UX designer's workflow</li>
+				</ul>
+			</div>
+		<span class="close-button">Close</span>
+
+		<div class="col-sm-6 col-sm-offset-3 text-center magic-spell">
+				<a href="#"><i class="fa fa-magic fa-lg" aria-hidden="true"></i> <span>Reducio</span> </a>
+			</div>
+	</div>
+
+
+
+<!-- =================== TESTIMONIALS =================== -->
+
+	<div class="row testimonials-section">
+		<blockquote class="center-block position-relative">
+
+			<p>Olga and I worked on my professional portfolio. She is great to work with.
+				 Not only is she an easy going person, but she has ingenious web skills with 
+				 an eye for detail.
+				Olga is very innovative and she was looking for new solutions and fresh ideas
+				 for my website.
+				Olga is a fun person to work with and is always helpful and insightful.
+				 She is a hard worker and sticks to deadlines.</p>
+				<em class="pull-right"><small>Anna Vinogradova, UX Researcher and Designer</small></em>
+		</blockquote>
+	</div> <!--/.row-->
+</section> <!--/.container-fluid-->
+
+
+
+
+<!-- =================== ABOUT PAGE =================== -->
+
+<section class="container-fluid about-section" id="about">
+	<div class="row position-relative">
+
+			<div class="col-md-push-6 col-md-6 col-sm-12 author-side-image img-responsive"></div>
+			<div class="col-md-6 col-md-pull-6 col-sm-12 side-text">
+
+				<div class="row">
+					<div class="col-sm-12">
+						<div class="about-header">
+							<h2 class="about-title section-heading">About me</h2>
+							<div class="about-subtitle">
+								<p>Hi, my name is Olga Fomin. Who am I? I'm a Russian-speaking, San-Francisco based, book-loving, hard-working 
+									 front-end web developer. I enjoy creating beautiful, fully responsive websites of the highest quality. </p>
+									 <a href="OlgaFominCV.pdf" class="btn btn-default" role="button" target="_blank">Open my resume</a>
+							</div>
+							<div class="section-line"></div>
+						</div>
+					</div>
+				</div><!-- .row -->
+
+
+				<div class="row">
+					<div class="col-sm-6">
+						<div class="about-box">
+							<div class="about-box-icon">
+								<span class="icon-camera"></span>
+							</div>
+							<div class="about-box-text">
+								<h3 class="about-box-title">Front-end developer</h3>
+								<div class="about-box-desc">
+									<p>Since my career change 3 years ago I got truly passionate about web development 
+										that combines creativity with logic, visual harmony with functionality.
+									</p>
+								</div>
+							</div>
+						</div>
+
+					</div>
+
+					<div class="col-sm-6">
+
+						<div class="about-box">
+							<div class="about-box-icon">
+								<span class="icon-earphones"></span>
+							</div>
+							<div class="about-box-text">
+								<h3 class="about-box-title">Philologist</h3>
+								<div class="about-box-desc">
+									<p>I have a background in philology and pedagogics. I speak several languages and enjoy
+										 solving
+										 linguistic puzzles in my free time.</p>
+								</div>
+							</div>
+						</div>
+
+					</div>
+
+				</div><!-- .row -->
+
+				<div class="row">
+
+					<div class="col-sm-6">
+
+						<div class="about-box">
+							<div class="about-box-icon">
+								<span class="icon-ghost"></span>
+							</div>
+							<div class="about-box-text">
+								<h3 class="about-box-title">Ballet dancer</h3>
+								<div class="about-box-desc">
+									<p>I'm an adult ballet dancer. Ballet is all about control and balance and it
+										 helps me achieve the same in my everyday life.
+									</p>
+								</div>
+							</div>
+						</div>
+
+					</div>
+
+					<div class="col-sm-6">
+
+						<div class="about-box">
+							<div class="about-box-icon">
+								<span class="icon-magic-wand"></span>
+							</div>
+							<div class="about-box-text">
+								<h3 class="about-box-title">Instagrammer</h3>
+								<div class="about-box-desc">
+									<p>My <a href="https://www.instagram.com/io_phoenix/">Instagram feed</a> reflects 
+										the beautiful or comical things I see in the world and in San Francisco in particular.</p>
+								</div>
+							</div>
+						</div>
+
+					</div>
+
+				</div><!-- .row -->
+		</div> <!--/.col-md-7-->
+	</div> <!--/.row-->
+</section> 
+
+
+
+<!-- =================== FOOTER =================== -->
+
+	<svg id="bigTriangleColor" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="70" fill="#25304C" viewBox="0 0 100 340" preserveAspectRatio="none">
+		<path d="M0 265 L50 0 L100 265 Z"></path>
+	</svg>
+
+	<footer>
+		<div class="container">
+			<h4>Have an interesting project? <a href="mailto:olga.fomin26@gmail.com">Let's talk!</a></h4>
+			<p>&copy; 2017 Created by Olga Fomin</p>
+		</div>
+	</footer>
+
+
+	<script src="js/main.js"></script>
 </body>
 </html>
