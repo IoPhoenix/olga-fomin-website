@@ -1,0 +1,35 @@
+.site-header {
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    left: 0;
+    top: 0;
+  
+    &__text-content {
+        text-align: center;
+		position: absolute;
+		width: 100%;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
+		z-index: 1;
+		background-color: transparent;
+    }
+
+    &__title {
+        position: relative;
+        font-family: 'Stalemate', cursive;
+        font-size: 6.875rem;
+        color: #f5f4f9;
+        text-shadow: 10px 10px 3px rgba(0,0,0,0.15);
+        text-transform: none;
+        font-weight: 400;
+    }
+
+    &__subtitle {
+        font-family: 'Open Sans Condensed', sans-serif;
+        font-size: 1.625rem;
+        color: #D5B4E4;
+        margin-left: 10%;
+    }
+}
