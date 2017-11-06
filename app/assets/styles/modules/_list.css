@@ -1,0 +1,12 @@
+.list {
+    
+    &--inline {
+        display: inline;
+    }
+
+    & li {
+        display: inline-block;
+        padding-right: .3125rem; 
+        padding-left: .3125rem;
+    }
+}

@@ -1,0 +1,19 @@
+.primary-nav {
+        & a {
+            text-decoration: none;
+            font-family: 'Open Sans Condensed', sans-serif;
+            font-size: 1.25rem;
+            color: #c6b6ff;
+            text-transform: uppercase;
+
+            @mixin atSmall {
+                font-size: 1.4375rem;
+            }
+        }
+
+        .fa.fa-circle-o {
+            color: #c6b6ff;
+            font-size: .75rem;
+            transform: translateY(-3px);
+        }
+}

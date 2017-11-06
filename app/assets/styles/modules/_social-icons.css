@@ -1,0 +1,19 @@
+.social-icons {
+
+    & li {
+        text-decoration: none;
+    }
+
+    &--with-margin-left {
+        margin-left: 5%;
+    }
+
+    &__icon {
+        color: #FFF;
+        font-size: 1em;
+
+        @mixin atSmall {
+            font-size: 1.5em;
+        }
+    }
+}

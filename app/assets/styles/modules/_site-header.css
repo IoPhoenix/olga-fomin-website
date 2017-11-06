@@ -19,17 +19,26 @@
     &__title {
         position: relative;
         font-family: 'Stalemate', cursive;
-        font-size: 6.875rem;
+        font-size: 5rem;
         color: #f5f4f9;
         text-shadow: 10px 10px 3px rgba(0,0,0,0.15);
         text-transform: none;
         font-weight: 400;
+        margin-bottom: 4rem;
+
+        @mixin atSmall {
+            font-size: 6.875rem;
+        }
     }
 
     &__subtitle {
         font-family: 'Open Sans Condensed', sans-serif;
-        font-size: 1.625rem;
+        font-size: 1.375rem;
         color: #D5B4E4;
-        margin-left: 10%;
+        margin-left: 8%;
+
+        @mixin atSmall {
+            font-size: 1.625rem;
+        }
     }
 }

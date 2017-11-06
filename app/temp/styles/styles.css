@@ -450,17 +450,23 @@ template {
   display: none;
 }
 
+/* @import '../../../node_modules/font-awesome/css/font-awesome.css'; */
+
 body {
 	background-color: #25304C;
-	/* font-size: 1rem; */
+	font-size: 0.875rem;
 	color: #666;
 	font-family: 'Raleway', sans-serif;
 	font-weight: 300;
-	line-height: 26px;
-	/* @media only screen and (max-width : 480px) {
-		font-size: 14px;
-	} */
+	line-height: 26px; 
 }
+
+@media (min-width: 480px) {
+
+body {
+		 font-size: 1rem 
+}
+    }
 
 img {
     max-width: 100%;
@@ -497,29 +503,103 @@ h1, h2, h3, h4, h5, h6 {
 .site-header__title {
         position: relative;
         font-family: 'Stalemate', cursive;
-        font-size: 6.875rem;
+        font-size: 5rem;
         color: #f5f4f9;
         text-shadow: 10px 10px 3px rgba(0,0,0,0.15);
         text-transform: none;
         font-weight: 400;
+        margin-bottom: 4rem;
+    }
+
+@media (min-width: 480px) {
+
+.site-header__title {
+            font-size: 6.875rem
+    }
     }
 
 .site-header__subtitle {
         font-family: 'Open Sans Condensed', sans-serif;
-        font-size: 1.625rem;
+        font-size: 1.375rem;
         color: #D5B4E4;
-        margin-left: 10%;
+        margin-left: 8%;
+    }
+
+@media (min-width: 480px) {
+
+.site-header__subtitle {
+            font-size: 1.625rem
+    }
     }
 
 .fade-in-background {
     background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(24, 41, 86, .5)), to(rgba(24, 41, 86, .7))), url('../../assets/images/flower_bg.jpeg');
     background-image: linear-gradient(rgba(24, 41, 86, .5), rgba(24, 41, 86, .7)), url('../../assets/images/flower_bg.jpeg');
-    height: 100vh;
     z-index: -1;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    height: 10vh;
 }
+
+@media (min-width: 480px) {
+
+.fade-in-background {
+        height: 100vh
+}
+    }
+
+.social-icons li {
+        text-decoration: none;
+    }
+
+.social-icons--with-margin-left {
+        margin-left: 5%;
+    }
+
+.social-icons__icon {
+        color: #FFF;
+        font-size: 1em;
+    }
+
+@media (min-width: 480px) {
+
+.social-icons__icon {
+            font-size: 1.5em
+    }
+    }
+
+.list--inline {
+        display: inline;
+    }
+
+.list li {
+        display: inline-block;
+        padding-right: .3125rem; 
+        padding-left: .3125rem;
+    }
+
+.primary-nav a {
+            text-decoration: none;
+            font-family: 'Open Sans Condensed', sans-serif;
+            font-size: 1.25rem;
+            color: #c6b6ff;
+            text-transform: uppercase;
+        }
+
+@media (min-width: 480px) {
+
+.primary-nav a {
+                font-size: 1.4375rem
+        }
+    }
+
+.primary-nav .fa.fa-circle-o {
+            color: #c6b6ff;
+            font-size: .75rem;
+            -webkit-transform: translateY(-3px);
+                    transform: translateY(-3px);
+        }
 
 

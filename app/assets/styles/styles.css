@@ -1,6 +1,11 @@
 @import 'normalize.css';
+/* @import '../../../node_modules/font-awesome/css/font-awesome.css'; */
+@import 'base/_mixins';
 @import 'base/_global';
 @import 'modules/_site-header';
 @import 'modules/_fade-in-background';
+@import 'modules/_social-icons';
+@import 'modules/_list.css';
+@import 'modules/_primary-nav';
 
 
