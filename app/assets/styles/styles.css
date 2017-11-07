@@ -7,5 +7,11 @@
 @import 'modules/_social-icons';
 @import 'modules/_list.css';
 @import 'modules/_primary-nav';
+@import 'modules/_fixed-site-header';
+@import 'modules/_wrapper';
+@import 'modules/_about-section';
+@import 'modules/_row';
+@import 'modules/_btn';
+@import 'modules/_text-box';
 
 

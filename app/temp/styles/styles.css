@@ -452,6 +452,17 @@ template {
 
 /* @import '../../../node_modules/font-awesome/css/font-awesome.css'; */
 
+/* @mixin backgroundImage {
+    background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+} */
+
+* {
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+
 body {
 	background-color: #25304C;
 	font-size: 0.875rem;
@@ -480,13 +491,63 @@ h1, h2, h3, h4, h5, h6 {
 	color: #222;
 }
 
+a {
+	color: #337ab7;
+	text-decoration: none;
+	-webkit-transition: all .5s ease-out;
+	transition: all .5s ease-out;
+}
+
+a:hover {
+		color: #6F43A6;
+	}
+
+.section-line {
+    width: inherit;
+    margin: 30px 0;
+    background: #D5B4E4;
+    height: 2px;
+}
+
+.section-title {
+	text-align: center;
+	font-size: 1.5rem;
+    margin: 0 0 30px;
+	letter-spacing: 2px;
+	font-weight: 500;
+}
+
+.section-title--overlay {
+		top: -28px;
+		position: relative;
+		z-index: 2;
+		margin-bottom: -20px;
+	}
+
+@media (min-width: 480px) {
+
+.section-title {
+		text-align: left;
+		font-size: 2.8125rem;
+		margin: 0 0 20px;
+		letter-spacing: 3px
+}
+    }
+
 .site-header {
     position: absolute;
-    height: 100vh;
+    height: 10vh;
     width: 100%;
     left: 0;
     top: 0;
 }
+
+@media (min-width: 480px) {
+
+.site-header {
+        height: 100vh
+}
+    }
 
 .site-header__text-content {
         text-align: center;
@@ -533,8 +594,7 @@ h1, h2, h3, h4, h5, h6 {
     }
 
 .fade-in-background {
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(24, 41, 86, .5)), to(rgba(24, 41, 86, .7))), url('../../assets/images/flower_bg.jpeg');
-    background-image: linear-gradient(rgba(24, 41, 86, .5), rgba(24, 41, 86, .7)), url('../../assets/images/flower_bg.jpeg');
+    background-image: none;
     z-index: -1;
     background-attachment: fixed;
     background-position: center;
@@ -546,6 +606,8 @@ h1, h2, h3, h4, h5, h6 {
 @media (min-width: 480px) {
 
 .fade-in-background {
+        background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(24, 41, 86, .5)), to(rgba(24, 41, 86, .7))), url('../../assets/images/flower_bg.jpeg');
+        background-image: linear-gradient(rgba(24, 41, 86, .5), rgba(24, 41, 86, .7)), url('../../assets/images/flower_bg.jpeg');        
         height: 100vh
 }
     }
@@ -601,5 +663,203 @@ h1, h2, h3, h4, h5, h6 {
             -webkit-transform: translateY(-3px);
                     transform: translateY(-3px);
         }
+
+.fixed-nav .side-header {
+        position: fixed;
+        height: 110px;
+    }
+
+.fixed-nav .site-header__text-content {
+        /* height: 110px; */
+        /* position: fixed; */
+		top: 0;
+		padding: 15px 0 0;
+		background-color: #25304C;
+		border-bottom: 15px solid rgba(37, 48, 76, .2);
+		background-clip: padding-box; /* for IE9+, Firefox 4+, Opera, Chrome */
+		/* @media only screen and (max-width : 320px) {
+			height: 100px;
+		} */
+    }
+
+.fixed-nav .site-header__title {
+        /* position: absolute; */
+        /* top: -5px; */
+        left: 50%;
+        -webkit-transform: translateX(-50px);
+                transform: translateX(-50px);
+    }
+
+@media (min-width: 480px) {
+
+.fixed-nav .site-header__title {
+            font-size: 2.5rem;
+            position: absolute;
+            top: 0;
+            left: 20px
+    }
+    }
+
+.fixed-nav .site-header__subtitle {
+        font-size: .875rem;
+        position: absolute;
+        left: 21px;
+        text-transform: uppercase;
+        margin-left: 0;
+        letter-spacing: .5px;
+        visibility: hidden;
+        /* @media only screen and (max-width : 480px) {
+            visibility: hidden;
+        } */
+    }
+
+.fixed-nav .social-icons {
+        left: 2%;
+        position: absolute;
+        top: 5%;
+    }
+
+.fixed-nav .social-icons li {
+            display: block;
+        }
+
+.wrapper {
+    /* overflow: hidden; */
+    padding-left: 30px;
+    padding-right: 30px;
+    max-width: 1236px;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+@media (min-width: 480px) {
+
+.wrapper {
+        padding-left: 20px;
+        padding-right: 20px
+    
+}
+    }
+
+.about-section {
+    position: relative;
+    min-height: 90vh;
+    background-color: rgb(228, 227, 238);
+}
+
+@media (min-width: 768px) {
+
+.about-section {
+        background-image: url('../../assets/images/flower_bg_light.jpeg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover
+}
+    }
+
+.about-section__text-content {
+        padding-top: 150px;
+    }
+
+.about-section__author-image {
+        background-image: url(../../assets/images/olga_fomin_image_xsmall.jpg);
+        border-radius: 50%;
+        border: 2px solid #fff;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        max-width: 100%;
+        width: 150px;
+        height: 150px;
+        -webkit-transform: translateX(-50%);
+                transform: translateX(-50%);
+        background-position: top;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+.row::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+
+.row__medium-6 {
+        min-height: 1px;
+
+        /* &--push-6 {
+            left: 50%;
+        }
+
+        &--pull-6 {
+            right: 50%;
+        } */
+    }
+
+@media (min-width: 992px) {
+
+.row__medium-6 {
+            width: 50%;
+            float: left
+    }
+    }
+
+.row__medium-6 .row {
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+.btn {
+    display: block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    color: #fff;
+    background-color: #25304C;
+    border: 1px solid #25304C;
+    -webkit-transition: background-color .5s;
+    transition: background-color .5s;
+    border-radius: 1px;
+    width: 100%;
+    margin-top: 2%;
+}
+
+.btn:focus,
+    .btn:hover {
+        color: #fff;
+        background-color: #fff;
+        color: #25304C;
+    }
+
+@media (min-width: 768px) {
+
+.btn {
+        width: 40%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto
+}
+    }
+
+@media (min-width: 992px) {
+
+.btn {
+        margin-left: 0;
+        margin-right: 0
+}
+    }
+
+.text-box__title {
+        margin: 0 0 15px;
+        padding: 0;
+        font-size: 1.125rem;
+        text-align: center;
+    }
 
 

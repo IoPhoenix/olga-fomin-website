@@ -1,0 +1,58 @@
+.fixed-nav {
+
+
+    .side-header {
+        position: fixed;
+        height: 110px;
+    }
+
+    .site-header__text-content {
+        /* height: 110px; */
+        /* position: fixed; */
+		top: 0;
+		padding: 15px 0 0;
+		background-color: $darkBlue;
+		border-bottom: 15px solid rgba(37, 48, 76, .2);
+		background-clip: padding-box; /* for IE9+, Firefox 4+, Opera, Chrome */
+		/* @media only screen and (max-width : 320px) {
+			height: 100px;
+		} */
+    }
+
+    .site-header__title {
+        /* position: absolute; */
+        /* top: -5px; */
+        left: 50%;
+        transform: translateX(-50px);
+
+        @mixin atSmall {
+            font-size: 2.5rem;
+            position: absolute;
+            top: 0;
+            left: 20px;
+        }
+    }
+
+    .site-header__subtitle {
+        font-size: .875rem;
+        position: absolute;
+        left: 21px;
+        text-transform: uppercase;
+        margin-left: 0;
+        letter-spacing: .5px;
+        visibility: hidden;
+        /* @media only screen and (max-width : 480px) {
+            visibility: hidden;
+        } */
+    }
+
+    .social-icons {
+        left: 2%;
+        position: absolute;
+        top: 5%;
+
+        & li {
+            display: block;
+        }
+    }
+}

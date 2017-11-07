@@ -1,0 +1,32 @@
+.about-section {
+    position: relative;
+    min-height: 90vh;
+    background-color: rgb(228, 227, 238);
+
+    @mixin atMedium {
+        background-image: url('../../assets/images/flower_bg_light.jpeg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    &__text-content {
+        padding-top: 150px;
+    }
+
+    &__author-image {
+        background-image: url(../../assets/images/olga_fomin_image_xsmall.jpg);
+        border-radius: 50%;
+        border: 2px solid #fff;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        max-width: 100%;
+        width: 150px;
+        height: 150px;
+        transform: translateX(-50%);
+        background-position: top;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}

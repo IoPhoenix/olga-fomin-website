@@ -1,9 +1,13 @@
 .site-header {
     position: absolute;
-    height: 100vh;
+    height: 10vh;
     width: 100%;
     left: 0;
     top: 0;
+
+    @mixin atSmall {
+        height: 100vh;
+    }
   
     &__text-content {
         text-align: center;

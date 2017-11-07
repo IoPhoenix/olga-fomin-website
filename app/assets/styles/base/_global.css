@@ -1,4 +1,10 @@
 $darkBlue: #25304C;
+$lightBlue: #337ab7;
+$white: #fff;
+
+* {
+	box-sizing: border-box;
+}
 
 body {
 	background-color: $darkBlue;
@@ -23,4 +29,42 @@ h1, h2, h3, h4, h5, h6 {
 	font-weight: 600;
     text-transform: uppercase;
 	color: #222;
+}
+
+a {
+	color: $lightBlue;
+	text-decoration: none;
+	transition: all .5s ease-out;
+	&:hover {
+		color: #6F43A6;
+	}
+}
+
+.section-line {
+    width: inherit;
+    margin: 30px 0;
+    background: #D5B4E4;
+    height: 2px;
+}
+
+.section-title {
+	text-align: center;
+	font-size: 1.5rem;
+    margin: 0 0 30px;
+	letter-spacing: 2px;
+	font-weight: 500;
+
+	&--overlay {
+		top: -28px;
+		position: relative;
+		z-index: 2;
+		margin-bottom: -20px;
+	}
+	
+	@mixin atSmall {
+		text-align: left;
+		font-size: 2.8125rem;
+		margin: 0 0 20px;
+		letter-spacing: 3px;
+	}
 }

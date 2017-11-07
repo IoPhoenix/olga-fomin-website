@@ -15,3 +15,16 @@
         @mixin-content;
     }
 }
+
+@define-mixin clearfix {
+    &::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+  }
+/* @mixin backgroundImage {
+    background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+} */
