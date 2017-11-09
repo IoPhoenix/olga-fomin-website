@@ -1,7 +1,7 @@
 .about-section {
     position: relative;
     min-height: 90vh;
-    background-color: rgb(228, 227, 238);
+    background-color: rgb(234, 233, 245);
 
     @mixin atMedium {
         background-image: url('../../assets/images/flower_bg_light.jpeg');
@@ -19,7 +19,7 @@
         border-radius: 50%;
         border: 2px solid #fff;
         position: absolute;
-        top: 0;
+        top: 1.2rem;
         left: 50%;
         max-width: 100%;
         width: 150px;
@@ -28,5 +28,23 @@
         background-position: top;
         background-repeat: no-repeat;
         background-size: cover;
+
+        @mixin atSmall {
+            background-image: url(../../assets/images/olga_fomin_image_small.jpg);
+            width: 200px;
+			height: 200px;
+        }
+
+        @mixin atLarge {
+            background-image: url(../../assets/images/olga_fomin_image.jpg);
+            border-radius: 0;;
+            border: none;
+            position: relative;
+            top: 0;
+            left: 0;
+            width: 638px;
+            height: 900px;
+            transform: translateX(0);
+        }
     }
 }

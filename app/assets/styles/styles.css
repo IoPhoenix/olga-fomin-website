@@ -13,5 +13,8 @@
 @import 'modules/_row';
 @import 'modules/_btn';
 @import 'modules/_text-box';
+@import 'modules/_page-section';
+@import 'modules/_footer';
+@import 'modules/_section-title';
 
 

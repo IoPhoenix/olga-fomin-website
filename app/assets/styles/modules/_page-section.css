@@ -1,0 +1,45 @@
+.page-section {
+    padding: 1.2rem 0;
+  
+    @mixin atLarge {
+      padding: 4.5rem 0;
+    }
+
+    &--portfolio {
+        background-color: #8f71ab;
+        background: linear-gradient(top, #6684c3 0, #9b87b3 0, #6a6195 0, #5d71ab 24.63%, #6f71ab 50%, #7f71ab 75%, #8f71ab 100%);
+    }
+
+    &--about {
+        @mixin atLarge {
+            padding-top: 0;
+        }
+    }
+
+    &--with-bigger-b-padding {
+        padding-bottom: 3.2rem;
+
+        @mixin atLarge {
+            padding-bottom: 0;
+        }
+    }
+
+    blockquote {
+        width: 90%;
+        color: #ece2f1;
+        border-left: 5px solid #24054a;
+        padding: 1px 20px;
+        margin: 0 0 20px;
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+
+        @mixin atMedium {
+            width: 70%;
+        }
+
+        @mixin atLarge {
+            width: 50%;
+        }
+    }
+}

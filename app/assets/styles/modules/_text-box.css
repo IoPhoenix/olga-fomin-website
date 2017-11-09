@@ -1,8 +1,36 @@
 .text-box {
+    
+    @mixin atSmall {
+        padding-top: 3%;
+    }
+
+    @mixin atLarge {
+        padding-top: 10%;
+
+        &--no-t-padding-at-large {
+            padding-top: 0;
+        }
+    }
+
+    &--no-t-padding {
+        padding-top: 0;
+    }
+
+
     &__title {
         margin: 0 0 15px;
         padding: 0;
         font-size: 1.125rem;
         text-align: center;
+
+        @mixin atLarge {
+            text-align: left;
+        }
+    }
+
+    &__description {
+        &--with-padding-r {
+            padding-right: 15px;
+        }
     }
 }

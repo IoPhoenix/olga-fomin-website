@@ -1,0 +1,12 @@
+.footer {
+
+}
+
+svg#bigTriangleColor {
+    pointer-events: none;
+    position: absolute;
+    display: block;
+    overflow: hidden;
+    z-index: 1;
+    margin-top: -54px;
+ }
