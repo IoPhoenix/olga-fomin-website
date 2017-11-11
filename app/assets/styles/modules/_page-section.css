@@ -19,6 +19,10 @@
     &--with-bigger-b-padding {
         padding-bottom: 3.2rem;
 
+        @mixin atMedium {
+            padding-bottom: 4.5rem;
+        }
+
         @mixin atLarge {
             padding-bottom: 0;
         }
