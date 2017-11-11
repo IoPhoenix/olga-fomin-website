@@ -1,5 +1,4 @@
 @import 'normalize.css';
-/* @import '../../../node_modules/font-awesome/css/font-awesome.css'; */
 @import 'base/_mixins';
 @import 'base/_global';
 @import 'modules/_site-header';
@@ -16,5 +15,6 @@
 @import 'modules/_page-section';
 @import 'modules/_footer';
 @import 'modules/_section-title';
+@import 'modules/_project-content';
 
 

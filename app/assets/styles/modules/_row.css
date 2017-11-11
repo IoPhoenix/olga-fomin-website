@@ -1,4 +1,5 @@
 .row {
+    position: relative;
     @mixin clearfix;
 
     &__medium-6 {
