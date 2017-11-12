@@ -51,3 +51,8 @@ a {
 		width: 15%;
 	}
 }
+
+.noscroll {
+	height: 100%;
+	overflow: hidden;
+}

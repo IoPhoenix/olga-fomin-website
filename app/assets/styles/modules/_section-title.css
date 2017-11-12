@@ -6,7 +6,7 @@
 	font-weight: 500;
 
 	&--overlay {
-		top: -30px;
+		top: -15px;
 		position: relative;
 		z-index: 2;
         margin-bottom: -20px;

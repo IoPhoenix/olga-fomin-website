@@ -1,10 +1,21 @@
 .project-content {
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    transform: translateY(100%);
+    transition: transform 0.4s 0s, visibility 0s 0.4s;
+	transition-timing-function: cubic-bezier(0.67, 0.15, 0.83, 0.83);
     background-color: $white;
     padding-top: 3%;
     padding-bottom: 5%;
-    position: relative;
     line-height: 33px;
     overflow: scroll;
+    visibility: hidden;
 
     &__text > p {
         margin: 20px 0;
@@ -48,7 +59,8 @@
     }
 
     img {
-        margin: 3% 0;
+        margin: 3% auto;
+        display: block;
     }
 
     &__subtitle {
@@ -68,7 +80,7 @@
         }
 	}
 
-    .close-button {
+    &__close-button {
         cursor: pointer;
         display: block;
         height: 32px;
@@ -84,12 +96,26 @@
     }
 
     &__magic-spell {
+        color: color: $lightBlue;
+        transition: all .5s ease-out;
+        cursor: pointer;
 		margin-top: 7%;
         font-size: .75rem;
         text-align: center;
 
+        &:hover {
+            color: #6F43A6;
+        }
+
 		span {
 			vertical-align: middle;
 		}
-	}
+    }
+    
+    &.is-visible {
+        visibility: visible;
+        transform: translateY(0);
+        transition: transform 0.4s 0s, visibility 0s 0s;
+        transition-timing-function: cubic-bezier(0.67, 0.15, 0.83, 0.83);
+    }
 }
