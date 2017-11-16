@@ -10,12 +10,19 @@
         &--no-t-padding-at-large {
             padding-top: 0;
         }
+
+        &--with-margin-r-at-large {
+            margin-right: 15px;
+        }
+    
+        &--with-margin-l-at-large {
+            margin-left: 15px;
+        }
     }
 
     &--no-t-padding {
         padding-top: 0;
     }
-
 
     &__title {
         margin: 0 0 15px;
@@ -25,12 +32,6 @@
 
         @mixin atLarge {
             text-align: left;
-        }
-    }
-
-    &__description {
-        &--with-padding-r {
-            padding-right: 15px;
         }
     }
 }

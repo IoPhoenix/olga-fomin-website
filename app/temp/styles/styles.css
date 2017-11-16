@@ -926,7 +926,7 @@ a:hover {
             top: 0;
             left: 0;
             width: 638px;
-            height: 900px;
+            height: 920px;
             -webkit-transform: translateX(0);
                     transform: translateX(0)
     }
@@ -1021,6 +1021,14 @@ a:hover {
         .text-box--no-t-padding-at-large {
             padding-top: 0;
         }
+
+        .text-box--with-margin-r-at-large {
+            margin-right: 15px;
+        }
+    
+        .text-box--with-margin-l-at-large {
+            margin-left: 15px;
+        }
     }
 
 .text-box--no-t-padding {
@@ -1040,10 +1048,6 @@ a:hover {
             text-align: left
     }
     }
-
-.text-box__description--with-padding-r {
-            padding-right: 15px;
-        }
 
 .page-section {
     padding: 1.2rem 0;
