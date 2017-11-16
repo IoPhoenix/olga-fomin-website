@@ -2,6 +2,7 @@
 @import 'base/_mixins';
 @import 'base/_global';
 @import 'modules/_site-header';
+@import 'modules/_fixed-header';
 @import 'modules/_fade-in-background';
 @import 'modules/_social-icons';
 @import 'modules/_list.css';

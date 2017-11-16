@@ -1,10 +1,13 @@
 .primary-nav {
+    
         & a {
             text-decoration: none;
             font-family: 'Open Sans Condensed', sans-serif;
             font-size: 1.25rem;
             color: #c6b6ff;
             text-transform: uppercase;
+            transition: all .7s;
+            
 
             @mixin atSmall {
                 font-size: 1.4375rem;

@@ -10,7 +10,7 @@ const gulp = require('gulp'),
 
 
 
-// use Autoprefixer to make css work in all browsers
+
 gulp.task('styles', function() {
     return gulp.src('./app/assets/styles/styles.css')
         .pipe(postcss([cssImport, mixins, include, cssvars, nested, hexrgba, autoprefixer]))

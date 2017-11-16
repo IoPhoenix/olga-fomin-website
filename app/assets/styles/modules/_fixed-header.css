@@ -1,0 +1,106 @@
+.fixed-header {
+    & .site-header__text-content {
+        height: 100px;
+        position: fixed;
+        top: 0;
+        padding: 15px 0 0;
+        background-color: #25304C;
+        border-bottom: 15px solid rgba(37, 48, 76, 0.2);
+        background-clip: padding-box;
+        transform: translateY(0);
+
+        @mixin atSmall {
+            height: 110px;
+        }
+    }
+
+    & .site-header__title {
+        position: absolute;
+        top: -5px;
+        left: 50%;
+        transform: translateX(-50px);
+        font-size: 2.5rem;
+
+        @mixin atSmall {
+            top: 0;
+            left: 10px;
+            transform: translateX(0);
+        }
+
+        @mixin atMedium {
+            left: 20px;
+        }
+    }
+
+    & .site-header__subtitle {
+        display: none;
+
+        @mixin atSmall {
+            display: block;
+            font-size: .875rem;
+            position: absolute;
+            left: 11px;
+            top: 50%;
+            transform: translateY(-43%);
+            text-transform: uppercase;
+            margin-left: 0;
+            letter-spacing: .5px;
+        }
+
+        @mixin atMedium {
+            left: 21px;
+        }
+    }
+    & .list {
+        padding-left: 0;
+    }
+
+    & .primary-nav {
+        position: absolute;
+        bottom: 7px;
+        text-align: center;
+        width: 100%;
+
+        @mixin atSmall {
+            position: relative;
+            bottom: 0;
+        }
+
+        & a {
+            font-size: 1.125rem;
+
+            @mixin atSmall {
+                font-size: 1.25rem;
+            }
+        }
+    }
+
+    & .social-icons {
+        position: absolute;
+        left: 1%;
+        top: 3%;
+
+        @mixin atSmall {
+            position: relative;
+            left: 0;;
+            top: 0;
+            margin-left: 0;
+            margin-top: .625rem;
+        }
+
+        & li {
+            display: block;
+            @mixin atSmall {
+                display: inline-block;
+            }
+        }
+
+        &__icon {
+    
+            @mixin atSmall {
+                font-size: 1.2em;
+            }
+        }
+
+    }
+}

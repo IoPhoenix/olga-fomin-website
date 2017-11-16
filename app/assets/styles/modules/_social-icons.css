@@ -2,13 +2,18 @@
 
     & li {
         text-decoration: none;
+        
     }
 
     &--with-margin-left {
-        margin-left: 5%;
+        margin-left: 0;
+        @mixin atLarge {
+            margin-left: 5%;
+        }
     }
 
     &__icon {
+        transition: all .7s;
         color: #FFF;
         font-size: 1em;
 

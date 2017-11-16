@@ -15,7 +15,7 @@
     padding-bottom: 5%;
     line-height: 33px;
     overflow: scroll;
-    visibility: hidden;
+    /* visibility: hidden; */
 
     &__text > p {
         margin: 20px 0;
@@ -96,7 +96,7 @@
     }
 
     &__magic-spell {
-        color: color: $lightBlue;
+        color: $lightBlue;
         transition: all .5s ease-out;
         cursor: pointer;
 		margin-top: 7%;
