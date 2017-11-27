@@ -1,11 +1,25 @@
 .list {
+    padding-left: 0;
+    margin: 0;
+
+    @mixin atSmall {
+        padding-left: inherit;
+        margin: inherit;
+    }
         
-    &--inline {
+    &--inline li {
         display: inline;
     }
 
+    &--block-at-small li {
+        display: block;
+
+        @mixin atSmall {
+            display: inline;
+        }
+    }
+
     & li {
-        display: inline-block;
         padding-right: .3125rem; 
         padding-left: .3125rem;
     }

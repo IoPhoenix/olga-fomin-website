@@ -1,8 +1,18 @@
 .social-icons {
+    position: absolute;
+    left: 1%;
+    top: 3%;
+
+    @mixin atSmall {
+        position: relative;
+        left: 0;;
+        top: 0;
+        margin-left: 0;
+        margin-top: .625rem;
+    }
 
     & li {
         text-decoration: none;
-        
     }
 
     &--with-margin-left {

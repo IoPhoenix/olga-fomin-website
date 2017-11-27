@@ -519,7 +519,7 @@ a:hover {
 
 .site-header {
     position: absolute;
-    height: 10vh;
+    height: 100px;
     width: 100%;
     left: 0;
     top: 0;
@@ -536,7 +536,7 @@ a:hover {
         text-align: center;
         width: 100%;
         z-index: 10;
-        /* height: 100px; */
+        height: 100px;
         position: fixed;
         top: 0;
         left: 0;
@@ -553,6 +553,7 @@ a:hover {
 @media (min-width: 480px) {
 
 .site-header__text-content {
+            height: auto;
             border-bottom: none;
             position: absolute;
             top: 50%;
@@ -563,24 +564,35 @@ a:hover {
     }
 
 .site-header__title {
-        position: relative;
+        position: absolute;
+        top: -5px;
+        left: 50%;
+        -webkit-transform: translateX(-50px);
+                transform: translateX(-50px);
+        font-size: 2.5rem;
         font-family: 'Stalemate', cursive;
-        font-size: 5rem;
         color: #f5f4f9;
         text-shadow: 10px 10px 3px rgba(0,0,0,0.15);
         text-transform: none;
         font-weight: 400;
-        margin-bottom: 4rem;
+        z-index: 1;
     }
 
 @media (min-width: 480px) {
 
 .site-header__title {
-            font-size: 6.875rem
+            font-size: 6.875rem;
+            position: relative;
+            top: 0;
+            margin-bottom: 4rem;
+            left: 0;
+            -webkit-transform: translateX(0px);
+                    transform: translateX(0px)
     }
     }
 
 .site-header__subtitle {
+        display: none;
         font-family: 'Open Sans Condensed', sans-serif;
         font-size: 1.375rem;
         color: #D5B4E4;
@@ -590,6 +602,7 @@ a:hover {
 @media (min-width: 480px) {
 
 .site-header__subtitle {
+            display: block;
             font-size: 1.625rem
     }
     }
@@ -686,13 +699,15 @@ a:hover {
     }
 
 .fixed-header .primary-nav a {
-            font-size: 1.125rem;
+            /* font-size: 1.125rem; */
+            font-size: 1.25rem;
         }
 
 @media (min-width: 480px) {
 
 .fixed-header .primary-nav a {
-                font-size: 1.25rem
+                font-size: 1.4375rem
+                /* font-size: 1.25rem; */
         }
     }
 
@@ -751,9 +766,25 @@ a:hover {
 }
     }
 
+.social-icons {
+    position: absolute;
+    left: 1%;
+    top: 3%;
+}
+
+@media (min-width: 480px) {
+
+.social-icons {
+        position: relative;
+        left: 0;;
+        top: 0;
+        margin-left: 0;
+        margin-top: .625rem
+}
+    }
+
 .social-icons li {
         text-decoration: none;
-        
     }
 
 .social-icons--with-margin-left {
@@ -781,15 +812,57 @@ a:hover {
     }
     }
 
-.list--inline {
+.list {
+    padding-left: 0;
+    margin: 0;
+}
+
+@media (min-width: 480px) {
+
+.list {
+        padding-left: inherit;
+        margin: inherit
+}
+    }
+
+.list--inline li {
         display: inline;
     }
 
+.list--block-at-small li {
+        display: block;
+    }
+
+@media (min-width: 480px) {
+
+.list--block-at-small li {
+            display: inline
+    }
+    }
+
 .list li {
-        display: inline-block;
         padding-right: .3125rem; 
         padding-left: .3125rem;
     }
+
+.primary-nav {
+        position: absolute;
+        bottom: 7px;
+        text-align: center;
+        width: 100%;
+}
+
+@media (min-width: 480px) {
+
+.primary-nav {
+            position: relative;
+            bottom: 0
+}
+    }
+
+.primary-nav .list {
+            padding-left: 0;
+        }
 
 .primary-nav a {
             text-decoration: none;

@@ -1,4 +1,17 @@
 .primary-nav {
+        position: absolute;
+        bottom: 7px;
+        text-align: center;
+        width: 100%;
+
+        @mixin atSmall {
+            position: relative;
+            bottom: 0;
+        }
+
+        & .list {
+            padding-left: 0;
+        }
     
         & a {
             text-decoration: none;

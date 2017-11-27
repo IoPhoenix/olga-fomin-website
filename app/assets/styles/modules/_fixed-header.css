@@ -67,10 +67,12 @@
         }
 
         & a {
-            font-size: 1.125rem;
+            /* font-size: 1.125rem; */
+            font-size: 1.25rem;
 
             @mixin atSmall {
-                font-size: 1.25rem;
+                font-size: 1.4375rem;
+                /* font-size: 1.25rem; */
             }
         }
     }

@@ -10451,7 +10451,6 @@ var FixedHeader = function () {
     function FixedHeader() {
         _classCallCheck(this, FixedHeader);
 
-        this.headerContent = (0, _jquery2.default)('.site-header__text-content');
         this.headerLinks = (0, _jquery2.default)('.primary-nav a');
         this.addSmoothScrolling();
         this.events();
@@ -10461,40 +10460,16 @@ var FixedHeader = function () {
         key: 'events',
         value: function events() {
             (0, _jquery2.default)(window).scroll(this.addFixedHeaderOnScroll);
-
-            (0, _jquery2.default)(document).ready(this.addFixedHeaderOnSmallestScreens);
-
-            (0, _jquery2.default)(window).resize(this.addFixedHeaderOnResize);
         }
     }, {
         key: 'addFixedHeaderOnScroll',
         value: function addFixedHeaderOnScroll() {
-            if ((0, _jquery2.default)(window).width() > 480) {
-                if ((0, _jquery2.default)(window).scrollTop() >= (0, _jquery2.default)(window).innerHeight() - 110) {
-                    (0, _jquery2.default)('body').addClass('fixed-header');
-                } else {
-                    (0, _jquery2.default)('body').removeClass('fixed-header');
-                }
+            if ((0, _jquery2.default)(window).scrollTop() >= (0, _jquery2.default)(window).innerHeight() - 110) {
+                (0, _jquery2.default)('body').addClass('fixed-header');
             } else {
-                (0, _jquery2.default)('body').addClass('fixed-header');
+                (0, _jquery2.default)('body').removeClass('fixed-header');
             }
         }
-    }, {
-        key: 'addFixedHeaderOnSmallestScreens',
-        value: function addFixedHeaderOnSmallestScreens() {
-            if ((0, _jquery2.default)(window).width() < 480) {
-                (0, _jquery2.default)('body').addClass('fixed-header');
-            }
-        }
-
-        // addFixedHeaderOnResize() {
-        //     if ($(window).width() < 480) {
-        //         $('body').addClass('fixed-nav');
-        //     } else {
-        //         $('body').removeClass('fixed-nav');
-        //     } 
-        // }
-
     }, {
         key: 'addSmoothScrolling',
         value: function addSmoothScrolling() {
