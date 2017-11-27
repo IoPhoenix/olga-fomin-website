@@ -836,8 +836,8 @@ a:hover {
 @media (min-width: 480px) {
 
 .list {
-        padding-left: inherit;
-        margin: inherit
+        padding-left: 40px;
+        margin-left: 15px
 }
     }
 
@@ -877,7 +877,7 @@ a:hover {
     }
 
 .primary-nav .list {
-            padding-left: 0;
+            /* padding-left: 0; */
         }
 
 .primary-nav a {
@@ -1497,7 +1497,7 @@ svg#bigTriangleColor {
     }
 
 .portfolio-item__subtitle {
-        width: 70%;
+        width: 60%;
         margin: 0 auto;
     }
 

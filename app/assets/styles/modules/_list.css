@@ -3,8 +3,8 @@
     margin: 0;
 
     @mixin atSmall {
-        padding-left: inherit;
-        margin: inherit;
+        padding-left: 40px;
+        margin-left: 15px;
     }
         
     &--inline li {
