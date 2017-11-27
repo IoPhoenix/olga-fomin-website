@@ -1,14 +1,14 @@
 .fade-in-background {
     background-image: none;
     z-index: -1;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
     height: 10vh;
 
     @mixin atSmall {
-        background-image: linear-gradient(rgba(24, 41, 86, .5), rgba(24, 41, 86, .7)), url('../../assets/images/flower_bg.jpeg');        
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        /* background-image: linear-gradient(rgba(24, 41, 86, .5), rgba(24, 41, 86, .7)), url('../../assets/images/flower_bg.jpeg');         */
         height: 100vh;
     }
 }

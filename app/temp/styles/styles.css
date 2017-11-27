@@ -519,24 +519,47 @@ a:hover {
 
 .site-header {
     position: absolute;
-    height: 100vh;
+    height: 10vh;
     width: 100%;
     left: 0;
     top: 0;
 }
 
+@media (min-width: 480px) {
+
+.site-header {
+        height: 100vh
+}
+    }
+
 .site-header__text-content {
         text-align: center;
-        position: absolute;
         width: 100%;
-        top: 50%;
-        -webkit-transform: translateY(-50%);
-                transform: translateY(-50%);
+        z-index: 10;
+        /* height: 100px; */
+        position: fixed;
+        top: 0;
         left: 0;
-		z-index: 1;
-        background-color: transparent;
+        padding: 15px 0 0;
+        background-color: #25304C;
+        border-bottom: 15px solid rgba(37, 48, 76, 0.2);
+        background-clip: padding-box;
+        -webkit-transform: translateY(0);
+                transform: translateY(0);
         -webkit-transition: all 0.2s;
         transition: all 0.2s;
+    }
+
+@media (min-width: 480px) {
+
+.site-header__text-content {
+            border-bottom: none;
+            position: absolute;
+            top: 50%;
+            -webkit-transform: translateY(-50%);
+                    transform: translateY(-50%);
+            background-color: transparent
+    }
     }
 
 .site-header__title {
@@ -713,18 +736,17 @@ a:hover {
 .fade-in-background {
     background-image: none;
     z-index: -1;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
     height: 10vh;
 }
 
 @media (min-width: 480px) {
 
 .fade-in-background {
-        background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(24, 41, 86, .5)), to(rgba(24, 41, 86, .7))), url('../../assets/images/flower_bg.jpeg');
-        background-image: linear-gradient(rgba(24, 41, 86, .5), rgba(24, 41, 86, .7)), url('../../assets/images/flower_bg.jpeg');        
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        /* background-image: linear-gradient(rgba(24, 41, 86, .5), rgba(24, 41, 86, .7)), url('../../assets/images/flower_bg.jpeg');         */
         height: 100vh
 }
     }

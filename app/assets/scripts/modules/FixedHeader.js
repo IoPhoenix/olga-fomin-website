@@ -13,6 +13,8 @@ class FixedHeader {
         $(window).scroll(this.addFixedHeaderOnScroll);
 
         $(document).ready(this.addFixedHeaderOnSmallestScreens);
+
+        $(window).resize(this.addFixedHeaderOnResize);
     }
 
     addFixedHeaderOnScroll() {
@@ -22,15 +24,24 @@ class FixedHeader {
             } else {
                 $('body').removeClass('fixed-header');
             }
+        } else {
+            $('body').addClass('fixed-header');
         }
     }
 
     addFixedHeaderOnSmallestScreens() {
         if ($(window).width() < 480) {
-            console.log('test');
             $('body').addClass('fixed-header');
         }
     }
+
+    // addFixedHeaderOnResize() {
+    //     if ($(window).width() < 480) {
+    //         $('body').addClass('fixed-nav');
+    //     } else {
+    //         $('body').removeClass('fixed-nav');
+    //     } 
+    // }
 
     addSmoothScrolling() {
         this.headerLinks.smoothScroll();

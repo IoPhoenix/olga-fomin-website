@@ -10338,10 +10338,15 @@ var _FixedHeader = __webpack_require__(3);
 
 var _FixedHeader2 = _interopRequireDefault(_FixedHeader);
 
+var _FadeInBackground = __webpack_require__(5);
+
+var _FadeInBackground2 = _interopRequireDefault(_FadeInBackground);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var projectContent = new _ProjectContent2.default();
 var fixedHeader = new _FixedHeader2.default();
+var fadeInBackground = new _FadeInBackground2.default();
 
 /***/ }),
 /* 2 */
@@ -10458,6 +10463,8 @@ var FixedHeader = function () {
             (0, _jquery2.default)(window).scroll(this.addFixedHeaderOnScroll);
 
             (0, _jquery2.default)(document).ready(this.addFixedHeaderOnSmallestScreens);
+
+            (0, _jquery2.default)(window).resize(this.addFixedHeaderOnResize);
         }
     }, {
         key: 'addFixedHeaderOnScroll',
@@ -10468,16 +10475,26 @@ var FixedHeader = function () {
                 } else {
                     (0, _jquery2.default)('body').removeClass('fixed-header');
                 }
+            } else {
+                (0, _jquery2.default)('body').addClass('fixed-header');
             }
         }
     }, {
         key: 'addFixedHeaderOnSmallestScreens',
         value: function addFixedHeaderOnSmallestScreens() {
             if ((0, _jquery2.default)(window).width() < 480) {
-                console.log('test');
                 (0, _jquery2.default)('body').addClass('fixed-header');
             }
         }
+
+        // addFixedHeaderOnResize() {
+        //     if ($(window).width() < 480) {
+        //         $('body').addClass('fixed-nav');
+        //     } else {
+        //         $('body').removeClass('fixed-nav');
+        //     } 
+        // }
+
     }, {
         key: 'addSmoothScrolling',
         value: function addSmoothScrolling() {
@@ -10856,6 +10873,53 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 }));
 
 
+
+/***/ }),
+/* 5 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _jquery = __webpack_require__(0);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var FadeInBackground = function () {
+    function FadeInBackground() {
+        _classCallCheck(this, FadeInBackground);
+
+        this.headerBackground = (0, _jquery2.default)('.fade-in-background');
+        this.events();
+    }
+
+    _createClass(FadeInBackground, [{
+        key: 'events',
+        value: function events() {
+            (0, _jquery2.default)(document).ready(this.showBackground);
+        }
+    }, {
+        key: 'showBackground',
+        value: function showBackground() {
+            // fade in background image for home page on load
+            (0, _jquery2.default)('.fade-in-background').animate({ opacity: 0 }, 0).css({ 'background-image': 'linear-gradient(rgba(24, 41, 86, .5), rgba(24, 41, 86, .7)), url(../../assets/images/flower_bg.jpeg)' }).animate({ opacity: 1 }, 2500);
+        }
+    }]);
+
+    return FadeInBackground;
+}();
+
+exports.default = FadeInBackground;
 
 /***/ })
 /******/ ]);
