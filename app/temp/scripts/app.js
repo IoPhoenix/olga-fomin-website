@@ -10473,7 +10473,8 @@ var FixedHeader = function () {
     }, {
         key: 'addSmoothScrolling',
         value: function addSmoothScrolling() {
-            this.headerLinks.smoothScroll();
+            // offset: site header minus its bottom border
+            this.headerLinks.smoothScroll({ offset: -85 });
         }
     }]);
 

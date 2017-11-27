@@ -489,6 +489,10 @@ h1, h2, h3, h4, h5, h6 {
 	color: #222;
 }
 
+h3 {
+	font-size: 1.25rem;
+}
+
 a {
 	color: #337ab7;
 	text-decoration: none;
@@ -508,9 +512,23 @@ a:hover {
 }
 
 .section-line--short {
-		margin: -15px auto 3% auto;
+		margin: -15px auto 5% auto;
 		width: 15%;
 	}
+
+@media (min-width: 480px) {
+
+.section-line--short {
+			margin: 5% auto
+	}
+    }
+
+@media (min-width: 768px) {
+
+.section-line--short {
+			margin: 3% auto
+	}
+    }
 
 .noscroll {
 	height: 100%;
@@ -519,7 +537,6 @@ a:hover {
 
 .site-header {
     position: absolute;
-    height: 100px;
     width: 100%;
     left: 0;
     top: 0;
@@ -751,7 +768,7 @@ a:hover {
 .fade-in-background {
     background-image: none;
     z-index: -1;
-    height: 10vh;
+    height: 85px;
 }
 
 @media (min-width: 480px) {
@@ -761,7 +778,6 @@ a:hover {
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
-        /* background-image: linear-gradient(rgba(24, 41, 86, .5), rgba(24, 41, 86, .7)), url('../../assets/images/flower_bg.jpeg');         */
         height: 100vh
 }
     }
@@ -1029,7 +1045,6 @@ a:hover {
 
 .row {
     position: relative;
-    
 }
 
 .row::after {
@@ -1054,6 +1069,14 @@ a:hover {
             padding-left: 0;
             padding-right: 0;
         }
+
+@media (min-width: 768px) {
+
+.row__medium-4 {
+            width: 33.33333333%;
+            float: left
+    }
+    }
 
 .btn {
     display: block;
@@ -1147,6 +1170,13 @@ a:hover {
 .page-section {
     padding: 1.2rem 0;
 }
+
+@media (min-width: 480px) {
+
+.page-section {
+        padding: 3.2rem 0
+}
+    }
 
 @media (min-width: 992px) {
 
@@ -1264,19 +1294,19 @@ svg#bigTriangleColor {
 	}
     }
 
+@media (min-width: 992px) {
+
+.section-title--left-align {
+			text-align: left
+	}
+    }
+
 @media (min-width: 480px) {
 
 .section-title {
 		font-size: 2.8125rem;
 		margin: 0 0 20px;
 		letter-spacing: 3px
-}
-    }
-
-@media (min-width: 992px) {
-
-.section-title {
-		text-align: left
 }
     }
 
@@ -1427,4 +1457,47 @@ svg#bigTriangleColor {
                 transition-timing-function: cubic-bezier(0.67, 0.15, 0.83, 0.83);
     }
 
+.portfolio-item {
+    position: relative;
+    background-color: rgba(51, 46, 51, 0.8);
+    padding: 0;
+    cursor: pointer;
+    height: 120px;
+    margin-top: 1%;
+}
+
+.portfolio-item__image {
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+.portfolio-item__hover-mask {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        padding: 5px;
+        opacity: 1;
+        background: white;
+        -webkit-box-shadow: inset 0 0 0 5px rgba(29, 29, 29, 0.1);
+                box-shadow: inset 0 0 0 5px rgba(29, 29, 29, 0.1);
+        text-align: center;
+        -webkit-transition: opacity 0.35s ease;
+        transition: opacity 0.35s ease;
+    }
+
+.portfolio-item__hover-mask:hover {
+            opacity: 1;
+        }
+
+.portfolio-item__title {
+        margin: 1em 0 .5em 0;
+    }
+
+.portfolio-item__subtitle {
+        width: 70%;
+        margin: 0 auto;
+    }
 

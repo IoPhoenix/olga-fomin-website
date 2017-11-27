@@ -31,6 +31,10 @@ h1, h2, h3, h4, h5, h6 {
 	color: #222;
 }
 
+h3 {
+	font-size: 1.25rem;
+}
+
 a {
 	color: $lightBlue;
 	text-decoration: none;
@@ -47,8 +51,16 @@ a {
 	height: 2px;
 	
 	&--short {
-		margin: -15px auto 3% auto;
+		margin: -15px auto 5% auto;
 		width: 15%;
+
+		@mixin atSmall {
+			margin: 5% auto;
+		}
+
+		@mixin atMedium {
+			margin: 3% auto;
+		}
 	}
 }
 

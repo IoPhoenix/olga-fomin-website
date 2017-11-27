@@ -21,7 +21,8 @@ class FixedHeader {
     }
 
     addSmoothScrolling() {
-        this.headerLinks.smoothScroll();
+        // offset: site header minus its bottom border
+        this.headerLinks.smoothScroll({offset: -85});
     }
 }
 

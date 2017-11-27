@@ -15,14 +15,16 @@
             top: -10px;
         }
 	}
+
+	&--left-align {
+		@mixin atLarge {
+			text-align: left;
+		}
+	}
 	
 	@mixin atSmall {
 		font-size: 2.8125rem;
 		margin: 0 0 20px;
 		letter-spacing: 3px;
-	}
-
-	@mixin atLarge {
-		text-align: left;
 	}
 }

@@ -16,4 +16,10 @@
         }
     }
     
+    &__medium-4 {
+        @mixin atMedium {
+            width: 33.33333333%;
+            float: left;
+        }
+    }
 }
