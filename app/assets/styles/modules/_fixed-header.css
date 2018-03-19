@@ -1,5 +1,6 @@
 .fixed-header {
     & .site-header__text-content {
+        cursor: default;
         height: 100px;
         position: fixed;
         top: 0;
