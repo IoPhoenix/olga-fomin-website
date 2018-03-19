@@ -6,10 +6,19 @@
     height: 120px;
     margin-top: 1%;
 
+    @mixin atMedium {
+        height: 400px;
+    }
+
     &__image {
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
+        @mixin atMedium {
+            #project1-portfolio-image {
+                background-image: url('../../assets/images/project1_homepage_screenshot.jpg');
+            }
+        }
     }
 
     &__hover-mask {
@@ -18,24 +27,44 @@
         right: 0;
         bottom: 0;
         left: 0;
-        padding: 5px;
+        padding: .3125em;
         opacity: 1;
         background: white;
         box-shadow: inset 0 0 0 5px rgba(29, 29, 29, 0.1);
         text-align: center;
         transition: opacity 0.35s ease;
+        @mixin atMedium {
+            opacity: 0;
+            padding: 1.5625em;
+        }
 
         &:hover {
             opacity: 1;
         }
     }
 
+    &__inner {
+        position: absolute;
+        left: 0;
+        top: 40%;
+        width: 100%;
+        padding: 0 5%;
+        text-align: center;
+        margin-top: -1.56252em;
+    }
+
     &__title {
+        font-size: 1.5em;
         margin: 1em 0 .5em 0;
+        @mixin atMedium {
+          
+        }
     }
     
     &__subtitle {
-        width: 60%;
+        width: 70%;
         margin: 0 auto;
+        color: #666;
+       
     }
 }

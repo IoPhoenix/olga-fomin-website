@@ -59,7 +59,8 @@ a {
 		}
 
 		@mixin atMedium {
-			margin: 3% auto;
+			margin: 3
+			% auto;
 		}
 	}
 }
