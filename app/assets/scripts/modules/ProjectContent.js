@@ -19,7 +19,7 @@ class ProjectContent {
         // close project content when clicking the magic spell button
         this.projectMagicButton.click(this.closeProjectContent.bind(this));
 
-        // close project content on esc key
+        // close project content on escape key
          $(document).keyup(this.keyPressHandler.bind(this));
     }
 

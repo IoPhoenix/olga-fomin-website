@@ -537,6 +537,7 @@ a:hover {
 }
 
 .site-header {
+    cursor: url(../../assets/images/down-arrow-cursor.png) 16 16, auto;
     position: absolute;
     width: 100%;
     left: 0;
@@ -626,6 +627,7 @@ a:hover {
     }
 
 .fixed-header .site-header__text-content {
+        cursor: default;
         height: 100px;
         position: fixed;
         top: 0;

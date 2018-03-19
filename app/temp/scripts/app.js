@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 1);
+/******/ 	return __webpack_require__(__webpack_require__.s = 2);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -10327,166 +10327,6 @@ return jQuery;
 /* 1 */
 /***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
-
-
-var _ProjectContent = __webpack_require__(2);
-
-var _ProjectContent2 = _interopRequireDefault(_ProjectContent);
-
-var _FixedHeader = __webpack_require__(3);
-
-var _FixedHeader2 = _interopRequireDefault(_FixedHeader);
-
-var _FadeInBackground = __webpack_require__(5);
-
-var _FadeInBackground2 = _interopRequireDefault(_FadeInBackground);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var projectContent = new _ProjectContent2.default();
-var fixedHeader = new _FixedHeader2.default();
-var fadeInBackground = new _FadeInBackground2.default();
-
-/***/ }),
-/* 2 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _jquery = __webpack_require__(0);
-
-var _jquery2 = _interopRequireDefault(_jquery);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-var ProjectContent = function () {
-    function ProjectContent() {
-        _classCallCheck(this, ProjectContent);
-
-        this.portfolioItems = (0, _jquery2.default)('.portfolio-item');
-        this.projectContents = (0, _jquery2.default)('.project-content');
-        this.projectCloseButton = (0, _jquery2.default)('.project-content__close-button');
-        this.projectMagicButton = (0, _jquery2.default)('.project-content__magic-spell');
-        this.events();
-    }
-
-    _createClass(ProjectContent, [{
-        key: 'events',
-        value: function events() {
-            // open project content when clicking on porfolio item
-            this.portfolioItems.click(this.openProjectContent);
-
-            // close project content when clicking the x close button
-            this.projectCloseButton.click(this.closeProjectContent.bind(this));
-
-            // close project content when clicking the magic spell button
-            this.projectMagicButton.click(this.closeProjectContent.bind(this));
-
-            // close project content on esc key
-            (0, _jquery2.default)(document).keyup(this.keyPressHandler.bind(this));
-        }
-    }, {
-        key: 'openProjectContent',
-        value: function openProjectContent() {
-            var currentProject = (0, _jquery2.default)(this).data('project');
-            (0, _jquery2.default)('#' + currentProject).addClass('is-visible');
-            (0, _jquery2.default)('body').addClass('noscroll');
-        }
-    }, {
-        key: 'closeProjectContent',
-        value: function closeProjectContent() {
-            this.projectContents.removeClass('is-visible');
-            (0, _jquery2.default)('body').removeClass('noscroll');
-        }
-    }, {
-        key: 'keyPressHandler',
-        value: function keyPressHandler(e) {
-            if (e.keyCode == 27) {
-                this.closeProjectContent();
-            }
-        }
-    }]);
-
-    return ProjectContent;
-}();
-
-exports.default = ProjectContent;
-
-/***/ }),
-/* 3 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _jquery = __webpack_require__(0);
-
-var _jquery2 = _interopRequireDefault(_jquery);
-
-var _jquerySmoothScroll = __webpack_require__(4);
-
-var _jquerySmoothScroll2 = _interopRequireDefault(_jquerySmoothScroll);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-var FixedHeader = function () {
-    function FixedHeader() {
-        _classCallCheck(this, FixedHeader);
-
-        this.headerLinks = (0, _jquery2.default)('.primary-nav a');
-        this.addSmoothScrolling();
-        this.events();
-    }
-
-    _createClass(FixedHeader, [{
-        key: 'events',
-        value: function events() {
-            (0, _jquery2.default)(window).scroll(this.addFixedHeaderOnScroll);
-        }
-    }, {
-        key: 'addFixedHeaderOnScroll',
-        value: function addFixedHeaderOnScroll() {
-            if ((0, _jquery2.default)(window).scrollTop() >= (0, _jquery2.default)(window).innerHeight() - 110) {
-                (0, _jquery2.default)('body').addClass('fixed-header');
-            } else {
-                (0, _jquery2.default)('body').removeClass('fixed-header');
-            }
-        }
-    }, {
-        key: 'addSmoothScrolling',
-        value: function addSmoothScrolling() {
-            // offset: site header minus its bottom border
-            this.headerLinks.smoothScroll({ offset: -85 });
-        }
-    }]);
-
-    return FixedHeader;
-}();
-
-exports.default = FixedHeader;
-
-/***/ }),
-/* 4 */
-/***/ (function(module, exports, __webpack_require__) {
-
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
  * jQuery Smooth Scroll - v2.2.0 - 2017-05-05
  * https://github.com/kswedberg/jquery-smooth-scroll
@@ -10851,7 +10691,232 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 
 
 /***/ }),
+/* 2 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _ProjectContent = __webpack_require__(3);
+
+var _ProjectContent2 = _interopRequireDefault(_ProjectContent);
+
+var _FullHeightHeader = __webpack_require__(4);
+
+var _FullHeightHeader2 = _interopRequireDefault(_FullHeightHeader);
+
+var _FixedHeader = __webpack_require__(5);
+
+var _FixedHeader2 = _interopRequireDefault(_FixedHeader);
+
+var _FadeInBackground = __webpack_require__(6);
+
+var _FadeInBackground2 = _interopRequireDefault(_FadeInBackground);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var projectContent = new _ProjectContent2.default();
+var fullHeightHeader = new _FullHeightHeader2.default();
+var fixedHeader = new _FixedHeader2.default();
+var fadeInBackground = new _FadeInBackground2.default();
+
+/***/ }),
+/* 3 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _jquery = __webpack_require__(0);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var ProjectContent = function () {
+    function ProjectContent() {
+        _classCallCheck(this, ProjectContent);
+
+        this.portfolioItems = (0, _jquery2.default)('.portfolio-item');
+        this.projectContents = (0, _jquery2.default)('.project-content');
+        this.projectCloseButton = (0, _jquery2.default)('.project-content__close-button');
+        this.projectMagicButton = (0, _jquery2.default)('.project-content__magic-spell');
+        this.events();
+    }
+
+    _createClass(ProjectContent, [{
+        key: 'events',
+        value: function events() {
+            // open project content when clicking on porfolio item
+            this.portfolioItems.click(this.openProjectContent);
+
+            // close project content when clicking the x close button
+            this.projectCloseButton.click(this.closeProjectContent.bind(this));
+
+            // close project content when clicking the magic spell button
+            this.projectMagicButton.click(this.closeProjectContent.bind(this));
+
+            // close project content on escape key
+            (0, _jquery2.default)(document).keyup(this.keyPressHandler.bind(this));
+        }
+    }, {
+        key: 'openProjectContent',
+        value: function openProjectContent() {
+            var currentProject = (0, _jquery2.default)(this).data('project');
+            (0, _jquery2.default)('#' + currentProject).addClass('is-visible');
+            (0, _jquery2.default)('body').addClass('noscroll');
+        }
+    }, {
+        key: 'closeProjectContent',
+        value: function closeProjectContent() {
+            this.projectContents.removeClass('is-visible');
+            (0, _jquery2.default)('body').removeClass('noscroll');
+        }
+    }, {
+        key: 'keyPressHandler',
+        value: function keyPressHandler(e) {
+            if (e.keyCode == 27) {
+                this.closeProjectContent();
+            }
+        }
+    }]);
+
+    return ProjectContent;
+}();
+
+exports.default = ProjectContent;
+
+/***/ }),
+/* 4 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _jquery = __webpack_require__(0);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+var _jquerySmoothScroll = __webpack_require__(1);
+
+var _jquerySmoothScroll2 = _interopRequireDefault(_jquerySmoothScroll);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var FullHeightHeader = function () {
+    function FullHeightHeader() {
+        _classCallCheck(this, FullHeightHeader);
+
+        this.header = (0, _jquery2.default)('.site-header');
+        this.events();
+    }
+
+    _createClass(FullHeightHeader, [{
+        key: 'events',
+        value: function events() {
+            // scroll to portfolio section when clicked anywhere on home page
+            this.header.on('click', this.scrollToPortfolio);
+        }
+    }, {
+        key: 'scrollToPortfolio',
+        value: function scrollToPortfolio(e) {
+            // do not scroll if header is fixed (user has already scrolled past home page)
+            if ((0, _jquery2.default)('body').hasClass('fixed-header')) return;
+
+            // do not scroll if links or social icons are clicked
+            if (e.target.nodeName === 'LI' || e.target.nodeName === 'I' || e.target.nodeName === 'A') return;
+
+            _jquery2.default.smoothScroll({
+                offset: -85,
+                scrollTarget: '#portfolio'
+            });
+        }
+    }]);
+
+    return FullHeightHeader;
+}();
+
+exports.default = FullHeightHeader;
+
+/***/ }),
 /* 5 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _jquery = __webpack_require__(0);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+var _jquerySmoothScroll = __webpack_require__(1);
+
+var _jquerySmoothScroll2 = _interopRequireDefault(_jquerySmoothScroll);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var FixedHeader = function () {
+    function FixedHeader() {
+        _classCallCheck(this, FixedHeader);
+
+        this.headerLinks = (0, _jquery2.default)('.primary-nav a');
+        this.addSmoothScrolling();
+        this.events();
+    }
+
+    _createClass(FixedHeader, [{
+        key: 'events',
+        value: function events() {
+            (0, _jquery2.default)(window).scroll(this.addFixedHeaderOnScroll);
+        }
+    }, {
+        key: 'addFixedHeaderOnScroll',
+        value: function addFixedHeaderOnScroll() {
+            if ((0, _jquery2.default)(window).scrollTop() >= (0, _jquery2.default)(window).innerHeight() - 110) {
+                (0, _jquery2.default)('body').addClass('fixed-header');
+            } else {
+                (0, _jquery2.default)('body').removeClass('fixed-header');
+            }
+        }
+    }, {
+        key: 'addSmoothScrolling',
+        value: function addSmoothScrolling() {
+            // offset: site header minus its bottom border
+            this.headerLinks.smoothScroll({ offset: -85 });
+        }
+    }]);
+
+    return FixedHeader;
+}();
+
+exports.default = FixedHeader;
+
+/***/ }),
+/* 6 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
