@@ -15,11 +15,20 @@
         background-repeat: no-repeat;
         background-size: cover;
         @mixin atMedium {
-            #project1-portfolio-image {
+            height: 400px;
+            &#project1-portfolio-image {
                 background-image: url('../../assets/images/project1_homepage_screenshot.jpg');
             }
-        }
+            &#project2-portfolio-image {
+                background-image: url('../../assets/images/project2_homepage_screenshot.jpg');
+            }
+            &#project3-portfolio-image {
+                background-image: url('../../assets/images/project3_homepage_screenshot.jpg');
+            }
+        } 
     }
+
+       
 
     &__hover-mask {
         position: absolute;
@@ -44,27 +53,25 @@
     }
 
     &__inner {
-        position: absolute;
-        left: 0;
-        top: 40%;
         width: 100%;
         padding: 0 5%;
         text-align: center;
-        margin-top: -1.56252em;
+        @mixin atMedium {
+            position: absolute;
+            left: 0;
+            top: 40%;
+            margin-top: -1.56252em;
+        }
     }
 
     &__title {
         font-size: 1.5em;
         margin: 1em 0 .5em 0;
-        @mixin atMedium {
-          
-        }
     }
     
     &__subtitle {
         width: 70%;
         margin: 0 auto;
         color: #666;
-       
     }
 }
