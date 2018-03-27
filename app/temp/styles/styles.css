@@ -483,7 +483,7 @@ img {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Open Sans Condensed', sans-serif;
+    font-family: 'Open Sans Condensed', san serif;
 	font-weight: 600;
     text-transform: uppercase;
 	color: #222;
@@ -526,8 +526,7 @@ a:hover {
 @media (min-width: 768px) {
 
 .section-line--short {
-			margin: 3
-			% auto
+			margin: 3% auto
 	}
     }
 
@@ -535,6 +534,29 @@ a:hover {
 	height: 100%;
 	overflow: hidden;
 }
+
+.triangle {
+	display: none;
+}
+
+@media (min-width: 992px) {
+
+.triangle {
+		display: block;
+		position: absolute;
+		width: 0;
+		height: 0;
+		left: 50%;
+		-webkit-transform: translateX(-50%);
+		        transform: translateX(-50%);
+		z-index: 5
+}
+		.triangle--down {
+			border-left: 80px solid transparent;
+			border-right: 80px solid transparent;
+			border-top: 60px solid #25304C;
+		}
+    }
 
 .site-header {
     cursor: url(../../assets/images/down-arrow-cursor.png) 16 16, auto;
@@ -586,8 +608,6 @@ a:hover {
         position: absolute;
         top: -5px;
         left: 50%;
-        -webkit-transform: translateX(-50px);
-                transform: translateX(-50px);
         font-size: 2.5rem;
         font-family: 'Stalemate', cursive;
         color: #f5f4f9;
@@ -605,14 +625,25 @@ a:hover {
             top: 0;
             margin-bottom: 4rem;
             left: 0;
-            -webkit-transform: translateX(0px);
-                    transform: translateX(0px)
+            -webkit-transition: -webkit-transform .3s ease-out;
+            transition: -webkit-transform .3s ease-out;
+            transition: transform .3s ease-out;
+            transition: transform .3s ease-out, -webkit-transform .3s ease-out
     }
     }
 
+.site-header__logo-link {
+        color: #fff;
+        pointer-events: none;
+    }
+
+.site-header__logo-link:hover {
+            color: #fff;
+        }
+
 .site-header__subtitle {
         display: none;
-        font-family: 'Open Sans Condensed', sans-serif;
+        font-family: 'Open Sans Condensed', san serif;
         font-size: 1.375rem;
         color: #D5B4E4;
         margin-left: 8%;
@@ -670,6 +701,12 @@ a:hover {
 .fixed-header .site-header__title {
             left: 20px
     }
+    }
+
+/* restore the link functionality for logo */
+
+.fixed-header .site-header__logo-link {
+        pointer-events: auto;
     }
 
 .fixed-header .site-header__subtitle {
@@ -1191,7 +1228,7 @@ a:hover {
 .page-section--portfolio {
         background-color: #8f71ab;
         background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #6684c3), color-stop(0, #9b87b3), color-stop(0, #6a6195), color-stop(24.63%, #5d71ab), color-stop(50%, #6f71ab), color-stop(75%, #7f71ab), to(#8f71ab));
-        background: linear-gradient(top, #6684c3 0, #9b87b3 0, #6a6195 0, #5d71ab 24.63%, #6f71ab 50%, #7f71ab 75%, #8f71ab 100%);
+        background: linear-gradient(to bottom, #6684c3 0, #9b87b3 0, #6a6195 0, #5d71ab 24.63%, #6f71ab 50%, #7f71ab 75%, #8f71ab 100%);
     }
 
 @media (min-width: 992px) {
@@ -1339,10 +1376,21 @@ svg#bigTriangleColor {
     overflow: scroll;
 }
 
-/* visibility: hidden; */
+.project-content__text {
+        width: 50%;
+        margin: 0 auto;
+    }
+
+.project-content__text--list {
+            margin-top: 5%;
+        }
+
+.project-content__text strong {
+            font-weight: 600;
+        }
 
 .project-content__text > p {
-        margin: 20px 0;
+        /* margin: 20px 0; */
     }
 
 .project-content__mockups {
@@ -1394,7 +1442,7 @@ svg#bigTriangleColor {
     }
 
 .project-content__subtitle {
-        font-size: 1.25rem;
+        font-size: 1.5rem;
         text-align: center;
         margin-bottom: 0;
     }
@@ -1436,7 +1484,7 @@ svg#bigTriangleColor {
         transition: all .5s ease-out;
         cursor: pointer;
 		margin-top: 7%;
-        font-size: .75rem;
+        font-size: .875rem;
         text-align: center;
     }
 

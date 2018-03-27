@@ -14,16 +14,16 @@
 <body>
 	<div class="fade-in-background"></div>
 	
-	<header class="site-header">
+	<header class="site-header" id="home-page">
 		<div class="site-header__text-content">
 			<nav class="primary-nav">
 				<ul class="list list--inline">
 					<li><a href="#portfolio" class="portfolio-link">portfolio</a></li> <i class="fa fa-circle-o" aria-hidden="true"></i>
-					<li><a href="#about" class="about-link">about me</a></li>
+					<li><a href="#about" class="about-link">about</a></li>
 				</ul>
 			</nav>
 
-			<h1 class="site-header__title">Olga Fomin</h1>
+			<h1 class="site-header__title"><a href="#home-page" class="site-header__logo-link">Olga Fomin</a></h1>
 			<p class="site-header__subtitle">Front-End Developer</p>
 
 			<div class="social-icons social-icons--with-margin-left">
@@ -42,6 +42,7 @@
 <!-- =================== PORTFOLIO =================== -->
 
 <section class="page-section page-section--portfolio" id="portfolio">
+
 	<h2 class="section-title">Latest Work</h2>
 	<div class="section-line section-line--short"></div>
 		
@@ -144,7 +145,7 @@
 			</div>
 				
 
-			<div class="project-content__text">
+			<div class="project-content__text project-content__text--list">
 				<h3 class="project-content__subtitle">My contribution</h3>
 				<ul>
 					<li>Clean, responsive design</li>
@@ -188,8 +189,8 @@
 
 
 				<p>
-					This project was completed using Ruby on Rails, Bootstrap, Sass, PostgreSQL, and jQuery.
-					Other tools used were Cloud9 development environment, Slack for communication, and Heroku cloud platform for deployment.
+					This project was completed using <strong>Ruby on Rails</strong>,<strong> Bootstrap</strong>, <strong>Sass</strong>, <strong>PostgreSQL</strong>, and <strong>jQuery</strong>.
+					Other tools used were <strong>Cloud9</strong> development environment, <strong>Slack</strong> for communication, and <strong>Heroku</strong> cloud platform for deployment.
 				</p>
 			</div>
 			
@@ -214,7 +215,7 @@
 				</div>
 			</div>
 	
-			<div class="project-content__text">
+			<div class="project-content__text project-content__text--list">
 				<h3 class="project-content__subtitle">Features</h3>
 				<ul>
 					<li>Smooth, responsive design</li>
@@ -251,14 +252,18 @@
 						was to display a lot of visual content in a simplistic, yet attractive way for the convenience of 
 						potential users and employers. 
 					</p>
+				</div>
 	
+				<div class="project-content__text project-content__text--list">
 					<h3 class="project-content__subtitle">Features</h3>
 					<ul>
 						<li>Image slider for showcasing the final product</li>
 						<li>Responsiveness to different screen sizes</li>
 						<li>Vivid colors and easy to comprehend design</li>
 					</ul>
+				</div>
 	
+				<div class="project-content__text project-content__text--list">
 					<h3 class="project-content__subtitle">What I learned</h3>
 					<ul>
 						<li>Sketch</li>
@@ -292,11 +297,13 @@
 </section> 
 
 
-
-
 <!-- =================== ABOUT PAGE =================== -->
 
 <section class="page-section page-section--about about-section page-section--with-bigger-b-padding" id="about">
+
+	<!-- diamond-shaped element between sections-->
+	<div class="triangle triangle--down"></div>
+
 	<div class="row">
 		<div class="about-section__text-content row__medium-6">
 			<div class="wrapper">
@@ -335,7 +342,7 @@
 						<div class="text-box__content">
 							<h3 class="text-box__title">Philologist</h3>
 							<div class="text-box__description">
-								<p>I have a background in philology and pedagogics. I speak several languages and enjoy solving linguistic puzzles in my free time.</p>
+								<p>I have a background in philology and pedagogics. In my free time, I enjoy translating courses and videos and solving linguistic puzzles.</p>
 							</div> <!-- /.about-box-desc -->
 						</div> <!-- ./about-box-text -->
 					</div> <!-- ./text-box -->
@@ -371,7 +378,7 @@
 								<p>My <a href="https://www.instagram.com/io_phoenix/">Instagram feed</a> reflects 
 									the beautiful or comical things I see in the world and in San Francisco in particular.</p>
 							</div>
-						</div> <!-- /.atext-box__content -->
+						</div> <!-- /.text-box__content -->
 					</div> <!-- /.text-box -->
 				</div> <!-- /.row__medium-6 -->
 			</div> <!-- / .row -->

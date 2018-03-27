@@ -33,6 +33,11 @@
         }
     }
 
+    /* restore the link functionality for logo */
+    & .site-header__logo-link {
+        pointer-events: auto;
+    }
+
     & .site-header__subtitle {
         display: none;
 

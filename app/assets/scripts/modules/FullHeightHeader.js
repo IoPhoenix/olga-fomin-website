@@ -13,7 +13,7 @@ class FullHeightHeader {
     }
 
     scrollToPortfolio(e) {
-        // do not scroll if header is fixed (user has already scrolled past home page)
+        // do not scroll if header is fixed (=user has already scrolled past home page)
         if ($('body').hasClass('fixed-header')) return;
         
         // do not scroll if links or social icons are clicked

@@ -1,6 +1,8 @@
 $darkBlue: #25304C;
 $lightBlue: #337ab7;
 $white: #fff;
+$primaryFont: 'Raleway', sans-serif;
+$secondaryFont: 'Open Sans Condensed', san serif;
 
 * {
 	box-sizing: border-box;
@@ -10,7 +12,7 @@ body {
 	background-color: $darkBlue;
 	font-size: 0.875rem;
 	color: #666;
-	font-family: 'Raleway', sans-serif;
+	font-family: $primaryFont;
 	font-weight: 300;
 	line-height: 26px;
 	
@@ -25,7 +27,7 @@ img {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Open Sans Condensed', sans-serif;
+    font-family: $secondaryFont;
 	font-weight: 600;
     text-transform: uppercase;
 	color: #222;
@@ -59,8 +61,7 @@ a {
 		}
 
 		@mixin atMedium {
-			margin: 3
-			% auto;
+			margin: 3% auto;
 		}
 	}
 }
@@ -68,4 +69,23 @@ a {
 .noscroll {
 	height: 100%;
 	overflow: hidden;
+}
+
+.triangle {
+	display: none;
+
+	@mixin atLarge {
+		display: block;
+		position: absolute;
+		width: 0;
+		height: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		z-index: 5;
+		&--down {
+			border-left: 80px solid transparent;
+			border-right: 80px solid transparent;
+			border-top: 60px solid $darkBlue;
+		}
+	}
 }

@@ -38,7 +38,6 @@
         position: absolute;
         top: -5px;
         left: 50%;
-        transform: translateX(-50px);
         font-size: 2.5rem;
         font-family: 'Stalemate', cursive;
         color: #f5f4f9;
@@ -54,13 +53,21 @@
             top: 0;
             margin-bottom: 4rem;
             left: 0;
-            transform: translateX(0px);
+            transition: transform .3s ease-out;
+        }
+    }
+
+    &__logo-link {
+        color: $white;
+        pointer-events: none;
+        &:hover {
+            color: $white;
         }
     }
 
     &__subtitle {
         display: none;
-        font-family: 'Open Sans Condensed', sans-serif;
+        font-family: $secondaryFont;
         font-size: 1.375rem;
         color: #D5B4E4;
         margin-left: 8%;

@@ -10836,7 +10836,7 @@ var FullHeightHeader = function () {
     }, {
         key: 'scrollToPortfolio',
         value: function scrollToPortfolio(e) {
-            // do not scroll if header is fixed (user has already scrolled past home page)
+            // do not scroll if header is fixed (=user has already scrolled past home page)
             if ((0, _jquery2.default)('body').hasClass('fixed-header')) return;
 
             // do not scroll if links or social icons are clicked
@@ -10884,6 +10884,7 @@ var FixedHeader = function () {
         _classCallCheck(this, FixedHeader);
 
         this.headerLinks = (0, _jquery2.default)('.primary-nav a');
+        this.logoLink = (0, _jquery2.default)('.site-header__logo-link');
         this.addSmoothScrolling();
         this.events();
     }
@@ -10907,6 +10908,7 @@ var FixedHeader = function () {
         value: function addSmoothScrolling() {
             // offset: site header minus its bottom border
             this.headerLinks.smoothScroll({ offset: -85 });
+            this.logoLink.smoothScroll();
         }
     }]);
 

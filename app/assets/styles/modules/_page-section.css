@@ -11,7 +11,7 @@
 
     &--portfolio {
         background-color: #8f71ab;
-        background: linear-gradient(top, #6684c3 0, #9b87b3 0, #6a6195 0, #5d71ab 24.63%, #6f71ab 50%, #7f71ab 75%, #8f71ab 100%);
+        background: linear-gradient(to bottom, #6684c3 0, #9b87b3 0, #6a6195 0, #5d71ab 24.63%, #6f71ab 50%, #7f71ab 75%, #8f71ab 100%);
     }
 
     &--about {
