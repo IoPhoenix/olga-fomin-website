@@ -1,5 +1,6 @@
 $darkBlue: #25304C;
 $lightBlue: #337ab7;
+$lightGray: #E8E8E8;
 $white: #fff;
 $primaryFont: 'Raleway', sans-serif;
 $secondaryFont: 'Open Sans Condensed', san serif;
@@ -44,6 +45,11 @@ a {
 	&:hover {
 		color: #6F43A6;
 	}
+}
+
+img {
+	max-width: 100%;
+	height: auto;
 }
 
 .section-line {

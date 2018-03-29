@@ -17,62 +17,30 @@
     overflow: scroll;
 
     &__text {
-        width: 50%;
-        margin: 0 auto;
+        width: 100%;
+        margin: 4% auto;
         &--list {
-            margin-top: 5%;
+            /* margin-top: 5%; */
         }
         strong {
             font-weight: 600;
         }
-    }
-
-    &__text > p {
-        /* margin: 20px 0; */
-    }
-
-    &__mockups {
-        background-color: #E8E8E8;
-		margin-bottom: 5%;
-		width: 100%;
-        height: 40vh;
-
         @mixin atSmall {
-            height: 70vh;
+            width: 80%;
         }
-
         @mixin atLarge {
-            height: 90vh;
+            width: 50%;
         }
     }
 
     &__mockups-image {
-        max-width: 100%;
-        height: auto;
-        background-color: #E8E8E8;
-        background-repeat: no-repeat;
-        background-position: center;
-        min-height: 100%;
-        background-size: contain;
+        background-color: $lightGray;
+        img {
+            margin: 0 auto;
+            display: block;
+        }
     }
-
-    #project1-image {
-        background-image: url('../../assets/images/project1/multiscreen_mockups.png');
-    }
-
-    #project2-image {
-        background-image: url('../../assets/images/project2/multiscreen_mockups.png');
-    }
-
-    #project3-image {
-        background-image: url('../../assets/images/project3/multiscreen_mockups.png');
-    }
-
-    img {
-        margin: 3% auto;
-        display: block;
-    }
-
+    
     &__subtitle {
         font-size: 1.5rem;
         text-align: center;
@@ -98,7 +66,7 @@
         position: absolute;
         top: 10px;
         right: 10px;
-        background: url(../../assets/images/close.png) no-repeat center center;
+        background: url(../../assets/images/icons/close.png) no-repeat center center;
         color: transparent;
         overflow: hidden;
         text-indent: 100%;
@@ -110,16 +78,17 @@
         transition: all .5s ease-out;
         cursor: pointer;
 		margin-top: 7%;
-        font-size: .875rem;
+        font-size: .8125rem;
         text-align: center;
-
         &:hover {
             color: #6F43A6;
         }
-
 		span {
 			vertical-align: middle;
-		}
+        }
+        @mixin atMedium {
+            font-size: .875rem;
+        }
     }
     
     &.is-visible {

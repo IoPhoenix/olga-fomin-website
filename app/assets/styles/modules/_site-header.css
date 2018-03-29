@@ -1,5 +1,5 @@
 .site-header {
-    cursor: url(../../assets/images/down-arrow-cursor.png) 16 16, auto;
+    cursor: url(../../assets/images/icons/down-arrow-cursor.png) 16 16, auto;
     position: absolute;
     width: 100%;
     left: 0;
@@ -35,6 +35,7 @@
     }
 
     &__title {
+        transform: translateX(-50%);
         position: absolute;
         top: -5px;
         left: 50%;
@@ -48,6 +49,7 @@
         
 
         @mixin atSmall {
+            transform: translateX(0%);
             font-size: 6.875rem;
             position: relative;
             top: 0;
