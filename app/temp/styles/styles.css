@@ -504,9 +504,15 @@ a:hover {
 		color: #6F43A6;
 	}
 
-img {
+img, video {
 	max-width: 100%;
 	height: auto;
+}
+
+.center {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .section-line {
@@ -1219,6 +1225,12 @@ img {
     }
     }
 
+.img--centered {
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+
 @media (min-width: 480px) {
 
 .text-box {
@@ -1438,7 +1450,7 @@ svg#bigTriangleColor {
     }
 
 .project-content__text--list {
-            /* margin-top: 5%; */
+            margin-top: 5%;
         }
 
 .project-content__text strong {
@@ -1457,6 +1469,10 @@ svg#bigTriangleColor {
 .project-content__text {
             width: 50%
     }
+    }
+
+.project-content img {
+        border: 2px solid green;
     }
 
 .project-content__mockups-image {
