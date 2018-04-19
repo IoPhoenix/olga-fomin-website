@@ -16,6 +16,7 @@
     line-height: 33px;
     overflow: scroll;
 
+
     &__text {
         width: 100%;
         margin: 4% auto;
@@ -35,10 +36,6 @@
 
     &__mockups-image {
         background-color: $lightGray;
-        img {
-            margin: 0 auto;
-            display: block;
-        }
     }
     
     &__subtitle {
@@ -98,3 +95,4 @@
         transition-timing-function: cubic-bezier(0.67, 0.15, 0.83, 0.83);
     }
 }
+

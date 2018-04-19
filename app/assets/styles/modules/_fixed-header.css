@@ -19,7 +19,7 @@
         position: absolute;
         top: -5px;
         left: 50%;
-        transform: translateX(-50px);
+        transform: translateX(-50%);
         font-size: 2.5rem;
 
         @mixin atSmall {
@@ -27,7 +27,6 @@
             left: 10px;
             transform: translateX(0);
         }
-
         @mixin atMedium {
             left: 20px;
         }
@@ -104,11 +103,13 @@
         }
 
         &__icon {
-    
-            @mixin atSmall {
-                font-size: 1.2em;
-            }
+            font-size: 1.2em;
         }
-
     }
+}
+
+.is-small {
+    & .site-header__text-content {
+        cursor: default;
+    }   
 }

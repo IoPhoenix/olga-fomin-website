@@ -1,0 +1,15 @@
+.img {
+    &--with-m-bottom-till-large {
+        margin-bottom: 3%;
+        @mixin atLarge {
+            margin-bottom: 0;
+        }
+    }
+
+    &--with-m-top-till-large {
+        margin-top: 3%;
+        @mixin atLarge {
+            margin-top: 0;
+        }
+    } 
+}

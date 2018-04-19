@@ -25,7 +25,6 @@
     &__icon {
         transition: all .7s;
         color: #FFF;
-        font-size: 1em;
 
         @mixin atSmall {
             font-size: 1.5em;
