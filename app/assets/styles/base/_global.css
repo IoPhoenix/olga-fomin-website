@@ -82,22 +82,3 @@ img, video {
 	height: 100%;
 	overflow: hidden;
 }
-
-.triangle {
-	display: none;
-
-	@mixin atLarge {
-		display: block;
-		position: absolute;
-		width: 0;
-		height: 0;
-		left: 50%;
-		transform: translateX(-50%);
-		z-index: 5;
-		&--down {
-			border-left: 80px solid transparent;
-			border-right: 80px solid transparent;
-			border-top: 60px solid $darkBlue;
-		}
-	}
-}

@@ -10859,7 +10859,7 @@ var ProjectContent = function () {
         this.portfolioItems = (0, _jquery2.default)('.portfolio-item');
         this.projectContents = (0, _jquery2.default)('.project-content');
         this.projectCloseButton = (0, _jquery2.default)('.project-content__close-button');
-        this.projectMagicButton = (0, _jquery2.default)('.project-content__magic-spell');
+        this.projectMagicButton = (0, _jquery2.default)('.project-content__magic-button');
         this.events();
     }
 
