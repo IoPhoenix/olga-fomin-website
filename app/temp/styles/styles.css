@@ -1021,7 +1021,7 @@ img, video {
 @media (min-width: 768px) {
 
 .about-section {
-        background-image: url('../../assets/images/flower_bg_light.jpeg');
+        background-image: url('../../assets/images/flowers_light.jpeg');
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover
@@ -1033,7 +1033,7 @@ img, video {
     }
 
 .about-section__author-image {
-        background-image: url(../../assets/images/olga_fomin_image_xsmall.jpg);
+        background-image: url(../../assets/images/olga_fomin_image--smaller.jpg);
         border-radius: 50%;
         border: 2px solid #fff;
         position: absolute;
@@ -1052,7 +1052,7 @@ img, video {
 @media (min-width: 480px) {
 
 .about-section__author-image {
-            background-image: url(../../assets/images/olga_fomin_image_small.jpg);
+            background-image: url(../../assets/images/olga_fomin_image--small.jpg);
             width: 200px;
 			height: 200px
     }
@@ -1061,7 +1061,7 @@ img, video {
 @media (min-width: 992px) {
 
 .about-section__author-image {
-            background-image: url(../../assets/images/olga_fomin_image.jpg);
+            background-image: url(../../assets/images/olga_fomin_image--large.jpg);
             border-radius: 0;;
             border: none;
             position: relative;
@@ -1587,13 +1587,13 @@ svg#bigTriangleColor {
             height: 400px 
     }
             .portfolio-item__image#project1-portfolio-image {
-                background-image: url('../../assets/images/project1_homepage_screenshot.jpg');
+                background-image: url('../../assets/images/project1_homepage.jpg');
             }
             .portfolio-item__image#project2-portfolio-image {
-                background-image: url('../../assets/images/project2_homepage_screenshot.jpg');
+                background-image: url('../../assets/images/project2_homepage.jpg');
             }
             .portfolio-item__image#project3-portfolio-image {
-                background-image: url('../../assets/images/project3_homepage_screenshot.jpg');
+                background-image: url('../../assets/images/project3_homepage.jpg');
             }
     }
 
