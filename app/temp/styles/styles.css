@@ -1202,12 +1202,6 @@ img, video {
     }
     }
 
-.img--centered {
-        margin-left: auto;
-        margin-right: auto;
-        display: block;
-    }
-
 @media (min-width: 480px) {
 
 .text-box {
@@ -1421,32 +1415,34 @@ svg#bigTriangleColor {
     overflow: scroll;
 }
 
-.project-content__text {
+.project-content__text,
+    .project-content__list {
         width: 100%;
         margin: 4% auto;
     }
 
-.project-content__text strong {
+.project-content__text strong, .project-content__list strong {
             font-weight: 600;
         }
 
 @media (min-width: 480px) {
 
-.project-content__text {
+.project-content__text,
+    .project-content__list {
             width: 80%
     }
     }
 
 @media (min-width: 992px) {
 
-.project-content__text {
+.project-content__text,
+    .project-content__list {
             width: 50%
     }
     }
 
 .project-content__list {
         margin-top: 5%;
-        width: 100%;
     }
 
 @media (min-width: 480px) {

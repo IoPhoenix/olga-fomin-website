@@ -17,7 +17,8 @@
     overflow: scroll;
 
 
-    &__text {
+    &__text,
+    &__list {
         width: 100%;
         margin: 4% auto;
         strong {
@@ -33,7 +34,6 @@
 
     &__list {
         margin-top: 5%;
-        width: 100%;
         &--narrow {
             @mixin atSmall {
                 width: 60%;
