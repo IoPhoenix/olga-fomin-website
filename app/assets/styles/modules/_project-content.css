@@ -20,9 +20,6 @@
     &__text {
         width: 100%;
         margin: 4% auto;
-        &--list {
-            margin-top: 5%;
-        }
         strong {
             font-weight: 600;
         }
@@ -32,17 +29,35 @@
         @mixin atLarge {
             width: 50%;
         }
-        /* &--full-width {
-            @mixin atSmall {
-                width: 100%;
-            }
-        } */
     }
 
-    img {
-        border: 2px solid green;
+    &__list {
+        margin-top: 5%;
+        width: 100%;
+        &--narrow {
+            @mixin atSmall {
+                width: 60%;
+            }
+            @mixin atMedium {
+                width: 40%;
+            }
+            @mixin atLarge {
+                width: 30%;
+            }
+        }
     }
-    &__mockups-image {
+
+    &__image {
+        &--single {
+            width: 100%;
+            @mixin atSmall {
+                width: 80%;
+            }
+        }
+    }
+
+    
+    &__mockups {
         background-color: $lightGray;
     }
     
@@ -78,7 +93,7 @@
         white-space: nowrap;
     }
 
-    &__magic-spell {
+    &__magic-button {
         color: $lightBlue;
         transition: all .5s ease-out;
         cursor: pointer;

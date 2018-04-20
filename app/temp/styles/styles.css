@@ -546,29 +546,6 @@ img, video {
 	overflow: hidden;
 }
 
-.triangle {
-	display: none;
-}
-
-@media (min-width: 992px) {
-
-.triangle {
-		display: block;
-		position: absolute;
-		width: 0;
-		height: 0;
-		left: 50%;
-		-webkit-transform: translateX(-50%);
-		        transform: translateX(-50%);
-		z-index: 5
-}
-		.triangle--down {
-			border-left: 80px solid transparent;
-			border-right: 80px solid transparent;
-			border-top: 60px solid #25304C;
-		}
-    }
-
 .site-header {
     cursor: default;
     position: absolute;
@@ -1447,16 +1424,7 @@ svg#bigTriangleColor {
 .project-content__text {
         width: 100%;
         margin: 4% auto;
-        /* &--full-width {
-            @mixin atSmall {
-                width: 100%;
-            }
-        } */
     }
-
-.project-content__text--list {
-            margin-top: 5%;
-        }
 
 .project-content__text strong {
             font-weight: 600;
@@ -1476,11 +1444,44 @@ svg#bigTriangleColor {
     }
     }
 
-.project-content img {
-        border: 2px solid green;
+.project-content__list {
+        margin-top: 5%;
+        width: 100%;
     }
 
-.project-content__mockups-image {
+@media (min-width: 480px) {
+
+.project-content__list--narrow {
+                width: 60%
+        }
+    }
+
+@media (min-width: 768px) {
+
+.project-content__list--narrow {
+                width: 40%
+        }
+    }
+
+@media (min-width: 992px) {
+
+.project-content__list--narrow {
+                width: 30%
+        }
+    }
+
+.project-content__image--single {
+            width: 100%;
+        }
+
+@media (min-width: 480px) {
+
+.project-content__image--single {
+                width: 80%
+        }
+    }
+
+.project-content__mockups {
         background-color: #E8E8E8;
     }
 
@@ -1521,7 +1522,7 @@ svg#bigTriangleColor {
         white-space: nowrap;
     }
 
-.project-content__magic-spell {
+.project-content__magic-button {
         color: #337ab7;
         -webkit-transition: all .5s ease-out;
         transition: all .5s ease-out;
@@ -1531,17 +1532,17 @@ svg#bigTriangleColor {
         text-align: center;
     }
 
-.project-content__magic-spell:hover {
+.project-content__magic-button:hover {
             color: #6F43A6;
         }
 
-.project-content__magic-spell span {
+.project-content__magic-button span {
 			vertical-align: middle;
         }
 
 @media (min-width: 768px) {
 
-.project-content__magic-spell {
+.project-content__magic-button {
             font-size: .875rem
     }
     }

@@ -5,7 +5,7 @@ class ProjectContent {
         this.portfolioItems = $('.portfolio-item');
         this.projectContents = $('.project-content');
         this.projectCloseButton = $('.project-content__close-button');
-        this.projectMagicButton = $('.project-content__magic-spell');
+        this.projectMagicButton = $('.project-content__magic-button');
         this.events();
     }
 
