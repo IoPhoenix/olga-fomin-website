@@ -32,6 +32,11 @@
         @mixin atLarge {
             width: 50%;
         }
+        /* &--full-width {
+            @mixin atSmall {
+                width: 100%;
+            }
+        } */
     }
 
     img {

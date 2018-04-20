@@ -1447,6 +1447,11 @@ svg#bigTriangleColor {
 .project-content__text {
         width: 100%;
         margin: 4% auto;
+        /* &--full-width {
+            @mixin atSmall {
+                width: 100%;
+            }
+        } */
     }
 
 .project-content__text--list {
