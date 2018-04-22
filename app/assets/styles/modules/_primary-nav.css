@@ -8,10 +8,6 @@
             position: relative;
             bottom: 0;
         }
-
-        & .list {
-            /* padding-left: 0; */
-        }
     
         & a {
             text-decoration: none;

@@ -3,9 +3,7 @@
     @mixin clearfix;
 
     &__medium-6 {
-        min-height: 1px;
-
-        @mixin atLarge {
+        @mixin atMedium {
             width: 50%;
             float: left;
         }
@@ -15,6 +13,14 @@
             padding-right: 0;
         }
     }
+
+    &__large-6 {
+        @mixin atLarge {
+            width: 50%;
+            float: left;
+        }
+    }
+
     
     &__medium-4 {
         width: 100%;

@@ -4,16 +4,19 @@
     margin: 0 0 30px;
 	letter-spacing: 2px;
 	font-weight: 500;
+	z-index: 2;
+
+	@mixin atSmall {
+		font-size: 2.8125rem;
+		letter-spacing: 3px;
+	}
 
 	&--overlay {
-		top: -15px;
 		position: relative;
-		z-index: 2;
-        margin-bottom: -20px;
-        
-        @mixin atSmall {
-            top: -10px;
-        }
+		@mixin atSmall {
+			top: 32px;
+			right: -2px;
+		}
 	}
 
 	&--left-align {
@@ -21,10 +24,10 @@
 			text-align: left;
 		}
 	}
-	
-	@mixin atSmall {
-		font-size: 2.8125rem;
-		margin: 0 0 20px;
-		letter-spacing: 3px;
+
+	&--with-p-left-at-large {
+		@mixin atLarge {
+			padding-left: 15px;
+		}
 	}
 }

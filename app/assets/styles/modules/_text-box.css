@@ -1,27 +1,28 @@
 .text-box {
+    padding-top: 3%;
     
     @mixin atSmall {
-        padding-top: 3%;
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+
+    @mixin atMedium {
+        padding-top: 6%;
     }
 
     @mixin atLarge {
-        padding-top: 10%;
-
         &--no-t-padding-at-large {
             padding-top: 0;
         }
-
-        &--with-margin-r-at-large {
-            margin-right: 15px;
-        }
-    
-        &--with-margin-l-at-large {
-            margin-left: 15px;
-        }
     }
 
-    &--no-t-padding {
-        padding-top: 0;
+    &--primary {
+        @mixin atSmall {
+            padding-top: 6%;
+        }
+        @mixin atLarge {
+            /* padding-top: 6%; */
+        }
     }
 
     &__title {
