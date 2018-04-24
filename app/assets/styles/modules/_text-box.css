@@ -11,13 +11,10 @@
     }
 
     @mixin atLarge {
+        padding-top: 10%;
         &--no-t-padding-at-large {
             padding-top: 0;
         }
-    }
-
-    &--primary {
-        padding-top: 0;
     }
 
     &__title {
@@ -29,5 +26,9 @@
         @mixin atLarge {
             text-align: left;
         }
+    }
+
+    &--no-t-padding {
+        padding-top: 0;
     }
 }

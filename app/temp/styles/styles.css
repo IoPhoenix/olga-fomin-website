@@ -1009,7 +1009,7 @@ img, video {
 
 .about-section {
     position: relative;
-    min-height: 90vh;
+    /* min-height: 90vh; */
     background-color: rgb(234, 233, 245);
 }
 
@@ -1019,41 +1019,15 @@ img, video {
         background-image: url('../../assets/images/flowers_light.jpeg');
         background-position: center;
         background-repeat: no-repeat;
-        background-size: cover;
-        padding-top: 0
+        background-size: cover
 }
     }
 
 @media (min-width: 992px) {
-
-.about-section {
-        padding-top: 0
-}
-    }
-
-.about-section .row {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: reverse;
-            -ms-flex-direction: column-reverse;
-                flex-direction: column-reverse;
-        position: relative;
-    }
-
-@media (min-width: 992px) {
-
-.about-section .row {
-            -webkit-box-orient: horizontal;
-            -webkit-box-direction: normal;
-                -ms-flex-direction: row;
-                    flex-direction: row
-    }
-    }
 
 .about-section__text-content {
-        padding-top: 0;
+            padding-top: 4.5rem
+    }
     }
 
 .about-section__author-image {
@@ -1092,6 +1066,27 @@ img, video {
             -webkit-transform: translateX(0);
                     transform: translateX(0)
     }
+    }
+
+.about-section > .row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    position: relative;
+}
+
+@media (min-width: 992px) {
+
+.about-section > .row {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row
+}
     }
 
 .row {
@@ -1246,13 +1241,13 @@ img, video {
     }
 
 @media (min-width: 992px) {
+
+.text-box {
+        padding-top: 10%
+}
         .text-box--no-t-padding-at-large {
             padding-top: 0;
         }
-    }
-
-.text-box--primary {
-        padding-top: 0;
     }
 
 .text-box__title {
@@ -1267,6 +1262,10 @@ img, video {
 .text-box__title {
             text-align: left
     }
+    }
+
+.text-box--no-t-padding {
+        padding-top: 0;
     }
 
 .page-section {
