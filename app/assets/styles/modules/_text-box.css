@@ -17,12 +17,7 @@
     }
 
     &--primary {
-        @mixin atSmall {
-            padding-top: 6%;
-        }
-        @mixin atLarge {
-            /* padding-top: 6%; */
-        }
+        padding-top: 0;
     }
 
     &__title {

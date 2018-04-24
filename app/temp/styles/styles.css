@@ -450,12 +450,6 @@ template {
   display: none;
 }
 
-/* @mixin backgroundImage {
-    background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
-} */
-
 * {
 	-webkit-box-sizing: border-box;
 	        box-sizing: border-box;
@@ -1025,36 +1019,60 @@ img, video {
         background-image: url('../../assets/images/flowers_light.jpeg');
         background-position: center;
         background-repeat: no-repeat;
-        background-size: cover
+        background-size: cover;
+        padding-top: 0
 }
     }
 
+@media (min-width: 992px) {
+
+.about-section {
+        padding-top: 0
+}
+    }
+
+.about-section .row {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: reverse;
+            -ms-flex-direction: column-reverse;
+                flex-direction: column-reverse;
+        position: relative;
+    }
+
+@media (min-width: 992px) {
+
+.about-section .row {
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: row;
+                    flex-direction: row
+    }
+    }
+
 .about-section__text-content {
-        padding-top: 100px;
+        padding-top: 0;
     }
 
 .about-section__author-image {
-        background-image: url(../../assets/images/olga_fomin_image--smaller.jpg);
+        margin: 0 auto;
+        background-image: url(../../assets/images/olga_fomin--smaller.jpg);
         border-radius: 50%;
         border: 2px solid #fff;
-        position: absolute;
-        /* top: 1.2rem; */
-        top: 0;
-        left: 50%;
         max-width: 100%;
         width: 150px;
         height: 150px;
-        -webkit-transform: translateX(-50%);
-                transform: translateX(-50%);
-        background-position: top;
-        background-repeat: no-repeat;
-        background-size: cover;
+       background-position: center;
+       background-repeat: no-repeat;
+       background-size: cover;
     }
 
 @media (min-width: 480px) {
 
 .about-section__author-image {
-            background-image: url(../../assets/images/olga_fomin_image--small.jpg);
+            background-image: url(../../assets/images/olga_fomin--small.jpg);
             width: 200px;
 			height: 200px
     }
@@ -1063,7 +1081,7 @@ img, video {
 @media (min-width: 992px) {
 
 .about-section__author-image {
-            background-image: url(../../assets/images/olga_fomin_image--large.jpg);
+            background-image: url(../../assets/images/olga_fomin--large.jpg);
             border-radius: 0;;
             border: none;
             position: relative;
@@ -1233,18 +1251,8 @@ img, video {
         }
     }
 
-@media (min-width: 480px) {
-
 .text-box--primary {
-            padding-top: 6%
-    }
-    }
-
-@media (min-width: 992px) {
-
-.text-box--primary {
-            /* padding-top: 6%; */
-    }
+        padding-top: 0;
     }
 
 .text-box__title {
@@ -1384,14 +1392,27 @@ svg#bigTriangleColor {
     }
 
 .section-title--overlay {
-		position: relative;
+		position: absolute;
+		top: 100px;
+		-webkit-transform: translateX(-50%);
+		        transform: translateX(-50%);
+		left: 50%;
 	}
 
 @media (min-width: 480px) {
 
 .section-title--overlay {
-			top: 32px;
-			right: -2px
+			top: 140px
+	}
+    }
+
+@media (min-width: 992px) {
+
+.section-title--overlay {
+			position: static;
+		    -webkit-transform: none;
+		            transform: none;
+    		left: 0
 	}
     }
 
