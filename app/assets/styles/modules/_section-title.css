@@ -26,6 +26,13 @@
 		}
 	}
 
+	.no-flexbox &--overlay {
+		top: 135px;
+		@mixin atSmall {
+			top: 170px;
+		}
+	}
+
 	&--left-align {
 		@mixin atLarge {
 			text-align: left;

@@ -45,4 +45,20 @@
             padding-left: 15px;
         }
     }
+
+    .flexbox &--flex-reverse {
+        display: flex;
+        flex-direction: column-reverse;
+        position: relative;
+        @mixin atLarge {
+            flex-direction: row;
+        }
+    }
+
+    .no-flexbox &--flex-reverse {
+        position: static;
+        @mixin atLarge {
+            position: relative;
+        }
+    }
 }
