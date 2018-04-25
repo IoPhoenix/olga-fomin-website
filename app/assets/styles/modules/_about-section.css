@@ -1,6 +1,5 @@
 .about-section {
     position: relative;
-    /* min-height: 90vh; */
     background-color: rgb(234, 233, 245);
 
     @mixin atMedium {
