@@ -13,6 +13,30 @@
         }
     }
 
+    /* fallback for old browsers */
+    .no-flexbox &__text-content {
+        margin-top: 180px;
+        @mixin atSmall {
+            margin-top: 200px;
+        }
+        @mixin atLarge {
+            margin-top: 0;
+        }
+    }
+
+    .no-flexbox  &__author-image {
+        position: absolute;
+        top: 30px;
+        left: 50%;
+        transform: translateX(-50%);
+        @mixin atLarge {
+            position: relative;
+            top: 0;
+            left: 0;
+            transform: none;
+        }
+    }
+
     &__author-image {
         margin: 0 auto;
         background-image: url(../../assets/images/olga_fomin--smaller.jpg);
@@ -40,14 +64,5 @@
             height: 920px;
             transform: translateX(0);
         }
-    }
-}
-
-.about-section > .row {
-    display: flex;
-    flex-direction: column-reverse;
-    position: relative;
-    @mixin atLarge {
-        flex-direction: row;
     }
 }

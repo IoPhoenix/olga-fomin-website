@@ -1029,6 +1029,45 @@ img, video {
     }
     }
 
+/* fallback for old browsers */
+
+.no-flexbox .about-section__text-content {
+        margin-top: 180px;
+    }
+
+@media (min-width: 480px) {
+
+.no-flexbox .about-section__text-content {
+            margin-top: 200px
+    }
+    }
+
+@media (min-width: 992px) {
+
+.no-flexbox .about-section__text-content {
+            margin-top: 0
+    }
+    }
+
+.no-flexbox  .about-section__author-image {
+        position: absolute;
+        top: 30px;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+                transform: translateX(-50%);
+    }
+
+@media (min-width: 992px) {
+
+.no-flexbox  .about-section__author-image {
+            position: relative;
+            top: 0;
+            left: 0;
+            -webkit-transform: none;
+                    transform: none
+    }
+    }
+
 .about-section__author-image {
         margin: 0 auto;
         background-image: url(../../assets/images/olga_fomin--smaller.jpg);
@@ -1065,27 +1104,6 @@ img, video {
             -webkit-transform: translateX(0);
                     transform: translateX(0)
     }
-    }
-
-.about-section > .row {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: column-reverse;
-            flex-direction: column-reverse;
-    position: relative;
-}
-
-@media (min-width: 992px) {
-
-.about-section > .row {
-        -webkit-box-orient: horizontal;
-        -webkit-box-direction: normal;
-            -ms-flex-direction: row;
-                flex-direction: row
-}
     }
 
 .row {
@@ -1152,6 +1170,38 @@ img, video {
              padding-right: 15px;
             padding-left: 15px;
         }
+
+.flexbox .row--flex-reverse {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: reverse;
+            -ms-flex-direction: column-reverse;
+                flex-direction: column-reverse;
+        position: relative;
+    }
+
+@media (min-width: 992px) {
+
+.flexbox .row--flex-reverse {
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: row;
+                    flex-direction: row
+    }
+    }
+
+.no-flexbox .row--flex-reverse {
+        position: static;
+    }
+
+@media (min-width: 992px) {
+
+.no-flexbox .row--flex-reverse {
+            position: relative
+    }
+    }
 
 .btn {
     display: block;
@@ -1411,6 +1461,17 @@ svg#bigTriangleColor {
 		    -webkit-transform: none;
 		            transform: none;
     		left: 0
+	}
+    }
+
+.no-flexbox .section-title--overlay {
+		top: 135px;
+	}
+
+@media (min-width: 480px) {
+
+.no-flexbox .section-title--overlay {
+			top: 170px
 	}
     }
 
