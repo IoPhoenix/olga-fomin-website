@@ -20,7 +20,7 @@
     }
 
     & li {
-        padding-right: .3125rem; 
-        padding-left: .3125rem;
+        padding-right: .375rem; 
+        padding-left: .375rem;
     }
 }
