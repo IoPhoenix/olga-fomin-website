@@ -1015,11 +1015,13 @@ img, video {
 @media (min-width: 768px) {
 
 .about-section {
-        background-image: url('../../assets/images/flowers_light.jpeg');
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover
 }
+        .about-section.lazyloaded {
+            background-image: url('../../assets/images/flowers_light.jpeg');
+        }
     }
 
 @media (min-width: 992px) {
@@ -1070,30 +1072,34 @@ img, video {
 
 .about-section__author-image {
         margin: 0 auto;
-        background-image: url(../../assets/images/olga_fomin--smaller.jpg);
         border-radius: 50%;
         border: 2px solid #fff;
         max-width: 100%;
         width: 150px;
         height: 150px;
-       background-position: center;
-       background-repeat: no-repeat;
-       background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
     }
+
+.about-section__author-image.lazyloaded {
+            background-image: url(../../assets/images/olga_fomin--smaller.jpg);
+        }
 
 @media (min-width: 480px) {
 
 .about-section__author-image {
-            background-image: url(../../assets/images/olga_fomin--small.jpg);
             width: 200px;
-			height: 200px
+            height: 200px
     }
+            .about-section__author-image.lazyloaded {
+                background-image: url(../../assets/images/olga_fomin--small.jpg);
+            }
     }
 
 @media (min-width: 992px) {
 
 .about-section__author-image {
-            background-image: url(../../assets/images/olga_fomin--large.jpg);
             border-radius: 0;;
             border: none;
             position: relative;
@@ -1104,6 +1110,9 @@ img, video {
             -webkit-transform: translateX(0);
                     transform: translateX(0)
     }
+            .about-section__author-image.lazyloaded {
+                background-image: url(../../assets/images/olga_fomin--large.jpg);
+            }
     }
 
 .row {

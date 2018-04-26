@@ -11,6 +11,10 @@
 	<!-- build:css assets/styles/styles.css -->
 	<link rel="stylesheet" href="temp/styles/styles.css">
 	<!-- endbuild -->
+
+	 <!-- build:js assets/scripts/vendor.js -->
+	 <script src="/temp/scripts/vendor.js"></script>
+	 <!-- endbuild -->
   </head>
 
 <body>
@@ -103,8 +107,8 @@
 				<source srcset="assets/images/project1/mockups--medium.jpg 1280w" media="(min-width: 990px)">
 				<source srcset="assets/images/project1/mockups--small.jpg 990w" media="(min-width: 640px)">
 				<img
-					class="img img--centered"
-					srcset="assets/images/project1/mockups--smaller.jpg 640w"
+					class="img img--centered lazyload"
+					data-srcset="assets/images/project1/mockups--smaller.jpg 640w"
 					alt="Multiscreen mockup of the website">
 			</picture>
 		</div>
@@ -126,10 +130,16 @@
 
 			<div class="row">
 				<div class="row row__medium-8 row__medium-8--with-padding">
-					<img srcset="assets/images/project1/table-mockup--large.jpg" alt="The table reflecting database search results on iPad screen">
+					<img 
+						class="lazyload"
+						data-src="assets/images/project1/table-mockup--large.jpg" 
+						alt="The table reflecting database search results on iPad screen">
 				</div> <!-- /.row__medium-8 -->
 				<div class="row row__medium-4 row__medium-4--with-padding">
-					<img srcset="assets/images/project1/table-mobile--large.jpg" alt="The table reflecting database search results on smartphone screen">
+					<img
+						class="lazyload" 
+						data-src="assets/images/project1/table-mobile--large.jpg" 
+						alt="The table reflecting database search results on smartphone screen">
 				</div>
 			</div> <!-- /.row -->
 
@@ -144,8 +154,8 @@
 			<div class="row">
 				<div class="row__medium-6">
 					<img
-						class="img img--with-m-bottom-till-large" 
-						src="assets/images/project1/gallery--large.jpg" 
+						class="img img--with-m-bottom-till-large lazyload" 
+						data-src="assets/images/project1/gallery--large.jpg" 
 						alt="iPad mockup showing Rare Bird Gallery page">
 				</div> <!-- / .row__medium-6 -->
 
@@ -153,8 +163,8 @@
 
 				<div class="row__medium-6">
 					<img
-						class="img img--with-m-top-till-large"  
-						src="assets/images/project1/gallery-item--large.jpg" 
+						class="img img--with-m-top-till-large lazyload"  
+						data-src="assets/images/project1/gallery-item--large.jpg" 
 						alt="Smartphone mockup showing Rare Bird Gallery page">
 				</div> <!-- / .row__medium-6 -->
 			</div> <!-- /.row -->
@@ -190,7 +200,10 @@
 			<picture>
 				<source srcset="assets/images/project2/mockups--medium.jpg 1280w" media="(min-width: 990px)">
 				<source srcset="assets/images/project2/mockups--small.jpg 990w" media="(min-width: 640px)">
-				<img srcset="assets/images/project2/mockups--smaller.jpg 640w" alt="Multiscreen mockup of the website">
+				<img 
+					class="lazyload"
+					data-srcset="assets/images/project2/mockups--smaller.jpg 640w"
+					alt="Multiscreen mockup of the website">
 			</picture>
 		</div>
 
@@ -205,11 +218,17 @@
 
 			<div class="row">
 				<div class="row__medium-6">
-					<img src="assets/images/project2/full_post.jpg" class="center"alt="Smartphone mockup showing a single post with social share buttons and tags">
+					<img
+						 data-src="assets/images/project2/full_post.jpg" 
+						 class="center lazyload" 
+						 alt="Smartphone mockup showing a single post with social share buttons and tags">
 				</div>
 			
 				<div class="row__medium-6">
-					<img src="assets/images/project2/tags_archive.jpg" class="center" alt="Smartphone mockup showing tags, archive and recent posts fields">
+					<img 
+						data-src="assets/images/project2/tags_archive.jpg"
+						class="center lazyload"
+						alt="Smartphone mockup showing tags, archive and recent posts fields">
 				</div>
 			</div> <!-- /.row -->
 
@@ -228,7 +247,10 @@
 			
 	
 			<div class="project-content__image project-content__image--single center">
-				<img src="assets/images/project2/new_post.jpg" alt="Smartphone screen showing website">
+				<img 
+					class="lazyload"
+					data-src="assets/images/project2/new_post.jpg"
+					 alt="Smartphone screen showing website">
 			</div>
 	
 
@@ -262,7 +284,10 @@
 			<picture>
 				<source srcset="assets/images/project3/mockups--medium.jpg 1280w" media="(min-width: 990px)">
 				<source srcset="assets/images/project3/mockups--small.jpg 990w" media="(min-width: 640px)">
-				<img srcset="assets/images/project3/mockups--smaller.jpg 640w" alt="Multiscreen mockups of the website">
+				<img
+					class="lazyload" 
+					data-srcset="assets/images/project3/mockups--smaller.jpg 640w"
+					 alt="Multiscreen mockups of the website">
 			</picture>
 		</div>
 
@@ -334,7 +359,7 @@
 
 <!-- =================== ABOUT PAGE =================== -->
 
-<section class="page-section about-section page-section--about page-section--with-bigger-b-padding" id="about">
+<section class="page-section about-section page-section--about page-section--with-bigger-b-padding lazyload" id="about">
 
 	<div class="row row--flex-reverse">
 		<div class="about-section__text-content row__large-6">
@@ -408,7 +433,7 @@
 		</div> <!--/.wrapper-->
 	</div> <!-- /.about-section__text-content -->
 
-	<div class="about-section__author-image row__large-6"></div>
+	<div class="row__large-6 about-section__author-image lazyload"></div>
 	</div> <!--/.row-->
 </section> <!-- /.about-section -->
 

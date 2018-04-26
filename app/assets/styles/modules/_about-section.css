@@ -3,8 +3,10 @@
     background-color: rgb(234, 233, 245);
 
     @mixin atMedium {
-        background-image: url('../../assets/images/flowers_light.jpeg');
         @mixin backgroundImage;
+        &.lazyloaded {
+            background-image: url('../../assets/images/flowers_light.jpeg');
+        }
     }
 
     &__text-content {
@@ -39,22 +41,26 @@
 
     &__author-image {
         margin: 0 auto;
-        background-image: url(../../assets/images/olga_fomin--smaller.jpg);
         border-radius: 50%;
         border: 2px solid #fff;
         max-width: 100%;
         width: 150px;
         height: 150px;
-       @mixin backgroundImage;
+        @mixin backgroundImage;
+
+        &.lazyloaded {
+            background-image: url(../../assets/images/olga_fomin--smaller.jpg);
+        }
 
         @mixin atSmall {
-            background-image: url(../../assets/images/olga_fomin--small.jpg);
             width: 200px;
-			height: 200px;
+            height: 200px;
+            &.lazyloaded {
+                background-image: url(../../assets/images/olga_fomin--small.jpg);
+            }
         }
 
         @mixin atLarge {
-            background-image: url(../../assets/images/olga_fomin--large.jpg);
             border-radius: 0;;
             border: none;
             position: relative;
@@ -63,6 +69,9 @@
             width: 638px;
             height: 920px;
             transform: translateX(0);
+            &.lazyloaded {
+                background-image: url(../../assets/images/olga_fomin--large.jpg);
+            }
         }
     }
 }

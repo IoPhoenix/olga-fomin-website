@@ -4,9 +4,10 @@
   "dependencies": {
     "gulp": "^3.9.1",
     "jquery": "^3.3.1",
+    "jquery-smooth-scroll": "^2.2.0",
+    "lazysizes": "^4.0.2",
     "normalize.css": "^7.0.0",
-    "picturefill": "^3.0.2",
-    "postcss-mixins": "^6.2.0"
+    "picturefill": "^3.0.2"
   },
   "devDependencies": {
     "autoprefixer": "^7.2.6",
@@ -24,10 +25,10 @@
     "gulp-uglify": "^3.0.0",
     "gulp-usemin": "^0.3.29",
     "gulp-watch": "^4.3.11",
-    "jquery-smooth-scroll": "^2.2.0",
     "postcss-hexrgba": "^1.0.0",
     "postcss-import": "^11.1.0",
     "postcss-include": "^0.3.1",
+    "postcss-mixins": "^6.2.0",
     "postcss-nested": "^2.1.2",
     "postcss-simple-vars": "^4.1.0",
     "webpack": "^3.11.0"
