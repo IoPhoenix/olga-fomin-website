@@ -7,20 +7,24 @@
         margin-left: 15px;
     }
         
+    & li {
+        padding-right: .375rem; 
+        padding-left: .375rem;
+    }
+
     &--inline li {
         display: inline;
     }
 
-    &--block-at-small li {
+    /* &--block-at-small li {
         display: block;
 
         @mixin atSmall {
             display: inline;
         }
-    }
+    } */
 
-    & li {
-        padding-right: .375rem; 
-        padding-left: .375rem;
+    &--with-no-padding li {
+        padding: 0;
     }
 }

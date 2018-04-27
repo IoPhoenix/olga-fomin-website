@@ -1,6 +1,6 @@
 .primary-nav {
-        position: absolute;
-        bottom: 7px;
+        /* position: absolute; */
+        /* bottom: 7px; */
         text-align: center;
         width: 100%;
 
@@ -10,6 +10,7 @@
         }
     
         & a {
+            padding: .43em 0;
             text-decoration: none;
             font-family: 'Open Sans Condensed', sans-serif;
             font-size: 1.25rem;

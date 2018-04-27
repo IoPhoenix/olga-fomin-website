@@ -35,11 +35,25 @@
         }
     }
 
-    &__title {
-        transform: translateX(-50%);
+    &__home-link {
         position: absolute;
-        top: -5px;
-        left: 50%;
+        top: 10px;
+        left: 0;
+        padding: 0.2em .5em;
+        color: $white;
+        /* pointer-events: none; */
+        &:hover {
+            color: $white;
+        }
+    }
+
+
+    &__title {
+        display: none;
+        /* transform: translateX(-50%); */
+        position: absolute;
+        top: 0;
+        left: 0;
         font-size: 2.5rem;
         font-family: 'Stalemate', cursive;
         color: #f5f4f9;
@@ -50,7 +64,7 @@
         
 
         @mixin atSmall {
-            transform: translateX(0%);
+            /* transform: translateX(0%); */
             font-size: 6.875rem;
             position: relative;
             top: 0;
@@ -60,13 +74,13 @@
         }
     }
 
-    &__logo-link {
+    /* &__logo-link {
         color: $white;
         pointer-events: none;
         &:hover {
             color: $white;
         }
-    }
+    } */
 
     &__subtitle {
         display: none;

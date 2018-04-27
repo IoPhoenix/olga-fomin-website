@@ -1,7 +1,6 @@
 .social-icons {
-    position: absolute;
-    left: 1%;
-    top: 3%;
+    position: relative;
+    top: 16px;
 
     @mixin atSmall {
         position: relative;
@@ -15,6 +14,10 @@
         text-decoration: none;
     }
 
+    & a {
+        padding: 1em;
+    }
+
     &--with-margin-left {
         margin-left: 0;
         @mixin atLarge {
@@ -23,11 +26,13 @@
     }
 
     &__icon {
+        font-size: 1.5em;
         transition: all .7s;
         color: #FFF;
 
-        @mixin atSmall {
+        /* @mixin atSmall {
             font-size: 1.5em;
-        }
+            
+        } */
     }
 }

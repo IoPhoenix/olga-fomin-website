@@ -10995,7 +10995,7 @@ var FixedHeader = function () {
         _classCallCheck(this, FixedHeader);
 
         this.headerLinks = (0, _jquery2.default)('.primary-nav a');
-        this.logoLink = (0, _jquery2.default)('.site-header__logo-link');
+        this.homeLink = (0, _jquery2.default)('.site-header__home-link');
         this.addSmoothScrolling();
         this.events();
     }
@@ -11019,7 +11019,7 @@ var FixedHeader = function () {
         value: function addSmoothScrolling() {
             // offset: site header minus its bottom border
             this.headerLinks.smoothScroll({ offset: -85 });
-            this.logoLink.smoothScroll();
+            this.homeLink.smoothScroll();
         }
     }]);
 

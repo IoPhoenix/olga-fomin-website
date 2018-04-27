@@ -22,11 +22,6 @@ body {
 	} 
 }
 
-img {
-    max-width: 100%;
-    height: auto;
-}
-
 h1, h2, h3, h4, h5, h6 {
     font-family: $secondaryFont;
 	font-weight: 600;
@@ -39,6 +34,7 @@ h3 {
 }
 
 a {
+	border: 2px solid green;
 	color: $lightBlue;
 	text-decoration: none;
 	transition: all .5s ease-out;
@@ -47,7 +43,7 @@ a {
 	}
 }
 
-img, video {
+img, video, embed, object {
 	max-width: 100%;
 	height: auto;
 }
