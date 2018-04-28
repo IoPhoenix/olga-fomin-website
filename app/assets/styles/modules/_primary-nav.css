@@ -1,6 +1,4 @@
 .primary-nav {
-        /* position: absolute; */
-        /* bottom: 7px; */
         text-align: center;
         width: 100%;
 
@@ -13,9 +11,9 @@
         & a {
             padding: .43em 0;
             text-decoration: none;
-            font-family: 'Open Sans Condensed', sans-serif;
+            font-family: $secondaryFont;
             font-size: 1.25rem;
-            color: #c6b6ff;
+            color: $lilac;
             text-transform: uppercase;
             transition: all .7s;
             
@@ -27,7 +25,7 @@
         }
 
         .fa.fa-circle-o {
-            color: #c6b6ff;
+            color: $lilac;
             font-size: .75rem;
             transform: translateY(-3px);
         }

@@ -3,11 +3,7 @@
     top: 16px;
 
     @mixin atSmall {
-        /* position: relative; */
-        /* left: 0;; */
         top: 0;
-        /* margin-left: 0; */
-        /* margin-top: .625rem; */
     }
 
     & li {
@@ -30,12 +26,7 @@
 
     &__icon {
         font-size: 1.5em;
-        transition: all .7s;
-        color: #FFF;
-
-        /* @mixin atSmall {
-            font-size: 1.5em;
-            
-        } */
+        transition: all .5s;
+        color: $white;
     }
 }

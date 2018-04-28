@@ -1,6 +1,6 @@
 .btn {
     display: block;
-    padding: 6px 12px;
+    padding: 10px 12px;
     margin-bottom: 0;
     font-size: 14px;
     font-weight: 400;
@@ -24,6 +24,7 @@
     }
 
     @mixin atMedium {
+        padding: 6px 12px;
         width: 40%;
         display: block;
         margin-left: auto;

@@ -17,24 +17,11 @@
 
     & .site-header__logo {
         display: inline-block;
-    }
-
-    & .site-header__title {
-        display: none;
-        /* transform: translateX(-50%); */
-        font-size: 2.5rem;
-
-        @mixin atSmall {
-            left: 0;
-            /* transform: translateX(0); */
-        }
         @mixin atMedium {
-            position: absolute;
-            top: 0;
-            left: 0;
-            left: 20px;
+            display: none;
         }
     }
+
 
     & .site-header__home-link {
         cursor: pointer;
@@ -43,25 +30,30 @@
             padding: .2em .45em;
             top: 10px;
         }
+        @mixin atMedium {
+            width: 100%;
+            text-align: left;
+        }
     }
 
+    & .site-header__title {
+        display: none;
+        @mixin atMedium {
+            font-size: 3rem;
+            display: block;
+            margin: 10px 0 0;
+        }
+    }
 
     & .site-header__subtitle {
         display: none;
-
-        @mixin atSmall {
-            font-size: .875rem;
-            position: absolute;
-            left: 11px;
-            top: 50%;
-            transform: translateY(-43%);
-            text-transform: uppercase;
-            margin-left: 0;
-            letter-spacing: .5px;
-        }
-
         @mixin atMedium {
-            left: 21px;
+            display: block;
+            font-size: .95rem;
+            letter-spacing: .5px;
+            position: relative;
+            left: 6px;
+            margin: 0;
         }
     }
     & .list {
@@ -71,7 +63,6 @@
     & .primary-nav {
         text-align: center;
         width: 100%;
-
         @mixin atSmall {
             left: 0;
         }
@@ -89,25 +80,9 @@
     & .social-icons {
         position: relative;
         top: 16px;
-
-        @mixin atSmall {
-            /* position: relative; */
-            /* left: 0;; */
-            /* top: 0; */
-            /* margin-left: 0; */
-            /* margin-top: .625rem; */
+        @mixin atMedium {
+            margin-left: 0;
         }
-
-        /* & li {
-            display: block;
-            @mixin atSmall {
-                display: inline-block;
-            }
-        } */
-
-        /* &__icon {
-            font-size: 1.3em;
-        } */
 
         & a {
             @mixin atSmall {
