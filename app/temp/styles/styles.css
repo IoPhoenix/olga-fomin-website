@@ -665,7 +665,6 @@ img, video, embed, object {
         padding: 15px 0 0;
         background-color: #25304C;
         border-bottom: 15px solid rgba(37, 48, 76, 0.2);
-        background-clip: padding-box;
         -webkit-transform: translateY(0);
                 transform: translateY(0);
     }
@@ -677,15 +676,29 @@ img, video, embed, object {
     }
     }
 
-.fixed-header .site-header__logo {
-        display: inline-block;
+.fixed-header .primary-nav {
+        text-align: center;
+        width: 100%;
     }
 
-@media (min-width: 768px) {
+@media (min-width: 480px) {
 
-.fixed-header .site-header__logo {
-            display: none
+.fixed-header .primary-nav {
+            left: 0
     }
+    }
+
+.fixed-header .primary-nav a {
+            font-size: 1.25rem;
+            padding: .43em 0;
+        }
+
+@media (min-width: 480px) {
+
+.fixed-header .primary-nav a {
+                font-size: 1.4375rem;
+                padding: .3em 0
+        }
     }
 
 .fixed-header .site-header__home-link {
@@ -738,33 +751,19 @@ img, video, embed, object {
     }
     }
 
+.fixed-header .site-header__logo {
+        display: inline-block;
+    }
+
+@media (min-width: 768px) {
+
+.fixed-header .site-header__logo {
+            display: none
+    }
+    }
+
 .fixed-header .list {
         padding-left: 0;
-    }
-
-.fixed-header .primary-nav {
-        text-align: center;
-        width: 100%;
-    }
-
-@media (min-width: 480px) {
-
-.fixed-header .primary-nav {
-            left: 0
-    }
-    }
-
-.fixed-header .primary-nav a {
-            font-size: 1.25rem;
-            padding: .43em 0;
-        }
-
-@media (min-width: 480px) {
-
-.fixed-header .primary-nav a {
-                font-size: 1.4375rem;
-                padding: .3em 0
-        }
     }
 
 .fixed-header .social-icons {
@@ -810,6 +809,8 @@ img, video, embed, object {
 .social-icons {
     position: relative;
     top: 16px;
+    -webkit-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
 }
 
 @media (min-width: 480px) {
@@ -889,6 +890,8 @@ img, video, embed, object {
 .primary-nav {
         text-align: center;
         width: 100%;
+        -webkit-transition: all .5s ease-in-out;
+        transition: all .5s ease-in-out;
 }
 
 @media (min-width: 480px) {

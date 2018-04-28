@@ -1,6 +1,7 @@
 .primary-nav {
         text-align: center;
         width: 100%;
+        transition: all .5s ease-in-out;
 
         @mixin atSmall {
             position: relative;

@@ -1,6 +1,8 @@
 .social-icons {
     position: relative;
     top: 16px;
+    transition: all .5s ease-in-out;
+
 
     @mixin atSmall {
         top: 0;

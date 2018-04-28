@@ -7,7 +7,6 @@
         padding: 15px 0 0;
         background-color: #25304C;
         border-bottom: 15px solid rgba(37, 48, 76, 0.2);
-        background-clip: padding-box;
         transform: translateY(0);
 
         @mixin atSmall {
@@ -15,13 +14,22 @@
         }
     }
 
-    & .site-header__logo {
-        display: inline-block;
-        @mixin atMedium {
-            display: none;
+    & .primary-nav {
+        text-align: center;
+        width: 100%;
+        @mixin atSmall {
+            left: 0;
+        }
+
+        & a {
+            font-size: 1.25rem;
+            padding: .43em 0;
+            @mixin atSmall {
+                font-size: 1.4375rem;
+                padding: .3em 0;
+            }
         }
     }
-
 
     & .site-header__home-link {
         cursor: pointer;
@@ -56,25 +64,16 @@
             margin: 0;
         }
     }
-    & .list {
-        padding-left: 0;
+
+    & .site-header__logo {
+        display: inline-block;
+        @mixin atMedium {
+            display: none;
+        }
     }
 
-    & .primary-nav {
-        text-align: center;
-        width: 100%;
-        @mixin atSmall {
-            left: 0;
-        }
-
-        & a {
-            font-size: 1.25rem;
-            padding: .43em 0;
-            @mixin atSmall {
-                font-size: 1.4375rem;
-                padding: .3em 0;
-            }
-        }
+    & .list {
+        padding-left: 0;
     }
 
     & .social-icons {
