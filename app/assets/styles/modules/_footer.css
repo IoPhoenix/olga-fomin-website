@@ -8,6 +8,10 @@
         font-size: 1.125rem;
         margin: 0;
         margin-top: 5px;
+
+        & a {
+            padding: .6em 0;
+        }
     }
 
     &__subtitle,

@@ -15,33 +15,41 @@
         }
     }
 
+    & .site-header__logo {
+        display: inline-block;
+    }
+
     & .site-header__title {
-        position: absolute;
-        top: -5px;
-        left: 50%;
-        transform: translateX(-50%);
+        display: none;
+        /* transform: translateX(-50%); */
         font-size: 2.5rem;
 
         @mixin atSmall {
-            top: 0;
-            left: 10px;
-            transform: translateX(0);
+            left: 0;
+            /* transform: translateX(0); */
         }
         @mixin atMedium {
+            position: absolute;
+            top: 0;
+            left: 0;
             left: 20px;
         }
     }
 
-    /* restore the link functionality for logo */
     & .site-header__home-link {
-        /* pointer-events: auto; */
+        cursor: pointer;
+        @mixin atSmall {
+            position: absolute;
+            padding: .2em .45em;
+            top: 10px;
+        }
     }
+
 
     & .site-header__subtitle {
         display: none;
 
         @mixin atSmall {
-            display: block;
             font-size: .875rem;
             position: absolute;
             left: 11px;
@@ -61,23 +69,19 @@
     }
 
     & .primary-nav {
-        /* position: absolute;
-        bottom: 7px; */
         text-align: center;
         width: 100%;
 
         @mixin atSmall {
-            position: relative;
-            bottom: 0;
+            left: 0;
         }
 
         & a {
-            /* font-size: 1.125rem; */
             font-size: 1.25rem;
-
+            padding: .43em 0;
             @mixin atSmall {
                 font-size: 1.4375rem;
-                /* font-size: 1.25rem; */
+                padding: .3em 0;
             }
         }
     }
@@ -85,16 +89,13 @@
     & .social-icons {
         position: relative;
         top: 16px;
-        /* position: absolute;
-        left: 1%;
-        top: 3%; */
 
         @mixin atSmall {
-            position: relative;
-            left: 0;;
-            top: 0;
-            margin-left: 0;
-            margin-top: .625rem;
+            /* position: relative; */
+            /* left: 0;; */
+            /* top: 0; */
+            /* margin-left: 0; */
+            /* margin-top: .625rem; */
         }
 
         /* & li {
@@ -110,7 +111,7 @@
 
         & a {
             @mixin atSmall {
-                padding: .9em;
+                padding: .85em;
             }
         }
     }

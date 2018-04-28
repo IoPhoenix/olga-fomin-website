@@ -34,7 +34,7 @@ h3 {
 }
 
 a {
-	border: 2px solid green;
+	border: 1px solid green;
 	color: $lightBlue;
 	text-decoration: none;
 	transition: all .5s ease-out;

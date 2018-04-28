@@ -483,7 +483,7 @@ h3 {
 }
 
 a {
-	border: 2px solid green;
+	border: 1px solid green;
 	color: #337ab7;
 	text-decoration: none;
 	-webkit-transition: all .5s ease-out;
@@ -553,6 +553,7 @@ img, video, embed, object {
     }
 
 .site-header__text-content {
+        /* border: 2px solid red; */
         text-align: center;
         width: 100%;
         z-index: 10;
@@ -591,11 +592,26 @@ img, video, embed, object {
         color: #fff;
     }
 
-/* pointer-events: none; */
-
 .site-header__home-link:hover {
             color: #fff;
         }
+
+@media (min-width: 480px) {
+
+.site-header__home-link {
+            cursor: inherit;
+            position: relative;
+            top: 0;
+            padding: 0
+    }
+    }
+
+@media (min-width: 480px) {
+
+.site-header__logo {
+            display: none
+    }
+    }
 
 .site-header__title {
         display: none;
@@ -615,12 +631,16 @@ img, video, embed, object {
 @media (min-width: 480px) {
 
 .site-header__title {
+            /* pointer-events: none; */
+            display: block;
             /* transform: translateX(0%); */
             font-size: 6.875rem;
             position: relative;
-            top: 0;
-            margin-bottom: 4rem;
-            left: 0;
+            /* top: 0; */
+            /* margin-bottom: 4rem; */
+            /* left: 0; */
+            margin-top: 40px;
+            margin-bottom: 50px;
             -webkit-transition: -webkit-transform .3s ease-out;
             transition: -webkit-transform .3s ease-out;
             transition: transform .3s ease-out;
@@ -628,27 +648,21 @@ img, video, embed, object {
     }
     }
 
-/* &__logo-link {
-        color: $white;
-        pointer-events: none;
-        &:hover {
-            color: $white;
-        }
-    } */
-
 .site-header__subtitle {
         display: none;
         font-family: 'Open Sans Condensed', san serif;
-        font-size: 1.375rem;
+        /* font-size: 1.375rem; */
         color: #D5B4E4;
-        margin-left: 8%;
     }
 
 @media (min-width: 480px) {
 
 .site-header__subtitle {
+            position: relative;
             display: block;
-            font-size: 1.625rem
+            font-size: 1.625rem;
+            left: 5%;
+            margin-bottom: 0
     }
     }
 
@@ -672,36 +686,45 @@ img, video, embed, object {
     }
     }
 
+.fixed-header .site-header__logo {
+        display: inline-block;
+    }
+
 .fixed-header .site-header__title {
-        position: absolute;
-        top: -5px;
-        left: 50%;
-        -webkit-transform: translateX(-50%);
-                transform: translateX(-50%);
+        display: none;
+        /* transform: translateX(-50%); */
         font-size: 2.5rem;
     }
 
 @media (min-width: 480px) {
 
 .fixed-header .site-header__title {
-            top: 0;
-            left: 10px;
-            -webkit-transform: translateX(0);
-                    transform: translateX(0)
+            left: 0
+            /* transform: translateX(0); */
     }
     }
 
 @media (min-width: 768px) {
 
 .fixed-header .site-header__title {
+            position: absolute;
+            top: 0;
+            left: 0;
             left: 20px
     }
     }
 
-/* restore the link functionality for logo */
+.fixed-header .site-header__home-link {
+        cursor: pointer;
+    }
+
+@media (min-width: 480px) {
 
 .fixed-header .site-header__home-link {
-        /* pointer-events: auto; */
+            position: absolute;
+            padding: .2em .45em;
+            top: 10px
+    }
     }
 
 .fixed-header .site-header__subtitle {
@@ -711,7 +734,6 @@ img, video, embed, object {
 @media (min-width: 480px) {
 
 .fixed-header .site-header__subtitle {
-            display: block;
             font-size: .875rem;
             position: absolute;
             left: 11px;
@@ -736,8 +758,6 @@ img, video, embed, object {
     }
 
 .fixed-header .primary-nav {
-        /* position: absolute;
-        bottom: 7px; */
         text-align: center;
         width: 100%;
     }
@@ -745,21 +765,20 @@ img, video, embed, object {
 @media (min-width: 480px) {
 
 .fixed-header .primary-nav {
-            position: relative;
-            bottom: 0
+            left: 0
     }
     }
 
 .fixed-header .primary-nav a {
-            /* font-size: 1.125rem; */
             font-size: 1.25rem;
+            padding: .43em 0;
         }
 
 @media (min-width: 480px) {
 
 .fixed-header .primary-nav a {
-                font-size: 1.4375rem
-                /* font-size: 1.25rem; */
+                font-size: 1.4375rem;
+                padding: .3em 0
         }
     }
 
@@ -775,18 +794,14 @@ img, video, embed, object {
         } */
     }
 
-/* position: absolute;
-        left: 1%;
-        top: 3%; */
-
 @media (min-width: 480px) {
 
 .fixed-header .social-icons {
-            position: relative;
-            left: 0;;
-            top: 0;
-            margin-left: 0;
-            margin-top: .625rem
+            /* position: relative; */
+            /* left: 0;; */
+            /* top: 0; */
+            /* margin-left: 0; */
+            /* margin-top: .625rem; */
     }
     }
 
@@ -797,7 +812,7 @@ img, video, embed, object {
 @media (min-width: 480px) {
 
 .fixed-header .social-icons a {
-                padding: .9em
+                padding: .85em
         }
     }
 
@@ -830,11 +845,11 @@ img, video, embed, object {
 @media (min-width: 480px) {
 
 .social-icons {
-        position: relative;
-        left: 0;;
-        top: 0;
-        margin-left: 0;
-        margin-top: .625rem
+        /* position: relative; */
+        /* left: 0;; */
+        top: 0
+        /* margin-left: 0; */
+        /* margin-top: .625rem; */
 }
     }
 
@@ -844,6 +859,13 @@ img, video, embed, object {
 
 .social-icons a {
         padding: 1em;
+    }
+
+@media (min-width: 480px) {
+
+.social-icons a {
+            padding: .8em
+    }
     }
 
 .social-icons--with-margin-left {
@@ -914,7 +936,8 @@ img, video, embed, object {
 
 .primary-nav {
             position: relative;
-            bottom: 0
+            bottom: 0;
+            left: -3%
 }
     }
 
@@ -932,7 +955,8 @@ img, video, embed, object {
 @media (min-width: 480px) {
 
 .primary-nav a {
-                font-size: 1.4375rem
+                font-size: 1.4375rem;
+                padding: .3em 0
         }
     }
 
@@ -1430,6 +1454,10 @@ img, video, embed, object {
         margin: 0;
         margin-top: 5px;
     }
+
+.footer__subtitle a {
+            padding: .6em 0;
+        }
 
 .footer__subtitle,
     .footer__copyright {

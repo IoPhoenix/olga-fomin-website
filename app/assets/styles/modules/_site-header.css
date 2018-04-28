@@ -11,6 +11,7 @@
     }
 
     &__text-content {
+        /* border: 2px solid red; */
         text-align: center;
         width: 100%;
         z-index: 10;
@@ -41,12 +42,23 @@
         left: 0;
         padding: 0.2em .5em;
         color: $white;
-        /* pointer-events: none; */
         &:hover {
             color: $white;
         }
+        @mixin atSmall {
+            cursor: inherit;
+            position: relative;
+            top: 0;
+            padding: 0;
+        }
     }
 
+
+    &__logo {
+        @mixin atSmall {
+            display: none;
+        }
+    }
 
     &__title {
         display: none;
@@ -64,34 +76,32 @@
         
 
         @mixin atSmall {
+            /* pointer-events: none; */
+            display: block;
             /* transform: translateX(0%); */
             font-size: 6.875rem;
             position: relative;
-            top: 0;
-            margin-bottom: 4rem;
-            left: 0;
+            /* top: 0; */
+            /* margin-bottom: 4rem; */
+            /* left: 0; */
+            margin-top: 40px;
+            margin-bottom: 50px;
             transition: transform .3s ease-out;
         }
     }
 
-    /* &__logo-link {
-        color: $white;
-        pointer-events: none;
-        &:hover {
-            color: $white;
-        }
-    } */
-
     &__subtitle {
         display: none;
         font-family: $secondaryFont;
-        font-size: 1.375rem;
+        /* font-size: 1.375rem; */
         color: #D5B4E4;
-        margin-left: 8%;
 
         @mixin atSmall {
+            position: relative;
             display: block;
             font-size: 1.625rem;
+            left: 5%;
+            margin-bottom: 0;
         }
     }
 }
