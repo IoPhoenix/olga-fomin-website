@@ -1,9 +1,10 @@
 .fade-in-background {
     background-image: none;
     z-index: -1;
-    height: 85px;
+    height: 0;  /* do not load background image for smaller screens */
 
     @mixin atSmall {
+        height: 85px;
         background-attachment: fixed;
         background-position: center;
         background-repeat: no-repeat;
