@@ -535,6 +535,19 @@ img, video, embed, object {
 	overflow: hidden;
 }
 
+/* add fade in effect for all lazyloading images */
+
+.lazyload,
+.lazyloading {
+	opacity: 0;
+}
+
+.lazyloaded {
+	opacity: 1;
+	-webkit-transition: opacity 300ms;
+	transition: opacity 300ms;
+}
+
 .site-header {
     cursor: default;
     position: absolute;
@@ -1618,8 +1631,12 @@ svg#bigTriangleColor {
         }
     }
 
+.project-content img {
+        background-color: #EBEBEB;
+    }
+
 .project-content__mockups {
-        background-color: #E8E8E8;
+        background-color: #EBEBEB;
     }
 
 .project-content__subtitle {
@@ -1634,14 +1651,24 @@ svg#bigTriangleColor {
 		left: 50%;
         -webkit-transform: translateX(-50%) translateY(-60%) rotate(90deg);
                 transform: translateX(-50%) translateY(-60%) rotate(90deg);
-	}
+    }
+
+.project-content .fa.fa-chevron-right.lazyload {
+            opacity: 0;
+        }
+
+.project-content .fa.fa-chevron-right.lazyloaded {
+            opacity: 1;
+            -webkit-transition: opacity 300ms;
+            transition: opacity 300ms;
+        }
 
 @media (min-width: 992px) {
 
 .project-content .fa.fa-chevron-right {
             -webkit-transform: translateX(-50%) translateY(-60%) rotate(0deg);
                     transform: translateX(-50%) translateY(-60%) rotate(0deg)
-	}
+    }
     }
 
 .project-content__close-button {

@@ -56,7 +56,11 @@
         }
     }
 
+    & img {
+        background-color: $lightGray;
+    }
     
+
     &__mockups {
         background-color: $lightGray;
     }
@@ -72,11 +76,18 @@
 		top: 50%;
 		left: 50%;
         transform: translateX(-50%) translateY(-60%) rotate(90deg);
-        
+        &.lazyload {
+            opacity: 0;
+        }
+        &.lazyloaded {
+            opacity: 1;
+            transition: opacity 300ms;
+        }
         @mixin atLarge {
             transform: translateX(-50%) translateY(-60%) rotate(0deg);
         }
-	}
+    }
+
 
     &__close-button {
         cursor: pointer;
@@ -118,4 +129,6 @@
         transition-timing-function: cubic-bezier(0.67, 0.15, 0.83, 0.83);
     }
 }
+
+
 

@@ -3,6 +3,7 @@ $lightBlue: #337ab7;
 $lightGray: #E8E8E8;
 $white: #fff;
 $lilac: #c6b6ff;
+$lightGray: #EBEBEB;
 $primaryFont: 'Raleway', sans-serif;
 $secondaryFont: 'Open Sans Condensed', san serif;
 
@@ -77,4 +78,16 @@ img, video, embed, object {
 .noscroll {
 	height: 100%;
 	overflow: hidden;
+}
+
+/* add fade in effect for all lazyloading images */
+.lazyload,
+.lazyloading {
+	opacity: 0;
+}
+
+
+.lazyloaded {
+	opacity: 1;
+	transition: opacity 300ms;
 }
