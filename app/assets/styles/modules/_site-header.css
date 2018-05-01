@@ -50,6 +50,7 @@
             top: 0;
             padding: 0;
             text-align: center;
+            border: 1px solid transparent;
         }
     }
 
@@ -76,7 +77,7 @@
             display: block;
             font-size: 6.875rem;
             position: relative;
-            margin-bottom: 60px;
+            margin: 50px 0 60px 0;
             transition: transform .3s ease-out;
         }
     }
@@ -91,6 +92,7 @@
             display: block;
             font-size: 1.625rem;
             left: 5%;
+            margin: 0;
         }
     }
 }

@@ -614,7 +614,8 @@ img, video, embed, object {
             position: relative;
             top: 0;
             padding: 0;
-            text-align: center
+            text-align: center;
+            border: 1px solid transparent
     }
     }
 
@@ -645,7 +646,7 @@ img, video, embed, object {
             display: block;
             font-size: 6.875rem;
             position: relative;
-            margin-bottom: 60px;
+            margin: 50px 0 60px 0;
             -webkit-transition: -webkit-transform .3s ease-out;
             transition: -webkit-transform .3s ease-out;
             transition: transform .3s ease-out;
@@ -665,7 +666,8 @@ img, video, embed, object {
             position: relative;
             display: block;
             font-size: 1.625rem;
-            left: 5%
+            left: 5%;
+            margin: 0
     }
     }
 
@@ -762,7 +764,7 @@ img, video, embed, object {
             font-size: .95rem;
             letter-spacing: .5px;
             position: relative;
-            left: 6px;
+            left: 13px;
             margin: 0
     }
     }
@@ -783,8 +785,18 @@ img, video, embed, object {
     }
 
 .fixed-header .social-icons {
-        position: relative;
-        top: 16px;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+                transform: translateX(-50%);
+    }
+
+@media (min-width: 480px) {
+
+.fixed-header .social-icons {
+            bottom: 5px
+    }
     }
 
 @media (min-width: 768px) {
@@ -828,16 +840,21 @@ img, video, embed, object {
     }
 
 .social-icons {
-    position: relative;
-    top: 16px;
-    -webkit-transition: all .5s ease-in-out;
-    transition: all .5s ease-in-out;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
 }
 
 @media (min-width: 480px) {
 
 .social-icons {
-        top: 0
+        position: relative;
+        left: 0;
+        bottom: 0;
+        -webkit-transform: none;
+                transform: none
 }
     }
 
@@ -856,14 +873,17 @@ img, video, embed, object {
     }
     }
 
-.social-icons--with-margin-left {
-        margin-left: 0;
+@media (min-width: 768px) {
+
+.social-icons--with-l-margin {
+            margin-left: 5%
+    }
     }
 
-@media (min-width: 992px) {
+@media (min-width: 768px) {
 
-.social-icons--with-margin-left {
-            margin-left: 5%
+.social-icons--with-l-margin {
+            margin-left: 6%
     }
     }
 
@@ -911,8 +931,6 @@ img, video, embed, object {
 .primary-nav {
         text-align: center;
         width: 100%;
-        -webkit-transition: all .5s ease-in-out;
-        transition: all .5s ease-in-out;
 }
 
 @media (min-width: 480px) {

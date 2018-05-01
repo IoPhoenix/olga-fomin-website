@@ -62,7 +62,7 @@
             font-size: .95rem;
             letter-spacing: .5px;
             position: relative;
-            left: 6px;
+            left: 13px;
             margin: 0;
         }
     }
@@ -79,8 +79,13 @@
     }
 
     & .social-icons {
-        position: relative;
-        top: 16px;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        @mixin atSmall {
+            bottom: 5px;
+        }
         @mixin atMedium {
             margin-left: 0;
         }
