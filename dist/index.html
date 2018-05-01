@@ -8,7 +8,9 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,600,700|Stalemate" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,600" rel="stylesheet">
 	<script src="https://use.fontawesome.com/97ea7e5223.js"></script>
-	<link rel="stylesheet" href="assets/styles/styles-bd14126670.css"/>
+	<link rel="stylesheet" href="assets/styles/styles-bae917b04c.css"/>
+
+	 <script src="assets/scripts/vendor-3786c047ce.js"></script>
   </head>
 
 <body>
@@ -23,13 +25,23 @@
 				</ul>
 			</nav>
 
-			<h1 class="site-header__title"><a href="#home-page" class="site-header__logo-link">Olga Fomin</a></h1>
-			<p class="site-header__subtitle">Front-End Developer</p>
+			<a href="#home-page" class="site-header__home-link">
+				<img 
+					src="assets/images/icons/logo.png"
+					alt="site logo" 
+					class="site-header__logo"
+					width="32"
+					height="32">
+				<h1 class="site-header__title">Olga Fomin</h1>
+				<p class="site-header__subtitle">Front-End Developer</p>
+			</a>
+			
+			
 
-			<div class="social-icons social-icons--with-margin-left">
-				<ul class="list list--inline list--block-at-small">
-					<li><a href="https://www.linkedin.com/in/olgafomin"  target="_blank"><i class="fa fa-linkedin-square social-icons__icon" aria-hidden="true"></i></a></li>
-					<li><a href="https://github.com/IoPhoenix/"  target="_blank"><i class="fa fa-github-alt social-icons__icon" aria-hidden="true"></i></a></li>
+			<div class="social-icons social-icons--with-l-margin">
+				<ul class="list list--inline list--with-no-padding">
+					<li><a href="https://www.linkedin.com/in/olgafomin" target="_blank"><i class="fa fa-linkedin-square social-icons__icon " aria-hidden="true"></i></a></li>
+					<li><a href="https://github.com/IoPhoenix/"  target="_blank"><i class="fa fa-github social-icons__icon" aria-hidden="true"></i></a></li>
 					<li><a href="mailto:olga.fomin26@gmail.com"><i class="fa fa-pencil social-icons__icon" aria-hidden="true"></i></a></li>
 				</ul>
 			</div>
@@ -101,8 +113,8 @@
 				<source srcset="assets/images/project1/mockups--medium.jpg 1280w" media="(min-width: 990px)">
 				<source srcset="assets/images/project1/mockups--small.jpg 990w" media="(min-width: 640px)">
 				<img
-					class="img img--centered"
-					srcset="assets/images/project1/mockups--smaller.jpg 640w"
+					class="img img--centered lazyload"
+					data-srcset="assets/images/project1/mockups--smaller.jpg 640w"
 					alt="Multiscreen mockup of the website">
 			</picture>
 		</div>
@@ -124,10 +136,16 @@
 
 			<div class="row">
 				<div class="row row__medium-8 row__medium-8--with-padding">
-					<img srcset="assets/images/project1/table-mockup--large.jpg" alt="The table reflecting database search results on iPad screen">
+					<img 
+						class="lazyload"
+						data-src="assets/images/project1/table-mockup--large.jpg" 
+						alt="The table reflecting database search results on iPad screen">
 				</div> <!-- /.row__medium-8 -->
 				<div class="row row__medium-4 row__medium-4--with-padding">
-					<img srcset="assets/images/project1/table-mobile--large.jpg" alt="The table reflecting database search results on smartphone screen">
+					<img
+						class="lazyload" 
+						data-src="assets/images/project1/table-mobile--large.jpg" 
+						alt="The table reflecting database search results on smartphone screen">
 				</div>
 			</div> <!-- /.row -->
 
@@ -142,17 +160,17 @@
 			<div class="row">
 				<div class="row__medium-6">
 					<img
-						class="img img--with-m-bottom-till-large" 
-						src="assets/images/project1/gallery--large.jpg" 
+						class="img img--with-m-bottom-till-large lazyload" 
+						data-src="assets/images/project1/gallery--large.jpg" 
 						alt="iPad mockup showing Rare Bird Gallery page">
 				</div> <!-- / .row__medium-6 -->
 
-				<i class="fa fa-chevron-right fa-2x" aria-hidden="true"></i>
+				<i class="lazyload fa fa-chevron-right fa-2x" aria-hidden="true"></i>
 
 				<div class="row__medium-6">
 					<img
-						class="img img--with-m-top-till-large"  
-						src="assets/images/project1/gallery-item--large.jpg" 
+						class="img img--with-m-top-till-large lazyload"  
+						data-src="assets/images/project1/gallery-item--large.jpg" 
 						alt="Smartphone mockup showing Rare Bird Gallery page">
 				</div> <!-- / .row__medium-6 -->
 			</div> <!-- /.row -->
@@ -188,7 +206,10 @@
 			<picture>
 				<source srcset="assets/images/project2/mockups--medium.jpg 1280w" media="(min-width: 990px)">
 				<source srcset="assets/images/project2/mockups--small.jpg 990w" media="(min-width: 640px)">
-				<img srcset="assets/images/project2/mockups--smaller.jpg 640w" alt="Multiscreen mockup of the website">
+				<img 
+					class="lazyload"
+					data-srcset="assets/images/project2/mockups--smaller.jpg 640w"
+					alt="Multiscreen mockup of the website">
 			</picture>
 		</div>
 
@@ -203,11 +224,17 @@
 
 			<div class="row">
 				<div class="row__medium-6">
-					<img src="assets/images/project2/full_post.jpg" class="center"alt="Smartphone mockup showing a single post with social share buttons and tags">
+					<img
+						 data-src="assets/images/project2/full_post.jpg" 
+						 class="center lazyload" 
+						 alt="Smartphone mockup showing a single post with social share buttons and tags">
 				</div>
 			
 				<div class="row__medium-6">
-					<img src="assets/images/project2/tags_archive.jpg" class="center" alt="Smartphone mockup showing tags, archive and recent posts fields">
+					<img 
+						data-src="assets/images/project2/tags_archive.jpg"
+						class="center lazyload"
+						alt="Smartphone mockup showing tags, archive and recent posts fields">
 				</div>
 			</div> <!-- /.row -->
 
@@ -226,7 +253,10 @@
 			
 	
 			<div class="project-content__image project-content__image--single center">
-				<img src="assets/images/project2/new_post.jpg" alt="Smartphone screen showing website">
+				<img 
+					class="lazyload"
+					data-src="assets/images/project2/new_post.jpg"
+					 alt="Smartphone screen showing website">
 			</div>
 	
 
@@ -260,7 +290,10 @@
 			<picture>
 				<source srcset="assets/images/project3/mockups--medium.jpg 1280w" media="(min-width: 990px)">
 				<source srcset="assets/images/project3/mockups--small.jpg 990w" media="(min-width: 640px)">
-				<img srcset="assets/images/project3/mockups--smaller.jpg 640w" alt="Multiscreen mockups of the website">
+				<img
+					class="lazyload" 
+					data-srcset="assets/images/project3/mockups--smaller.jpg 640w"
+					 alt="Multiscreen mockups of the website">
 			</picture>
 		</div>
 
@@ -316,7 +349,7 @@
 
 <!-- =================== TESTIMONIALS =================== -->
 
-	<div class="page-section page-section--testimonials testimonials">
+	<div class="page-section page-section--testimonials">
 		<blockquote>
 			<p>Olga and I worked on my professional portfolio. She is great to work with.
 				 Not only is she an easy going person, but she has ingenious web skills with 
@@ -332,9 +365,9 @@
 
 <!-- =================== ABOUT PAGE =================== -->
 
-<section class="page-section about-section page-section--about page-section--with-bigger-b-padding" id="about">
+<section class="page-section about-section page-section--about page-section--with-bigger-b-padding lazyload" id="about">
 
-	<div class="row">
+	<div class="row row--flex-reverse">
 		<div class="about-section__text-content row__large-6">
 			<div class="wrapper wrapper--no-p-right-at-large">
 
@@ -406,7 +439,7 @@
 		</div> <!--/.wrapper-->
 	</div> <!-- /.about-section__text-content -->
 
-	<div class="about-section__author-image row__large-6"></div>
+	<div class="row__large-6 about-section__author-image lazyload"></div>
 	</div> <!--/.row-->
 </section> <!-- /.about-section -->
 
@@ -425,6 +458,6 @@
 		</div>
 	</footer>
 
-	<script src="assets/scripts/app-4edbb81dba.js"></script>
+	<script src="assets/scripts/app-1cd263873c.js"></script>
 </body>
 </html>
