@@ -483,6 +483,7 @@ h3 {
 }
 
 a {
+	border: 1px solid green;
 	color: #337ab7;
 	text-decoration: none;
 	-webkit-transition: all .5s ease-out;
@@ -599,7 +600,7 @@ img, video, embed, object {
         position: absolute;
         top: 10px;
         left: 0;
-        padding: 0.2em .5em;
+        padding: .3em .6em;
         color: #fff;
     }
 
@@ -785,8 +786,7 @@ img, video, embed, object {
     }
 
 .fixed-header .social-icons {
-        position: absolute;
-        bottom: 0;
+        top: 15px;
         left: 50%;
         -webkit-transform: translateX(-50%);
                 transform: translateX(-50%);
@@ -840,8 +840,8 @@ img, video, embed, object {
     }
 
 .social-icons {
-    position: absolute;
-    bottom: 0;
+    position: relative;
+    top: 15px;
     left: 50%;
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
@@ -850,9 +850,8 @@ img, video, embed, object {
 @media (min-width: 480px) {
 
 .social-icons {
-        position: relative;
         left: 0;
-        bottom: 0;
+        top: 0;
         -webkit-transform: none;
                 transform: none
 }
@@ -863,13 +862,13 @@ img, video, embed, object {
     }
 
 .social-icons a {
-        padding: 1em;
+        padding: 1.1em;
     }
 
 @media (min-width: 480px) {
 
 .social-icons a {
-            padding: .8em
+            padding: .9em
     }
     }
 
@@ -943,7 +942,7 @@ img, video, embed, object {
     }
 
 .primary-nav a {
-            padding: .43em 0;
+            padding: .48em 0;
             text-decoration: none;
             font-family: 'Open Sans Condensed', san serif;
             font-size: 1.25rem;
@@ -956,8 +955,14 @@ img, video, embed, object {
 @media (min-width: 480px) {
 
 .primary-nav a {
-                font-size: 1.4375rem;
-                padding: .3em 0
+                font-size: 1.4375rem
+        }
+    }
+
+@media (min-width: 768px) {
+
+.primary-nav a {
+                padding: .4em 0
         }
     }
 

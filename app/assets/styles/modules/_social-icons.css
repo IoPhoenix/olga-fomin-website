@@ -1,13 +1,12 @@
 .social-icons {
-    position: absolute;
-    bottom: 0;
+    position: relative;
+    top: 15px;
     left: 50%;
     transform: translateX(-50%);
 
     @mixin atSmall {
-        position: relative;
         left: 0;
-        bottom: 0;
+        top: 0;
         transform: none;
     }
 
@@ -16,9 +15,9 @@
     }
 
     & a {
-        padding: 1em;
+        padding: 1.1em;
         @mixin atSmall {
-            padding: .8em;
+            padding: .9em;
         }
     }
 

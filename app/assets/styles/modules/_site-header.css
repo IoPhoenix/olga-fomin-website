@@ -39,7 +39,7 @@
         position: absolute;
         top: 10px;
         left: 0;
-        padding: 0.2em .5em;
+        padding: .3em .6em;
         color: $white;
         &:hover {
             color: $white;

@@ -9,7 +9,7 @@
         }
     
         & a {
-            padding: .43em 0;
+            padding: .48em 0;
             text-decoration: none;
             font-family: $secondaryFont;
             font-size: 1.25rem;
@@ -20,7 +20,9 @@
 
             @mixin atSmall {
                 font-size: 1.4375rem;
-                padding: .3em 0;
+            }
+            @mixin atMedium {
+                padding: .4em 0;
             }
         }
 
