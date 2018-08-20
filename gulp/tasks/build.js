@@ -28,22 +28,28 @@ gulp.task('deleteDistFolder', () => {
 // optimize images and create new images folder in dist
 gulp.task('compressImages', ['deleteDistFolder'], () => {
     return gulp.src(['./app/assets/images/**/*', '!./app/assets/images/icons', '!./app/assets/images/icons/**/*'])
-                .pipe(imagemin({
-                    progressive: true,
-                    interlaced: true,
-                    multipass: true
-                }))
+                .pipe(imagemin(
+                    [
+                        imagemin.gifsicle({interlaced: true}),
+                        imagemin.jpegtran({progressive: true}),
+                        imagemin.optipng({optimizationLevel: 5})
+                    ]
+                    
+                //  old version:   {
+                    //     progressive: true,
+                    //     interlaced: true,
+                    //     multipass: true
+                    // }
+                ))
                 .pipe(gulp.dest('./dist/assets/images'));
 });
 
 // optimize png icons
 gulp.task('compressIcons', ['deleteDistFolder'], () => {
     return gulp.src(['./app/assets/images/icons/**/*'])
-                .pipe(imagemin({
-                    progressive: true,
-                    interlaced: true,
-                    multipass: true
-                }))
+                .pipe(imagemin([
+                    imagemin.optipng({optimizationLevel: 5})
+                ]))
                 .pipe(gulp.dest('./dist/assets/images/icons'));
 });
 

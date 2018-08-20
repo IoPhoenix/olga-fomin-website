@@ -7,8 +7,6 @@
     }
 
     .site-header__text-content {
-        /* height: 110px; */
-        /* position: fixed; */
 		top: 0;
 		padding: 15px 0 0;
 		background-color: $darkBlue;
