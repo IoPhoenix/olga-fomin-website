@@ -17,13 +17,13 @@
         @mixin atMedium {
             height: 400px;
             &#project1-portfolio-image {
-                background-image: url('../../assets/images/project1_homepage.jpg');
+                background-image: url('../../assets/images/project1_homepage.webp');
             }
             &#project2-portfolio-image {
-                background-image: url('../../assets/images/project2_homepage.jpg');
+                background-image: url('../../assets/images/project2_homepage.webp');
             }
             &#project3-portfolio-image {
-                background-image: url('../../assets/images/project3_homepage.jpg');
+                background-image: url('../../assets/images/project3_homepage.webp');
             }
         } 
     }

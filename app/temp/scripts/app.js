@@ -11066,7 +11066,7 @@ var FadeInBackground = function () {
         key: 'showBackground',
         value: function showBackground() {
             // fade in background image for home page slowly
-            (0, _jquery2.default)('.fade-in-background').animate({ opacity: 0 }, 0).css({ 'background-image': 'linear-gradient(rgba(24, 41, 86, .5), rgba(24, 41, 86, .7)), url(../../assets/images/flowers.jpeg)' }).animate({ opacity: 1 }, 2500);
+            (0, _jquery2.default)('.fade-in-background').animate({ opacity: 0 }, 0).css({ 'background-image': 'linear-gradient(rgba(24, 41, 86, .5), rgba(24, 41, 86, .7)), url(../../assets/images/flowers.webp)' }).animate({ opacity: 1 }, 2500);
         }
     }]);
 

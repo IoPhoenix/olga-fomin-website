@@ -1128,7 +1128,7 @@ img, video, embed, object {
     }
 
 .about-section__author-image.lazyloaded {
-            background-image: url(../../assets/images/olga_fomin--smaller.jpg);
+            background-image: url(../../assets/images/olga_fomin--smaller.webp);
         }
 
 @media (min-width: 480px) {
@@ -1138,7 +1138,7 @@ img, video, embed, object {
             height: 200px
     }
             .about-section__author-image.lazyloaded {
-                background-image: url(../../assets/images/olga_fomin--small.jpg);
+                background-image: url(../../assets/images/olga_fomin--small.webp);
             }
     }
 
@@ -1156,7 +1156,7 @@ img, video, embed, object {
                     transform: translateX(0)
     }
             .about-section__author-image.lazyloaded {
-                background-image: url(../../assets/images/olga_fomin--large.jpg);
+                background-image: url(../../assets/images/olga_fomin--large.webp);
             }
     }
 
@@ -1771,13 +1771,13 @@ svg#bigTriangleColor {
             height: 400px 
     }
             .portfolio-item__image#project1-portfolio-image {
-                background-image: url('../../assets/images/project1_homepage.jpg');
+                background-image: url('../../assets/images/project1_homepage.webp');
             }
             .portfolio-item__image#project2-portfolio-image {
-                background-image: url('../../assets/images/project2_homepage.jpg');
+                background-image: url('../../assets/images/project2_homepage.webp');
             }
             .portfolio-item__image#project3-portfolio-image {
-                background-image: url('../../assets/images/project3_homepage.jpg');
+                background-image: url('../../assets/images/project3_homepage.webp');
             }
     }
 

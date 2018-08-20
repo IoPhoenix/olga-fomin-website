@@ -49,14 +49,14 @@
         @mixin backgroundImage;
 
         &.lazyloaded {
-            background-image: url(../../assets/images/olga_fomin--smaller.jpg);
+            background-image: url(../../assets/images/olga_fomin--smaller.webp);
         }
 
         @mixin atSmall {
             width: 200px;
             height: 200px;
             &.lazyloaded {
-                background-image: url(../../assets/images/olga_fomin--small.jpg);
+                background-image: url(../../assets/images/olga_fomin--small.webp);
             }
         }
 
@@ -70,7 +70,7 @@
             height: 920px;
             transform: translateX(0);
             &.lazyloaded {
-                background-image: url(../../assets/images/olga_fomin--large.jpg);
+                background-image: url(../../assets/images/olga_fomin--large.webp);
             }
         }
     }
