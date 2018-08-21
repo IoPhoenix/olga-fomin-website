@@ -582,6 +582,10 @@ img, video, embed, object {
   content: "\f054";
 }
 
+.icon-magic:before {
+  content: "\f0d0";
+}
+
 .icon-circle:before {
   content: "\f111";
 }
@@ -1011,11 +1015,11 @@ img, video, embed, object {
         }
     }
 
-.primary-nav .fa.fa-circle-o {
+.primary-nav .icon-circle {
             color: #c6b6ff;
             font-size: .75rem;
-            -webkit-transform: translateY(-3px);
-                    transform: translateY(-3px);
+            position: relative;
+            top: -3px;
         }
 
 .fixed-nav .side-header {
@@ -1711,7 +1715,7 @@ svg#bigTriangleColor {
         margin-bottom: 0;
     }
 
-.project-content .fa.fa-chevron-right {
+.project-content .icon-chevron-right {
 		position: absolute;
 		top: 50%;
 		left: 50%;
@@ -1719,11 +1723,11 @@ svg#bigTriangleColor {
                 transform: translateX(-50%) translateY(-60%) rotate(90deg);
     }
 
-.project-content .fa.fa-chevron-right.lazyload {
+.project-content .icon-chevron-right.lazyload {
             opacity: 0;
         }
 
-.project-content .fa.fa-chevron-right.lazyloaded {
+.project-content .icon-chevron-right.lazyloaded {
             opacity: 1;
             -webkit-transition: opacity 300ms;
             transition: opacity 300ms;
@@ -1731,7 +1735,7 @@ svg#bigTriangleColor {
 
 @media (min-width: 992px) {
 
-.project-content .fa.fa-chevron-right {
+.project-content .icon-chevron-right {
             -webkit-transform: translateX(-50%) translateY(-60%) rotate(0deg);
                     transform: translateX(-50%) translateY(-60%) rotate(0deg)
     }
@@ -1766,8 +1770,10 @@ svg#bigTriangleColor {
             color: #6F43A6;
         }
 
-.project-content__magic-button span {
-			vertical-align: middle;
+.project-content__magic-button .icon-magic {
+            font-size: 1.6em;
+            vertical-align: text-bottom;
+            margin-right: .1875rem;
         }
 
 @media (min-width: 768px) {

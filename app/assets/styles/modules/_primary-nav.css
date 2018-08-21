@@ -26,9 +26,10 @@
             }
         }
 
-        .fa.fa-circle-o {
+        .icon-circle {
             color: $lilac;
             font-size: .75rem;
-            transform: translateY(-3px);
+            position: relative;
+            top: -3px;
         }
 }

@@ -71,7 +71,7 @@
         margin-bottom: 0;
     }
 
-    .fa.fa-chevron-right {
+    .icon-chevron-right {
 		position: absolute;
 		top: 50%;
 		left: 50%;
@@ -114,8 +114,10 @@
         &:hover {
             color: #6F43A6;
         }
-		span {
-			vertical-align: middle;
+        .icon-magic {
+            font-size: 1.6em;
+            vertical-align: text-bottom;
+            margin-right: .1875rem;
         }
         @mixin atMedium {
             font-size: .875rem;

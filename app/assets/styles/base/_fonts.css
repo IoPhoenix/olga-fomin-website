@@ -30,6 +30,9 @@
 .icon-chevron-right:before {
   content: "\f054";
 }
+.icon-magic:before {
+  content: "\f0d0";
+}
 .icon-circle:before {
   content: "\f111";
 }
