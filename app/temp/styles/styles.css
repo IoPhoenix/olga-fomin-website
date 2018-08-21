@@ -458,7 +458,8 @@ template {
 body {
 	background-color: #25304C;
 	font-size: 0.875rem;
-	color: #666;
+	/* color: #666; */
+	color: #151414;
 	font-family: 'Raleway', sans-serif;
 	font-weight: 300;
 	line-height: 26px; 
@@ -550,6 +551,7 @@ img, video, embed, object {
 
 @font-face {
   font-family: 'icomoon';
+  font-display: fallback;
   src:  url('../../assets/fonts/icomoon.eot');
   src:  url('../../assets/fonts/icomoon.eot#iefix') format('embedded-opentype'),
     url('../../assets/fonts/icomoon.ttf') format('truetype'),

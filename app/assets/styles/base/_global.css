@@ -14,7 +14,8 @@ $secondaryFont: 'Open Sans Condensed', san serif;
 body {
 	background-color: $darkBlue;
 	font-size: 0.875rem;
-	color: #666;
+	/* color: #666; */
+	color: #151414;
 	font-family: $primaryFont;
 	font-weight: 300;
 	line-height: 26px;
