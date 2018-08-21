@@ -24,25 +24,22 @@ gulp.task('deleteDistFolder', () => {
     return del('./dist/');
 });
 
-
-// optimize images and create new images folder in dist
-gulp.task('compressImages', ['deleteDistFolder'], () => {
+gulp.task('copyImages', ['deleteDistFolder'], function() {
     return gulp.src(['./app/assets/images/**/*', '!./app/assets/images/icons', '!./app/assets/images/icons/**/*'])
-                .pipe(imagemin(
-                    [
-                        imagemin.gifsicle({interlaced: true}),
-                        imagemin.jpegtran({progressive: true}),
-                        imagemin.optipng({optimizationLevel: 5})
-                    ]
-                    
-                //  old version:   {
-                    //     progressive: true,
-                    //     interlaced: true,
-                    //     multipass: true
-                    // }
-                ))
-                .pipe(gulp.dest('./dist/assets/images'));
+            .pipe(gulp.dest('./dist/assets/images'));
 });
+// optimize images and create new images folder in dist
+// gulp.task('compressImages', ['deleteDistFolder'], () => {
+//     return gulp.src(['./app/assets/images/**/*', '!./app/assets/images/icons', '!./app/assets/images/icons/**/*'])
+//                 .pipe(imagemin(
+//                     [
+//                         imagemin.gifsicle({interlaced: true}),
+//                         imagemin.jpegtran({progressive: true}),
+//                         imagemin.optipng({optimizationLevel: 5})
+//                     ]
+//                 ))
+//                 .pipe(gulp.dest('./dist/assets/images'));
+// });
 
 // optimize png icons
 gulp.task('compressIcons', ['deleteDistFolder'], () => {
@@ -84,4 +81,4 @@ gulp.task('usemin', ['styles', 'scripts'], () => {
                 .pipe(gulp.dest('./dist'));
 });
 
-gulp.task('build', ['deleteDistFolder', 'copyGeneralFiles', 'compressImages', 'compressIcons', 'usemin']);
+gulp.task('build', ['deleteDistFolder', 'copyGeneralFiles', 'copyImages', 'compressIcons', 'usemin']);

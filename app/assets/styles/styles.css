@@ -1,6 +1,7 @@
 @import 'normalize.css';
 @import 'base/_mixins';
 @import 'base/_global';
+@import 'base/_fonts';
 @import 'modules/_site-header';
 @import 'modules/_fixed-header';
 @import 'modules/_fade-in-background';

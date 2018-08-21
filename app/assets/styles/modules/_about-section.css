@@ -5,7 +5,7 @@
     @mixin atMedium {
         @mixin backgroundImage;
         &.lazyloaded {
-            background-image: url('../../assets/images/flowers_light.jpeg');
+            background-image: url('../../assets/images/flowers_light.webp');
         }
     }
 
