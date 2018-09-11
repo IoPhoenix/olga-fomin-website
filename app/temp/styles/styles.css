@@ -458,7 +458,6 @@ template {
 body {
 	background-color: #25304C;
 	font-size: 0.875rem;
-	/* color: #666; */
 	color: #151414;
 	font-family: 'Raleway', sans-serif;
 	font-weight: 300;
@@ -1613,6 +1612,18 @@ svg#bigTriangleColor {
 .section-title--with-p-left-at-large {
 			padding-left: 15px
 	}
+    }
+
+.slick-slide {
+    margin: 0 6px;
+}
+
+.slick-dots {
+    bottom: -35px;
+}
+
+.slick-dots li button:before {
+        font-size: 10px;
     }
 
 .project-content {

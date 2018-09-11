@@ -1,4 +1,5 @@
 import $ from 'jquery';
+import slick from 'slick-carousel';
 
 class ProjectContent {
     constructor() {
@@ -10,6 +11,8 @@ class ProjectContent {
     }
 
     events() {
+        $(document).ready(this.activateSlickSlider);
+              
         // open project content when clicking on porfolio item
         this.portfolioItems.click(this.openProjectContent);
 
@@ -21,6 +24,43 @@ class ProjectContent {
 
         // close project content on escape key
          $(document).keyup(this.keyPressHandler.bind(this));
+    }
+
+    activateSlickSlider() {
+        console.log('test from activateSlickSlider!');
+        $('.slick-slider').slick({
+            dots: true,
+            accessibility: true,
+            // infinite: true,
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            focusOnSelect: true,
+            responsive: [{
+ 
+                breakpoint: 1024,
+                settings: {
+                  slidesToShow: 3,
+                  infinite: true
+                }
+           
+              }, {
+           
+                breakpoint: 600,
+                settings: {
+                  slidesToShow: 2,
+                  dots: true
+                }
+           
+              }, {
+           
+                breakpoint: 300,
+                settings: {
+                    slidesToShow: 1,
+                    dots: true
+                  }
+           
+              }]
+        });
     }
 
     openProjectContent() {
