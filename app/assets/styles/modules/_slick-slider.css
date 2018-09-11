@@ -1,0 +1,10 @@
+.slick-slide {
+    margin: 0 6px;
+}
+
+.slick-dots {
+    bottom: -35px;
+    li button:before {
+        font-size: 10px;
+    }
+}

@@ -5,7 +5,11 @@
     <meta name="description" content="Welcome to the website of Olga Fomin, a front-end web developer, who enjoys creating beautiful, responsive websites of the highest quality.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Olga Fomin / Portfolio</title>
-    <link async href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700|Stalemate|Raleway:300,400,500,600" rel="stylesheet">
+	<link async href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700|Stalemate|Raleway:300,400,500,600" rel="stylesheet">
+
+	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css"/>
+<!-- Add the slick-theme.css if you want default styling -->
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css"/>
 	<!-- build:css /assets/styles/styles.css -->
 	<link async rel="stylesheet" href="temp/styles/styles.css">
 	<!-- endbuild -->
@@ -60,45 +64,60 @@
 	<h2 class="section-title">Latest Work</h2>
 	<div class="section-line section-line--short"></div>
 		
-	<div class="row">
-		<div class="row row__medium-4">
+
+	<div class="slick-slider">
+	<!-- <div class="row"> -->
+		<!-- <div class="row row__medium-4"> -->
 			<div class="portfolio-item" data-project="project1">
 				<div class="portfolio-item__image" id="project1-portfolio-image"></div>
-				<div class="portfolio-item__hover-mask">
+				<!-- <div class="portfolio-item__hover-mask">
 					<div class="portfolio-item__inner">
 						<h3 class="portfolio-item__title">CBRC</h3>
 						<div class="portfolio-item__subtitle">Redesign of the California Bird Records Committee's website</div>
-					</div> <!-- /.portfolio-item__inner -->
-				</div><!-- /.portfolio-item__hover-mask -->
+					</div>  /.portfolio-item__inner -->
+				<!-- </div> -->
+				<!-- /.portfolio-item__hover-mask  -->
 			</div> <!-- /.portfolio-item -->
-		</div> <!-- /.row row__medium-4 -->
+		<!-- </div> /.row row__medium-4 -->
 
 
-		<div class="row row__medium-4">
+		<!-- <div class="row row__medium-4"> -->
 			<div class="portfolio-item" data-project="project2">
 				<div class="portfolio-item__image" id="project2-portfolio-image"></div>
-				<div class="portfolio-item__hover-mask">
+				<!-- <div class="portfolio-item__hover-mask">
 					<div class="portfolio-item__inner">
 						<h3 class="portfolio-item__title">Personal website and blog</h3>
 						<div class="portfolio-item__subtitle">Website and blog of a teacher</div>
 					</div>
-				</div>
+				</div> -->
 			</div> <!-- /.portfolio-item -->
-		</div> <!-- /.row row__medium-4 -->
+		<!-- </div> /.row row__medium-4 -->
 		
 
-		<div class="row row__medium-4">
+		<!-- <div class="row row__medium-4"> -->
 			<div class="portfolio-item" data-project="project3">
 				<div class="portfolio-item__image" id="project3-portfolio-image"></div>
-				<div class="portfolio-item__hover-mask">
+				<!-- <div class="portfolio-item__hover-mask">
 					<div class="portfolio-item__inner">
 						<h3 class="portfolio-item__title">UX Researcher's Portfolio</h3>
 						<div class="portfolio-item__subtitle">Professional portfolio</div>
 					</div>
-				</div>
+				</div> -->
 			</div><!-- /.portfolio-item -->
-		</div> <!-- /.row row__medium-4 -->
-	</div> <!--/.row-->
+		<!-- </div> /.row row__medium-4 -->
+	<!-- </div> /.row -->
+
+	<div class="portfolio-item" data-project="project1">
+		<div class="portfolio-item__image" id="project1-portfolio-image"></div>
+		<!-- <div class="portfolio-item__hover-mask">
+			<div class="portfolio-item__inner">
+				<h3 class="portfolio-item__title">CBRC</h3>
+				<div class="portfolio-item__subtitle">Redesign of the California Bird Records Committee's website</div>
+			</div>  /.portfolio-item__inner -->
+		<!-- </div> -->
+		<!-- /.portfolio-item__hover-mask  -->
+	</div> <!-- /.portfolio-item -->
+	</div> <!--/. slick-slider -->
 
 
 
@@ -463,5 +482,6 @@
 	<!-- build:js /assets/scripts/app.js -->
 	<script async src="/temp/scripts/app.js"></script>
 	<!-- endbuild -->
+
 </body>
 </html>
