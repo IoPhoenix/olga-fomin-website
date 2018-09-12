@@ -4,7 +4,6 @@
     padding: 0;
     cursor: pointer;
     height: 120px;
-    margin-top: 1%;
 
     @mixin atMedium {
         height: 400px;
