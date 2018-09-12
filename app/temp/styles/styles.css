@@ -1623,7 +1623,82 @@ svg#bigTriangleColor {
 }
 
 .slick-dots li button:before {
-        font-size: 10px;
+        font-size: 12px;
+    }
+
+.slick-prev, .slick-next {
+    z-index: 2;
+}
+
+.slick-prev:before, .slick-next:before {
+        font-size: 30px;
+    }
+
+.slick-arrow {
+    top: 49%;
+    height: 400px;
+    width: 80px;
+    opacity: .8;
+    background: #5E679D;
+    -webkit-transition: -webkit-transform .3s;
+    transition: -webkit-transform .3s;
+    transition: transform .3s;
+    transition: transform .3s, -webkit-transform .3s;
+}
+
+.slick-arrow:before {
+        opacity: .65;
+        -webkit-transition: all .3s;
+        transition: all .3s;
+    }
+
+.slick-arrow:focus,
+    .slick-arrow:hover {
+       background: #5E679D;
+    }
+
+.slick-prev {
+    left: 5px;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+}
+
+.slick-prev:focus,
+    .slick-prev:hover {
+        background: #5E679D;
+        -webkit-transform: translate(0, -50%);
+                transform: translate(0, -50%);
+    }
+
+.slick-prev:focus:before, .slick-prev:hover:before {
+            right: 0;
+        }
+
+.slick-prev:before {
+        right: -20px;
+        position: relative;
+    }
+
+.slick-next {
+    right: 5px;
+    -webkit-transform: translate(50%, -50%);
+            transform: translate(50%, -50%);
+}
+
+.slick-next:focus,
+    .slick-next:hover {
+        background: #5E679D;
+        -webkit-transform: translate(0, -50%);
+                transform: translate(0, -50%);
+    }
+
+.slick-next:focus:before, .slick-next:hover:before {
+            left: 0;
+        }
+
+.slick-next:before {
+        left: -20px;
+        position: relative;
     }
 
 .project-content {
@@ -1814,7 +1889,6 @@ svg#bigTriangleColor {
     padding: 0;
     cursor: pointer;
     height: 120px;
-    margin-top: 1%;
 }
 
 @media (min-width: 768px) {

@@ -2,9 +2,68 @@
     margin: 0 6px;
 }
 
+
 .slick-dots {
     bottom: -35px;
     li button:before {
-        font-size: 10px;
+        font-size: 12px;
+    }
+}
+
+.slick-prev, .slick-next {
+    z-index: 2;
+    &:before {
+        font-size: 30px;
+    }
+}
+
+.slick-arrow {
+    top: 49%;
+    height: 400px;
+    width: 80px;
+    opacity: .8;
+    background: #5E679D;
+    transition: transform .3s;
+    &:before {
+        opacity: .65;
+        transition: all .3s;
+    }
+    &:focus,
+    &:hover {
+       background: #5E679D;
+    }
+}
+
+.slick-prev {
+    left: 5px;
+    transform: translate(-50%, -50%);
+    &:focus,
+    &:hover {
+        background: #5E679D;
+        transform: translate(0, -50%);
+        &:before {
+            right: 0;
+        }
+    }
+    &:before {
+        right: -20px;
+        position: relative;
+    }
+}
+
+.slick-next {
+    right: 5px;
+    transform: translate(50%, -50%);
+    &:focus,
+    &:hover {
+        background: #5E679D;
+        transform: translate(0, -50%);
+        &:before {
+            left: 0;
+        }
+    }
+    &:before {
+        left: -20px;
+        position: relative;
     }
 }
