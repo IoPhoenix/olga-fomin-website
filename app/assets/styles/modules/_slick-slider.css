@@ -1,5 +1,7 @@
 .slick-slide {
-    margin: 0 6px;
+    @mixin atMedium {
+        margin: 0 6px;
+    }
 }
 
 
@@ -13,17 +15,24 @@
 .slick-prev, .slick-next {
     z-index: 2;
     &:before {
-        font-size: 30px;
+        font-size: 22px;
+        @mixin atMedium {
+            font-size: 30px;
+        }
     }
 }
 
 .slick-arrow {
-    top: 49%;
-    height: 400px;
-    width: 80px;
+    top: 0;
+    height: 120px;
+    width: 60px;
     opacity: .8;
     background: #5E679D;
     transition: transform .3s;
+    @mixin atMedium {
+        height: 400px;
+        width: 80px;
+    }
     &:before {
         opacity: .65;
         transition: all .3s;
@@ -35,35 +44,41 @@
 }
 
 .slick-prev {
-    left: 5px;
-    transform: translate(-50%, -50%);
+    left: 0;
+    transform: translate(-50%, 0);
     &:focus,
     &:hover {
         background: #5E679D;
-        transform: translate(0, -50%);
+        transform: translate(0, 0);
         &:before {
             right: 0;
         }
     }
     &:before {
-        right: -20px;
+        right: -18px;
         position: relative;
+        @mixin atMedium {
+            right: -20px;
+        }
     }
 }
 
 .slick-next {
-    right: 5px;
-    transform: translate(50%, -50%);
+    right: 0;
+    transform: translate(50%, 0);
     &:focus,
     &:hover {
         background: #5E679D;
-        transform: translate(0, -50%);
+        transform: translate(0, 0);
         &:before {
             left: 0;
         }
     }
     &:before {
-        left: -20px;
+        left: -18px;
         position: relative;
+        @mixin atMedium {
+            left: -20px;
+        }
     }
 }

@@ -10891,16 +10891,16 @@ var ProjectContent = function () {
             (0, _jquery2.default)('.slick-slider').slick({
                 dots: true,
                 accessibility: true,
-                // infinite: true,
                 slidesToShow: 3,
                 slidesToScroll: 3,
-                focusOnSelect: true,
+                mobileFirst: true,
                 responsive: [{
 
-                    breakpoint: 1024,
+                    breakpoint: 992,
                     settings: {
                         slidesToShow: 3,
-                        infinite: true
+                        slidesToScroll: 3,
+                        dots: true
                     }
 
                 }, {
@@ -10908,15 +10908,17 @@ var ProjectContent = function () {
                     breakpoint: 600,
                     settings: {
                         slidesToShow: 2,
+                        slidesToScroll: 2,
                         dots: true
                     }
 
                 }, {
-
-                    breakpoint: 300,
+                    breakpoint: 0,
                     settings: {
                         slidesToShow: 1,
-                        dots: true
+                        slidesToScroll: 1,
+                        dots: true,
+                        arrows: false
                     }
 
                 }]
@@ -10925,6 +10927,7 @@ var ProjectContent = function () {
     }, {
         key: 'openProjectContent',
         value: function openProjectContent() {
+            console.log('Project is clicked!');
             var currentProject = (0, _jquery2.default)(this).data('project');
             (0, _jquery2.default)('#' + currentProject).addClass('is-visible');
             (0, _jquery2.default)('body').addClass('noscroll');

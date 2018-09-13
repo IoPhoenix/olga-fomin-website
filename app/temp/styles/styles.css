@@ -1614,9 +1614,12 @@ svg#bigTriangleColor {
 	}
     }
 
+@media (min-width: 768px) {
+
 .slick-slide {
-    margin: 0 6px;
+        margin: 0 6px
 }
+    }
 
 .slick-dots {
     bottom: -35px;
@@ -1631,13 +1634,20 @@ svg#bigTriangleColor {
 }
 
 .slick-prev:before, .slick-next:before {
-        font-size: 30px;
+        font-size: 22px;
+    }
+
+@media (min-width: 768px) {
+
+.slick-prev:before, .slick-next:before {
+            font-size: 30px
+    }
     }
 
 .slick-arrow {
-    top: 49%;
-    height: 400px;
-    width: 80px;
+    top: 0;
+    height: 120px;
+    width: 60px;
     opacity: .8;
     background: #5E679D;
     -webkit-transition: -webkit-transform .3s;
@@ -1645,6 +1655,14 @@ svg#bigTriangleColor {
     transition: transform .3s;
     transition: transform .3s, -webkit-transform .3s;
 }
+
+@media (min-width: 768px) {
+
+.slick-arrow {
+        height: 400px;
+        width: 80px
+}
+    }
 
 .slick-arrow:before {
         opacity: .65;
@@ -1658,16 +1676,16 @@ svg#bigTriangleColor {
     }
 
 .slick-prev {
-    left: 5px;
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
+    left: 0;
+    -webkit-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
 }
 
 .slick-prev:focus,
     .slick-prev:hover {
         background: #5E679D;
-        -webkit-transform: translate(0, -50%);
-                transform: translate(0, -50%);
+        -webkit-transform: translate(0, 0);
+                transform: translate(0, 0);
     }
 
 .slick-prev:focus:before, .slick-prev:hover:before {
@@ -1675,21 +1693,28 @@ svg#bigTriangleColor {
         }
 
 .slick-prev:before {
-        right: -20px;
+        right: -18px;
         position: relative;
     }
 
+@media (min-width: 768px) {
+
+.slick-prev:before {
+            right: -20px
+    }
+    }
+
 .slick-next {
-    right: 5px;
-    -webkit-transform: translate(50%, -50%);
-            transform: translate(50%, -50%);
+    right: 0;
+    -webkit-transform: translate(50%, 0);
+            transform: translate(50%, 0);
 }
 
 .slick-next:focus,
     .slick-next:hover {
         background: #5E679D;
-        -webkit-transform: translate(0, -50%);
-                transform: translate(0, -50%);
+        -webkit-transform: translate(0, 0);
+                transform: translate(0, 0);
     }
 
 .slick-next:focus:before, .slick-next:hover:before {
@@ -1697,8 +1722,15 @@ svg#bigTriangleColor {
         }
 
 .slick-next:before {
-        left: -20px;
+        left: -18px;
         position: relative;
+    }
+
+@media (min-width: 768px) {
+
+.slick-next:before {
+            left: -20px
+    }
     }
 
 .project-content {

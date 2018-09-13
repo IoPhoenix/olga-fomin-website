@@ -31,32 +31,34 @@ class ProjectContent {
         $('.slick-slider').slick({
             dots: true,
             accessibility: true,
-            // infinite: true,
             slidesToShow: 3,
             slidesToScroll: 3,
-            focusOnSelect: true,
+            mobileFirst: true,
             responsive: [{
- 
-                breakpoint: 1024,
+           
+                breakpoint: 992,
                 settings: {
                   slidesToShow: 3,
-                  infinite: true
+                  slidesToScroll: 3,
+                  dots: true
                 }
-           
+        
               }, {
            
                 breakpoint: 600,
                 settings: {
                   slidesToShow: 2,
+                  slidesToScroll: 2,
                   dots: true
                 }
-           
+        
               }, {
-           
-                breakpoint: 300,
+                breakpoint: 0,
                 settings: {
                     slidesToShow: 1,
-                    dots: true
+                    slidesToScroll: 1,
+                    dots: true,
+                    arrows: false
                   }
            
               }]
@@ -64,6 +66,7 @@ class ProjectContent {
     }
 
     openProjectContent() {
+        console.log('Project is clicked!');
         const currentProject = $(this).data('project');
         $('#' + currentProject).addClass('is-visible');
         $('body').addClass('noscroll');
