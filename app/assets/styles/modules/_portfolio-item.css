@@ -4,6 +4,7 @@
     padding: 0;
     cursor: pointer;
     height: 120px;
+    z-index: 99999;
 
     @mixin atMedium {
         height: 400px;
@@ -23,6 +24,9 @@
             }
             &#project3-portfolio-image {
                 background-image: url('../../assets/images/project3_homepage.webp');
+            }
+            &#project4-portfolio-image {
+                background-image: url('../../assets/images/project4_homepage.webp');
             }
         } 
     }

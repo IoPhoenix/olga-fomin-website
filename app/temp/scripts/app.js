@@ -10854,13 +10854,15 @@ var _slickCarousel2 = _interopRequireDefault(_slickCarousel);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
+
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 var ProjectContent = function () {
     function ProjectContent() {
         _classCallCheck(this, ProjectContent);
 
-        this.portfolioItems = (0, _jquery2.default)('.portfolio-item');
+        this.portfolioItems = document.getElementsByClassName('portfolio-item');
         this.projectContents = (0, _jquery2.default)('.project-content');
         this.projectCloseButton = (0, _jquery2.default)('.project-content__close-button');
         this.projectMagicButton = (0, _jquery2.default)('.project-content__magic-button');
@@ -10870,10 +10872,15 @@ var ProjectContent = function () {
     _createClass(ProjectContent, [{
         key: 'events',
         value: function events() {
+            var _this = this;
+
             (0, _jquery2.default)(document).ready(this.activateSlickSlider);
 
             // open project content when clicking on porfolio item
-            this.portfolioItems.click(this.openProjectContent);
+            // use js as temp workaround since slick slider behavior does not allow jquery?
+            [].concat(_toConsumableArray(this.portfolioItems)).forEach(function (item) {
+                return item.addEventListener('click', _this.openProjectContent);
+            });
 
             // close project content when clicking the x close button
             this.projectCloseButton.click(this.closeProjectContent.bind(this));
@@ -10887,7 +10894,6 @@ var ProjectContent = function () {
     }, {
         key: 'activateSlickSlider',
         value: function activateSlickSlider() {
-            console.log('test from activateSlickSlider!');
             (0, _jquery2.default)('.slick-slider').slick({
                 dots: true,
                 accessibility: true,
@@ -10928,6 +10934,7 @@ var ProjectContent = function () {
         key: 'openProjectContent',
         value: function openProjectContent() {
             console.log('Project is clicked!');
+            console.log('this is: ', (0, _jquery2.default)(this));
             var currentProject = (0, _jquery2.default)(this).data('project');
             (0, _jquery2.default)('#' + currentProject).addClass('is-visible');
             (0, _jquery2.default)('body').addClass('noscroll');
