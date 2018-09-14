@@ -1921,6 +1921,7 @@ svg#bigTriangleColor {
     padding: 0;
     cursor: pointer;
     height: 120px;
+    z-index: 99999;
 }
 
 @media (min-width: 768px) {
@@ -1949,6 +1950,9 @@ svg#bigTriangleColor {
             }
             .portfolio-item__image#project3-portfolio-image {
                 background-image: url('../../assets/images/project3_homepage.webp');
+            }
+            .portfolio-item__image#project4-portfolio-image {
+                background-image: url('../../assets/images/project4_homepage.webp');
             }
     }
 

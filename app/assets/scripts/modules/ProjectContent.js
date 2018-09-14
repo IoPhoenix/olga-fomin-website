@@ -3,7 +3,7 @@ import slick from 'slick-carousel';
 
 class ProjectContent {
     constructor() {
-        this.portfolioItems = $('.portfolio-item');
+        this.portfolioItems = document.getElementsByClassName('portfolio-item');
         this.projectContents = $('.project-content');
         this.projectCloseButton = $('.project-content__close-button');
         this.projectMagicButton = $('.project-content__magic-button');
@@ -12,9 +12,10 @@ class ProjectContent {
 
     events() {
         $(document).ready(this.activateSlickSlider);
-              
+
         // open project content when clicking on porfolio item
-        this.portfolioItems.click(this.openProjectContent);
+        // use js as temp workaround since slick slider behavior does not allow jquery?
+        [...this.portfolioItems].forEach(item => item.addEventListener('click', this.openProjectContent));
 
         // close project content when clicking the x close button
         this.projectCloseButton.click(this.closeProjectContent.bind(this));
@@ -27,7 +28,6 @@ class ProjectContent {
     }
 
     activateSlickSlider() {
-        console.log('test from activateSlickSlider!');
         $('.slick-slider').slick({
             dots: true,
             accessibility: true,
@@ -67,6 +67,7 @@ class ProjectContent {
 
     openProjectContent() {
         console.log('Project is clicked!');
+        console.log('this is: ', $(this));
         const currentProject = $(this).data('project');
         $('#' + currentProject).addClass('is-visible');
         $('body').addClass('noscroll');
