@@ -10934,7 +10934,6 @@ var ProjectContent = function () {
         key: 'openProjectContent',
         value: function openProjectContent() {
             console.log('Project is clicked!');
-            console.log('this is: ', (0, _jquery2.default)(this));
             var currentProject = (0, _jquery2.default)(this).data('project');
             (0, _jquery2.default)('#' + currentProject).addClass('is-visible');
             (0, _jquery2.default)('body').addClass('noscroll');

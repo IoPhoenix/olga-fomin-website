@@ -67,7 +67,6 @@ class ProjectContent {
 
     openProjectContent() {
         console.log('Project is clicked!');
-        console.log('this is: ', $(this));
         const currentProject = $(this).data('project');
         $('#' + currentProject).addClass('is-visible');
         $('body').addClass('noscroll');
