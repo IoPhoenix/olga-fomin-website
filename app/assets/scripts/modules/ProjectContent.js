@@ -30,6 +30,7 @@ class ProjectContent {
     activateSlickSlider() {
         $('.slick-slider').slick({
             dots: true,
+            infinite: false,
             accessibility: true,
             slidesToShow: 3,
             slidesToScroll: 3,

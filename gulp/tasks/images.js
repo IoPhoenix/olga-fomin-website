@@ -64,7 +64,7 @@ gulp.task('responsive_images', ['copyIcons'], function() {
 
     const convertProject4Images = gulp.src(['./images/project4/*.{png,jpg,jpeg}'])
         .pipe(responsiveImages({
-            '*.jpg': {
+            '*.{jpg,png}': {
                 format: 'webp'
             }
         }, {
@@ -73,5 +73,16 @@ gulp.task('responsive_images', ['copyIcons'], function() {
         .pipe(extReplace('.webp'))
         .pipe(gulp.dest('./app/assets/images/project4'));
 
-    return merge(convertGeneralImages, convertProject1Images,convertProject2Images, convertProject3Images, convertProject4Images);
+    const convertProject5Images = gulp.src(['./images/project5/*.{png,jpg,jpeg}'])
+        .pipe(responsiveImages({
+            '*.{jpg,png}': {
+                format: 'webp'
+            }
+        }, {
+            progressive: true
+        }))
+        .pipe(extReplace('.webp'))
+        .pipe(gulp.dest('./app/assets/images/project5'));
+
+    return merge(convertGeneralImages, convertProject1Images,convertProject2Images, convertProject3Images, convertProject4Images,convertProject5Images);
 });

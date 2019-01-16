@@ -66,57 +66,48 @@
 		
 
 	<div class="slick-slider">
-		<!-- <div class="row"> -->
+		<div class="portfolio-item" data-project="project4">
+				<div class="portfolio-item__image" id="project4-portfolio-image"></div>
+				<div class="portfolio-item__hover-mask">
+					<div class="portfolio-item__inner">
+						<h3 class="portfolio-item__title">FaceID</h3>
+						<div class="portfolio-item__subtitle">Facial Recognition App</div>
+					</div> <!-- /.portfolio-item__inner  -->
+				</div> <!--/.portfolio-item__hover-mask -->
+			</div> <!-- /.portfolio-item -->
 
-			<div class="portfolio-item" data-project="project4">
-					<div class="portfolio-item__image" id="project4-portfolio-image"></div>
-					<div class="portfolio-item__hover-mask">
-						<div class="portfolio-item__inner">
-							<h3 class="portfolio-item__title">FaceID</h3>
-							<div class="portfolio-item__subtitle">Facial Recognition App</div>
-						</div> <!-- /.portfolio-item__inner  -->
-					</div> <!--/.portfolio-item__hover-mask -->
-				</div> <!-- /.portfolio-item -->
-<!-- Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis soluta veniam, repellat expedita consectetur animi sed, qui a sint enim voluptates pariatur. Molestiae quis aut reprehenderit, doloremque aliquam ea blanditiis. -->
-				
-			<!-- <div class="row row__medium-4"> -->
-				<div class="portfolio-item" data-project="project1">
-					<div class="portfolio-item__image" id="project1-portfolio-image"></div>
-					<div class="portfolio-item__hover-mask">
-						<div class="portfolio-item__inner">
-							<h3 class="portfolio-item__title">CBRC</h3>
-							<div class="portfolio-item__subtitle">Redesign of the California Bird Records Committee's website</div>
-						</div>  <!-- /.portfolio-item__inner -->
-					</div> <!-- /.portfolio-item__hover-mask -->
-				</div> <!-- /.portfolio-item -->
-			<!-- </div> /.row row__medium-4 -->
-
-
-			<!-- <div class="row row__medium-4"> -->
-				<div class="portfolio-item" data-project="project2">
-					<div class="portfolio-item__image" id="project2-portfolio-image"></div>
-					<div class="portfolio-item__hover-mask">
-						<div class="portfolio-item__inner">
-							<h3 class="portfolio-item__title">Personal website and blog</h3>
-							<div class="portfolio-item__subtitle">Website and blog of a teacher</div>
-						</div> <!-- /.portfolio-item__inner -->
-					</div> <!-- /.portfolio-item__hover-mask -->
-				</div> <!-- /.portfolio-item -->
-			<!-- </div> /.row row__medium-4 -->
 			
+			<div class="portfolio-item" data-project="project1">
+				<div class="portfolio-item__image" id="project1-portfolio-image"></div>
+				<div class="portfolio-item__hover-mask">
+					<div class="portfolio-item__inner">
+						<h3 class="portfolio-item__title">CBRC</h3>
+						<div class="portfolio-item__subtitle">Redesign of the California Bird Records Committee's website</div>
+					</div>  <!-- /.portfolio-item__inner -->
+				</div> <!-- /.portfolio-item__hover-mask -->
+			</div> <!-- /.portfolio-item -->
 
-			<!-- <div class="row row__medium-4"> -->
-				<div class="portfolio-item" data-project="project3">
-					<div class="portfolio-item__image" id="project3-portfolio-image"></div>
-					<div class="portfolio-item__hover-mask">
-						<div class="portfolio-item__inner">
-							<h3 class="portfolio-item__title">UX Researcher's Portfolio</h3>
-							<div class="portfolio-item__subtitle">Professional portfolio</div>
-						</div> <!-- /.portfolio-item__inner -->
-					</div> <!-- /.portfolio-item__hover-mask -->
-				</div> <!-- /.portfolio-item -->
-			<!-- </div> /.row row__medium-4 -->
-		<!-- </div> /.row -->
+
+			<div class="portfolio-item" data-project="project2">
+				<div class="portfolio-item__image" id="project2-portfolio-image"></div>
+				<div class="portfolio-item__hover-mask">
+					<div class="portfolio-item__inner">
+						<h3 class="portfolio-item__title">Personal website and blog</h3>
+						<div class="portfolio-item__subtitle">Website and blog of a teacher</div>
+					</div> <!-- /.portfolio-item__inner -->
+				</div> <!-- /.portfolio-item__hover-mask -->
+			</div> <!-- /.portfolio-item -->
+		
+
+			<div class="portfolio-item" data-project="project3">
+				<div class="portfolio-item__image" id="project3-portfolio-image"></div>
+				<div class="portfolio-item__hover-mask">
+					<div class="portfolio-item__inner">
+						<h3 class="portfolio-item__title">UX Researcher's Portfolio</h3>
+						<div class="portfolio-item__subtitle">Professional portfolio</div>
+					</div> <!-- /.portfolio-item__inner -->
+				</div> <!-- /.portfolio-item__hover-mask -->
+			</div> <!-- /.portfolio-item -->
 	</div> <!--/. slick-slider -->
 
 
@@ -386,41 +377,35 @@
 
 		<div class="wrapper">
 			<div class="project-content__text">
-				<p>The client, a <a href="" rel="noopener" target="_blank">UX researcher and designer</a>, needed a clean, straightforward solution
-					to showcase her work. The project-based design focuses on demonstrating the final product
-					and relevant documents such as user flow, competitive analysis, wireframes, etc. The biggest challenge
-					was to display a lot of visual content in a simplistic, yet attractive way for the convenience of 
-					potential users and employers. 
+				<p>As a side project, I built a Facial Recognition app using React framework and Node.js at the back end.
+					The most interesting challenge for me as a front-end developer was to create the server that will handle any requests from the app,
+					including user registration, user data change or image processing. To detect faces in the images,
+					I used the Face Detection Model provided by the Clarifai API. This service uses artificial intelligence to recognize the visual content.
+					The user submits an image, and the coordinate locations of where the faces might appear are returned.
 				</p>
+
+				<p>The users also have the ability to modify their profile data or delete their profiles completely,
+					take selfies and send them for the face recognition, update their avatars and stay logged in 
+					when they return to the website.</p>
+
+				<p>The next challenge would be to use other image recognition models by Clarifai 
+					like demographics prediction or apparel recofnition to make the image feedback data more interesting for the users.</p>
 			</div>
 
-			<video
-				autoplay
-				controls="controls"
-				class="center"
-				width="400"
-				height="auto"
-				name="Website showcase" 
-				src="assets/videos/project_showcase.mp4">
-			</video>
+			<div class="project-content__image project-content__image--single center">
+					<img 
+						class="lazyload"
+						data-src="assets/images/project4/ipad.webp"
+						 alt="Ipad screen showing FaceID website">
+				</div>
 
-			<div class="project-content__list">
-				<h3 class="project-content__subtitle">Features</h3>
-				<ul>
-					<li>Image slider for showcasing the final product</li>
-					<li>Scroll-activated sliding header</li>
-					<li>Responsiveness to different screen sizes</li>
-					<li>A zooming effect on project materials</li>
-					<li>Vivid colors and functional design</li>
-				</ul>
-			</div> <!-- /.project-content__text -->
 
 			<div class="project-content__list">
 				<h3 class="project-content__subtitle">What I've learned</h3>
 				<ul>
-					<li>Sketch</li>
-					<li>Invision</li>
-					<li>UX designer's workflow</li>
+					<li>Redux for state management</li>
+					<li>Express.js and Knex.js  to handle server data</li>
+					<li>How to store passwords securely using encryption</li>
 				</ul>
 			</div> <!-- /.project-content__list -->
 
