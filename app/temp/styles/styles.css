@@ -1921,7 +1921,7 @@ svg#bigTriangleColor {
     padding: 0;
     cursor: pointer;
     height: 120px;
-    z-index: 99999;
+    z-index: 0;
 }
 
 @media (min-width: 768px) {
