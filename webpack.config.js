@@ -10,11 +10,11 @@ module.exports = {
         filename: "[name].js"
     },
     module: {
-        loaders: [
+        rules: [
             {
                 loader: 'babel-loader',
                 query: {
-                    presets: ['es2015']
+                    presets: ['env']
                 },
                 test: /\.js$/,
                 exclude: /node_modules/

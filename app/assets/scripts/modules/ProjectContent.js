@@ -30,6 +30,7 @@ class ProjectContent {
     activateSlickSlider() {
         $('.slick-slider').slick({
             dots: true,
+            infinite: false,
             accessibility: true,
             slidesToShow: 3,
             slidesToScroll: 3,
@@ -67,7 +68,6 @@ class ProjectContent {
 
     openProjectContent() {
         console.log('Project is clicked!');
-        console.log('this is: ', $(this));
         const currentProject = $(this).data('project');
         $('#' + currentProject).addClass('is-visible');
         $('body').addClass('noscroll');
