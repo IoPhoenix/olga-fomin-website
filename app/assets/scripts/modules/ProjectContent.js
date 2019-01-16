@@ -55,14 +55,8 @@ class ProjectContent {
         
               }, {
                 breakpoint: 0,
-                // settings: {
-                //     slidesToShow: 1,
-                //     slidesToScroll: 1,
-                //     dots: true,
-                //     arrows: false
-                //   }
-                    settings: "unslick"
-           
+                // remove slick slider:
+                settings: "unslick"
               }]
         });
     }

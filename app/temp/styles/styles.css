@@ -1645,10 +1645,11 @@ svg#bigTriangleColor {
     }
 
 .slick-arrow {
-    top: 0;
+    top: 50%;
     height: 120px;
     width: 60px;
     opacity: .8;
+    border-radius: 50%;
     background: #5E679D;
     -webkit-transition: -webkit-transform .3s;
     transition: -webkit-transform .3s;
@@ -1659,7 +1660,7 @@ svg#bigTriangleColor {
 @media (min-width: 768px) {
 
 .slick-arrow {
-        height: 400px;
+        height: 80px;
         width: 80px
 }
     }
@@ -1677,15 +1678,15 @@ svg#bigTriangleColor {
 
 .slick-prev {
     left: 0;
-    -webkit-transform: translate(-50%, 0);
-            transform: translate(-50%, 0);
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
 }
 
 .slick-prev:focus,
     .slick-prev:hover {
         background: #5E679D;
-        -webkit-transform: translate(0, 0);
-                transform: translate(0, 0);
+        -webkit-transform: translate(0, -50%);
+                transform: translate(0, -50%);
     }
 
 .slick-prev:focus:before, .slick-prev:hover:before {
@@ -1706,15 +1707,15 @@ svg#bigTriangleColor {
 
 .slick-next {
     right: 0;
-    -webkit-transform: translate(50%, 0);
-            transform: translate(50%, 0);
+    -webkit-transform: translate(50%, -50%);
+            transform: translate(50%, -50%);
 }
 
 .slick-next:focus,
     .slick-next:hover {
         background: #5E679D;
-        -webkit-transform: translate(0, 0);
-                transform: translate(0, 0);
+        -webkit-transform: translate(0, -50%);
+                transform: translate(0, -50%);
     }
 
 .slick-next:focus:before, .slick-next:hover:before {
