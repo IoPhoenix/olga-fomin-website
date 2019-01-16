@@ -5,12 +5,14 @@
     <meta name="description" content="Welcome to the website of Olga Fomin, a front-end web developer, who enjoys creating beautiful, responsive websites of the highest quality.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Olga Fomin / Portfolio</title>
-    <link defer async href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700|Stalemate" rel="stylesheet">
-    <link defer async href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,600" rel="stylesheet">
-	<script src="https://use.fontawesome.com/97ea7e5223.js"></script>
-	<link rel="stylesheet" href="/assets/styles/styles-8db907d0ef.css"/>
+	<link async href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700|Stalemate|Raleway:300,400,500,600" rel="stylesheet">
 
-	 <script src="/assets/scripts/vendor-62473bf1f4.js"></script>
+	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css"/>
+	<!-- Add the slick-theme.css if you want default styling -->
+	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css"/>
+	<link rel="stylesheet" href="/assets/styles/styles-716fb4788d.css"/>
+
+	 <script src="/assets/scripts/vendor-bf03b31d79.js"></script>
   </head>
 
 <body>
@@ -20,7 +22,7 @@
 		<div class="site-header__text-content">
 			<nav class="primary-nav">
 				<ul class="list list--inline">
-					<li><a href="#portfolio" class="portfolio-link">portfolio</a></li> <i class="fa fa-circle-o" aria-hidden="true"></i>
+					<li><a href="#portfolio" class="portfolio-link">portfolio</a></li> <i class="icon-circle" aria-hidden="true"></i>
 					<li><a href="#about" class="about-link">about</a></li>
 				</ul>
 			</nav>
@@ -40,9 +42,9 @@
 
 			<div class="social-icons social-icons--with-l-margin">
 				<ul class="list list--inline list--with-no-padding">
-					<li><a rel="noopener" href="https://www.linkedin.com/in/olgafomin" target="_blank"><i class="fa fa-linkedin-square social-icons__icon " aria-hidden="true"></i></a></li>
-					<li><a rel="noopener" href="https://github.com/IoPhoenix/"  target="_blank"><i class="fa fa-github social-icons__icon" aria-hidden="true"></i></a></li>
-					<li><a rel="noopener" href="mailto:olga.fomin26@gmail.com"><i class="fa fa-pencil social-icons__icon" aria-hidden="true"></i></a></li>
+					<li><a rel="noopener" href="https://www.linkedin.com/in/olgafomin" target="_blank"><i class="icon-linkedin  social-icons__icon " aria-hidden="true"></i></a></li>
+					<li><a rel="noopener" href="https://github.com/IoPhoenix/"  target="_blank"><i class="icon-github social-icons__icon" aria-hidden="true"></i></a></li>
+					<li><a rel="noopener" href="mailto:olga.fomin26@gmail.com"><i class="icon-pencil social-icons__icon" aria-hidden="true"></i></a></li>
 				</ul>
 			</div>
 		</div> <!-- ./site-header__text-content -->
@@ -58,45 +60,51 @@
 	<h2 class="section-title">Latest Work</h2>
 	<div class="section-line section-line--short"></div>
 		
-	<div class="row">
-		<div class="row row__medium-4">
+
+	<div class="slick-slider">
+		<div class="portfolio-item" data-project="project4">
+				<div class="portfolio-item__image" id="project4-portfolio-image"></div>
+				<div class="portfolio-item__hover-mask">
+					<div class="portfolio-item__inner">
+						<h3 class="portfolio-item__title">FaceID</h3>
+						<div class="portfolio-item__subtitle">Facial Recognition App</div>
+					</div> <!-- /.portfolio-item__inner  -->
+				</div> <!--/.portfolio-item__hover-mask -->
+			</div> <!-- /.portfolio-item -->
+
+			
 			<div class="portfolio-item" data-project="project1">
 				<div class="portfolio-item__image" id="project1-portfolio-image"></div>
 				<div class="portfolio-item__hover-mask">
 					<div class="portfolio-item__inner">
 						<h3 class="portfolio-item__title">CBRC</h3>
 						<div class="portfolio-item__subtitle">Redesign of the California Bird Records Committee's website</div>
-					</div> <!-- /.portfolio-item__inner -->
-				</div><!-- /.portfolio-item__hover-mask -->
+					</div>  <!-- /.portfolio-item__inner -->
+				</div> <!-- /.portfolio-item__hover-mask -->
 			</div> <!-- /.portfolio-item -->
-		</div> <!-- /.row row__medium-4 -->
 
 
-		<div class="row row__medium-4">
 			<div class="portfolio-item" data-project="project2">
 				<div class="portfolio-item__image" id="project2-portfolio-image"></div>
 				<div class="portfolio-item__hover-mask">
 					<div class="portfolio-item__inner">
 						<h3 class="portfolio-item__title">Personal website and blog</h3>
 						<div class="portfolio-item__subtitle">Website and blog of a teacher</div>
-					</div>
-				</div>
+					</div> <!-- /.portfolio-item__inner -->
+				</div> <!-- /.portfolio-item__hover-mask -->
 			</div> <!-- /.portfolio-item -->
-		</div> <!-- /.row row__medium-4 -->
 		
 
-		<div class="row row__medium-4">
 			<div class="portfolio-item" data-project="project3">
 				<div class="portfolio-item__image" id="project3-portfolio-image"></div>
 				<div class="portfolio-item__hover-mask">
 					<div class="portfolio-item__inner">
 						<h3 class="portfolio-item__title">UX Researcher's Portfolio</h3>
 						<div class="portfolio-item__subtitle">Professional portfolio</div>
-					</div>
-				</div>
-			</div><!-- /.portfolio-item -->
-		</div> <!-- /.row row__medium-4 -->
-	</div> <!--/.row-->
+					</div> <!-- /.portfolio-item__inner -->
+				</div> <!-- /.portfolio-item__hover-mask -->
+			</div> <!-- /.portfolio-item -->
+	</div> <!--/. slick-slider -->
 
 
 
@@ -124,8 +132,8 @@
 				<p>
 					The redesign of the website for the <a href="http://www.wfo-cbrc.org" target="_blank">California Bird Records Committee</a> was conducted by 
 					the students of San Francisco City College during one semester. As a team of students from visual design and 
-					web development departments, we worked together to create a completely new look for the website. Another important
-					task was to allow users to access and send records from their mobile devices.
+					web development departments, we worked together to create a completely new look and feel for the website. Our main goal was to make it 
+					more user friendly and visually appealing. Another important task was to allow users to access and send records from their mobile devices.
 				</p>
 				<p>
 					My most challenging task was to present the requested data from the database in a clear and 
@@ -165,7 +173,7 @@
 						alt="iPad mockup showing Rare Bird Gallery page">
 				</div> <!-- / .row__medium-6 -->
 
-				<i class="lazyload fa fa-chevron-right fa-2x" aria-hidden="true"></i>
+				<i class="lazyload icon-chevron-right" aria-hidden="true"></i>
 
 				<div class="row__medium-6">
 					<img
@@ -189,7 +197,7 @@
 			<span class="project-content__close-button">Close</span>
 
 			<div class="project-content__magic-button">
-				<i class="fa fa-magic fa-lg" aria-hidden="true"></i> <span>Reducio</span>
+				<i class="icon-magic" aria-hidden="true"></i> <span>Reducio</span>
 			</div>
 		</div> <!-- /.wrapper -->
 	</div> <!-- /#project1 -->
@@ -274,7 +282,7 @@
 			<span class="project-content__close-button">Close</span>
 			
 			<div class="project-content__magic-button">
-				<i class="fa fa-magic fa-lg" aria-hidden="true"></i> <span>Reducio</span>
+				<i class="icon-magic" aria-hidden="true"></i> <span>Reducio</span>
 			</div>
 		</div> <!-- /.wrapper -->
 	</div> <!-- / #project2 -->
@@ -340,10 +348,70 @@
 			<span class="project-content__close-button">Close</span>
 
 			<div class="project-content__magic-button">
-				<i class="fa fa-magic fa-lg" aria-hidden="true"></i> <span>Reducio</span>
+				<i class="icon-magic" aria-hidden="true"></i> <span>Reducio</span>
 			</div>
 		</div> <!-- /.wrapper -->
 	</div> <!-- / #project3 -->
+
+
+	<!-- =================== PROJECT #4 =================== -->
+
+	<div class="project-content" id="project4">
+		<h2 class="section-title">Facial Recognition App</h2>
+		<div class="section-line section-line--short"></div>
+
+		<div class="project-content__mockups">
+			<picture>
+				<source srcset="assets/images/project4/mockups--medium.webp 1280w" media="(min-width: 990px)">
+				<source srcset="assets/images/project4/mockups--small.webp 990w" media="(min-width: 640px)">
+				<img
+					class="lazyload" 
+					data-srcset="assets/images/project4/mockups--smaller.webp 640w"
+					 alt="Multiscreen mockups of the website">
+			</picture>
+		</div>
+
+		<div class="wrapper">
+			<div class="project-content__text">
+				<p>As a side project, I built a Facial Recognition app using React framework and Node.js at the back end.
+					The most interesting challenge for me as a front-end developer was to create the server that will handle any requests from the app,
+					including user registration, user data change or image processing. To detect faces in the images,
+					I used the Face Detection Model provided by the Clarifai API. This service uses artificial intelligence to recognize the visual content.
+					The user submits an image, and the coordinate locations of where the faces might appear are returned.
+				</p>
+
+				<p>The users also have the ability to modify their profile data or delete their profiles completely,
+					take selfies and send them for the face recognition, update their avatars and stay logged in 
+					when they return to the website.</p>
+
+				<p>The next challenge would be to use other image recognition models by Clarifai 
+					like demographics prediction or apparel recofnition to make the image feedback data more interesting for the users.</p>
+			</div>
+
+			<div class="project-content__image project-content__image--single center">
+					<img 
+						class="lazyload"
+						data-src="assets/images/project4/ipad.webp"
+						 alt="Ipad screen showing FaceID website">
+				</div>
+
+
+			<div class="project-content__list">
+				<h3 class="project-content__subtitle">What I've learned</h3>
+				<ul>
+					<li>Redux for state management</li>
+					<li>Express.js and Knex.js  to handle server data</li>
+					<li>How to store passwords securely using encryption</li>
+				</ul>
+			</div> <!-- /.project-content__list -->
+
+			<span class="project-content__close-button">Close</span>
+
+			<div class="project-content__magic-button">
+				<i class="icon-magic" aria-hidden="true"></i> <span>Reducio</span>
+			</div>
+		</div> <!-- /.wrapper -->
+	</div> <!-- / #project4 -->
 
 
 
@@ -388,8 +456,7 @@
 						<div class="text-box__content">
 							<h3 class="text-box__title">Front-end developer</h3>
 							<div class="text-box__description text-box__description">
-								<p>Since my career change 3 years ago I got truly passionate about web development 
-									that combines creativity with logic, visual harmony with functionality.
+								<p>Since my career change 3 years ago I got truly passionate about web development that combines creativity with logic, visual harmony with functionality.
 								</p>
 							</div> <!-- /.text-box__description -->
 						</div> <!-- /.text-box__content -->
@@ -459,6 +526,7 @@
 		</div>
 	</footer>
 
-	<script src="/assets/scripts/app-862776d103.js"></script>
+	<script src="/assets/scripts/app-0e5bf27069.js"></script>
+
 </body>
 </html>

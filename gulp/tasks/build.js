@@ -28,6 +28,7 @@ gulp.task('copyImages', ['deleteDistFolder'], function() {
     return gulp.src(['./app/assets/images/**/*', '!./app/assets/images/icons', '!./app/assets/images/icons/**/*'])
             .pipe(gulp.dest('./dist/assets/images'));
 });
+
 // optimize images and create new images folder in dist
 // gulp.task('compressImages', ['deleteDistFolder'], () => {
 //     return gulp.src(['./app/assets/images/**/*', '!./app/assets/images/icons', '!./app/assets/images/icons/**/*'])
