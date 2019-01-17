@@ -62,7 +62,7 @@
     
 
     &__mockups {
-        background-color: #E8E8E8;
+        background-color: $lightGray;;
     }
     
     &__subtitle {
