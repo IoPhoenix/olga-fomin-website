@@ -10,7 +10,6 @@ module.exports = {
         filename: "[name].js"
     },
     module: {
-        mode: 'development',
         rules: [
             {
                 loader: 'babel-loader',
