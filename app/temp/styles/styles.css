@@ -1682,14 +1682,13 @@ svg#bigTriangleColor {
             transform: translate(-50%, -50%);
 }
 
-.slick-prev:focus,
-    .slick-prev:hover {
+.slick-prev:hover {
         background: #5E679D;
         -webkit-transform: translate(0, -50%);
                 transform: translate(0, -50%);
     }
 
-.slick-prev:focus:before, .slick-prev:hover:before {
+.slick-prev:hover:before {
             right: 0;
         }
 
@@ -1711,14 +1710,13 @@ svg#bigTriangleColor {
             transform: translate(50%, -50%);
 }
 
-.slick-next:focus,
-    .slick-next:hover {
+.slick-next:hover {
         background: #5E679D;
         -webkit-transform: translate(0, -50%);
                 transform: translate(0, -50%);
     }
 
-.slick-next:focus:before, .slick-next:hover:before {
+.slick-next:hover:before {
             left: 0;
         }
 
@@ -1827,7 +1825,7 @@ svg#bigTriangleColor {
     }
 
 .project-content__mockups {
-        background-color: #EBEBEB;
+        background-color: #E8E8E8;
     }
 
 .project-content__subtitle {

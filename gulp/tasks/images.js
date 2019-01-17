@@ -17,10 +17,7 @@ gulp.task('copyIcons', ['deleteImagesFolder'], function() {
 gulp.task('responsive_images', ['copyIcons'], function() {
     const convertGeneralImages = gulp.src(['./images/*.{png,jpg,jpeg}', '!./images/icons/*.png'])
         .pipe(responsiveImages({
-            '*.jpg': {
-                format: 'webp'
-            },
-            '*.jpeg': {
+            '*.{jpg,jpeg}': {
                 format: 'webp'
             }
         }, {
@@ -31,7 +28,7 @@ gulp.task('responsive_images', ['copyIcons'], function() {
 
     const convertProject1Images = gulp.src(['./images/project1/*.{png,jpg,jpeg}'])
         .pipe(responsiveImages({
-            '*.jpg': {
+            '*.{png,jpg,jpeg}': {
                 format: 'webp'
             }
         }, {
@@ -42,7 +39,7 @@ gulp.task('responsive_images', ['copyIcons'], function() {
 
     const convertProject2Images = gulp.src(['./images/project2/*.{png,jpg,jpeg}'])
         .pipe(responsiveImages({
-            '*.jpg': {
+            '*.{jpg,jpeg}': {
                 format: 'webp'
             }
         }, {
@@ -53,7 +50,7 @@ gulp.task('responsive_images', ['copyIcons'], function() {
 
     const convertProject3Images = gulp.src(['./images/project3/*.{png,jpg,jpeg}'])
         .pipe(responsiveImages({
-            '*.jpg': {
+            '*{png,jpg,jpeg}': {
                 format: 'webp'
             }
         }, {
@@ -64,18 +61,21 @@ gulp.task('responsive_images', ['copyIcons'], function() {
 
     const convertProject4Images = gulp.src(['./images/project4/*.{png,jpg,jpeg}'])
         .pipe(responsiveImages({
-            '*.{jpg,png}': {
+            '*.{png,jpg,jpeg}': {
                 format: 'webp'
             }
-        }, {
+        },
+         {
             progressive: true
-        }))
+        }
+        
+        ))
         .pipe(extReplace('.webp'))
         .pipe(gulp.dest('./app/assets/images/project4'));
 
     const convertProject5Images = gulp.src(['./images/project5/*.{png,jpg,jpeg}'])
         .pipe(responsiveImages({
-            '*.{jpg,png}': {
+            '*.{png,jpg,jpeg}': {
                 format: 'webp'
             }
         }, {

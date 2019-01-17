@@ -47,7 +47,6 @@
 .slick-prev {
     left: 0;
     transform: translate(-50%, -50%);
-    &:focus,
     &:hover {
         background: #5E679D;
         transform: translate(0, -50%);
@@ -67,7 +66,6 @@
 .slick-next {
     right: 0;
     transform: translate(50%, -50%);
-    &:focus,
     &:hover {
         background: #5E679D;
         transform: translate(0, -50%);
