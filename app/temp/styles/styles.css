@@ -1339,6 +1339,7 @@ img, video, embed, object {
 
 .btn {
         padding: 6px 60px;
+        width: intrinsic; /* Safari/WebKit uses a non-standard name */
         width: -webkit-fit-content;
         width: -moz-fit-content;
         width: fit-content;

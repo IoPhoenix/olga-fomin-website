@@ -25,6 +25,7 @@
 
     @mixin atMedium {
         padding: 6px 60px;
+        width: intrinsic; /* Safari/WebKit uses a non-standard name */
         width: fit-content;
         display: block;
         margin-left: auto;
