@@ -24,8 +24,8 @@
     }
 
     @mixin atMedium {
-        padding: 6px 12px;
-        width: 40%;
+        padding: 6px 60px;
+        width: fit-content;
         display: block;
         margin-left: auto;
         margin-right: auto;
@@ -34,5 +34,10 @@
     @mixin atLarge {
         margin-left: 0;
         margin-right: 0;
+    }
+
+    &--centered {
+        margin-left: auto;
+        margin-right: auto;
     }
 }

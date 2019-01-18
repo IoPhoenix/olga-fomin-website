@@ -40,7 +40,6 @@
     }
 
     blockquote {
-        width: 90%;
         color: #ece2f1;
         border-left: 5px solid #24054a;
         padding: 1px 20px;
@@ -51,10 +50,6 @@
 
         @mixin atMedium {
             width: 70%;
-        }
-
-        @mixin atLarge {
-            width: 50%;
         }
     }
 }

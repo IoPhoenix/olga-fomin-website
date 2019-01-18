@@ -1338,8 +1338,10 @@ img, video, embed, object {
 @media (min-width: 768px) {
 
 .btn {
-        padding: 6px 12px;
-        width: 40%;
+        padding: 6px 60px;
+        width: -webkit-fit-content;
+        width: -moz-fit-content;
+        width: fit-content;
         display: block;
         margin-left: auto;
         margin-right: auto
@@ -1352,6 +1354,11 @@ img, video, embed, object {
         margin-left: 0;
         margin-right: 0
 }
+    }
+
+.btn--centered {
+        margin-left: auto;
+        margin-right: auto;
     }
 
 .img--with-m-bottom-till-large {
@@ -1488,7 +1495,6 @@ img, video, embed, object {
     }
 
 .page-section blockquote {
-        width: 90%;
         color: #ece2f1;
         border-left: 5px solid #24054a;
         padding: 1px 20px;
@@ -1502,13 +1508,6 @@ img, video, embed, object {
 
 .page-section blockquote {
             width: 70%
-    }
-    }
-
-@media (min-width: 992px) {
-
-.page-section blockquote {
-            width: 50%
     }
     }
 
