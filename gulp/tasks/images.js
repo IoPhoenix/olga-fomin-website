@@ -27,7 +27,7 @@ gulp.task('convertGeneralImages', ['copyIcons'], function() {
         .pipe(gulp.dest('./app/assets/images/'));
     });
 
-    gulp.task('convertProjectImages', ['deleteImagesFolder'], function() {
+    gulp.task('convertProjectImages', ['convertGeneralImages'], function() {
         for (let i = 1; i < 5; i++) {
             gulp.src([`./images/project${i}/*.{png,jpg,jpeg}`])
                 .pipe(responsiveImages({
