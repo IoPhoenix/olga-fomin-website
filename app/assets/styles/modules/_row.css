@@ -37,7 +37,7 @@
     &__medium-8 {
         width: 100%;
         @mixin atMedium {
-            width:  66.66666667%;
+            width: 66.66666667%;
             float: left;
         }
         &--with-padding {
