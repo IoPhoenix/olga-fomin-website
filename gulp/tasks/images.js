@@ -27,12 +27,13 @@ gulp.task('convertGeneralImages', ['copyIcons'], function() {
         .pipe(gulp.dest('./app/assets/images/'));
     });
 
+
     gulp.task('convertProjectImages', ['convertGeneralImages'], function() {
         for (let i = 1; i < 5; i++) {
-            gulp.src([`./images/project${i}/*.{png,jpg,jpeg}`])
+            gulp.src([`./images/project${i}/*`])
                 .pipe(responsiveImages({
                     '*.{png,jpg,jpeg}': {
-                        format: 'webp'
+                      format: 'webp'
                     }
                 }, {
                     progressive: true
@@ -40,31 +41,4 @@ gulp.task('convertGeneralImages', ['copyIcons'], function() {
                 .pipe(extReplace('.webp'))
                 .pipe(gulp.dest(`./app/assets/images/project${i}`));
             }
-    });
-
-
-    gulp.task('createProjectMockups', ['convertProjectImages'], function() {
-        for (let i = 1; i < 5; i++) {
-            gulp.src([`./images/project${i}/mockups--medium.{png}`])
-                .pipe(responsiveImages({
-                    'mockups--medium.png': [
-                        {
-                            width: 2000,
-                            rename: 'mockups--medium',
-                            format: 'webp'
-                        },
-                        {
-                            width: 900,
-                            rename: 'mockups--small',
-                            format: 'webp'
-                        }, {
-                            width: 480,
-                            rename: 'mockups--smaller',
-                            format: 'webp'
-                        }
-                    ]
-                }))
-                .pipe(extReplace('.webp'))
-                .pipe(gulp.dest(`./app/assets/images/project${i}`));
-        }
     });
