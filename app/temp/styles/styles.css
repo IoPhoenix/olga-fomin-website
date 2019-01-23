@@ -1953,6 +1953,9 @@ svg#bigTriangleColor {
             .portfolio-item__image#project4-portfolio-image {
                 background-image: url('../../assets/images/project4_homepage.webp');
             }
+            .portfolio-item__image#project5-portfolio-image {
+                background-image: url('../../assets/images/project5_homepage.webp');
+            }
     }
 
 .portfolio-item__hover-mask {

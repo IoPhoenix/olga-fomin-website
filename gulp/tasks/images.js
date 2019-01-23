@@ -29,7 +29,7 @@ gulp.task('convertGeneralImages', ['copyIcons'], function() {
 
 
     gulp.task('convertProjectImages', ['convertGeneralImages'], function() {
-        for (let i = 1; i < 5; i++) {
+        for (let i = 1; i <= 5; i++) {
             gulp.src([`./images/project${i}/*`])
                 .pipe(responsiveImages({
                     '*.{png,jpg,jpeg}': {
