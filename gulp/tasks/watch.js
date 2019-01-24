@@ -36,7 +36,7 @@ gulp.task('watch', function() {
             .pipe(browserSync.stream());
     });
     
-    gulp.task('imagesRefresh', ['convertGeneralImages', 'convertProjectImages'], function() {
+    gulp.task('imagesRefresh', ['convertProjectImages'], function() {
         browserSync.reload();
     });
 
