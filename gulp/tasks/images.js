@@ -3,18 +3,18 @@ const gulp = require('gulp'),
     extReplace = require('gulp-ext-replace'),
     del = require('del'),
     merge = require('merge-stream');
-    
 
-gulp.task('deleteImagesFolder', function() {
+
+gulp.task('deleteImagesFolder', function () {
     return del('./app/assets/images');
 });
 
-gulp.task('copyIcons', ['deleteImagesFolder'], function() {
+gulp.task('copyIcons', ['deleteImagesFolder'], function () {
     return gulp.src('./images/icons/*.{png,svg}').pipe(gulp.dest('./app/assets/images/icons'));
 });
 
 // convert images to webp format
-gulp.task('convertGeneralImages', ['copyIcons'], function() {
+gulp.task('convertGeneralImages', ['copyIcons'], function () {
     gulp.src(['./images/*.{png,jpg,jpeg}', '!./images/icons/*.png'])
         .pipe(responsiveImages({
             '*.{png,jpg,jpeg}': {
@@ -25,20 +25,20 @@ gulp.task('convertGeneralImages', ['copyIcons'], function() {
         }))
         .pipe(extReplace('.webp'))
         .pipe(gulp.dest('./app/assets/images/'));
-    });
+});
 
 
-    gulp.task('convertProjectImages', ['convertGeneralImages'], function() {
-        for (let i = 1; i <= 5; i++) {
-            gulp.src([`./images/project${i}/*`])
-                .pipe(responsiveImages({
-                    '*.{png,jpg,jpeg}': {
-                      format: 'webp'
-                    }
-                }, {
-                    progressive: true
-                }))
-                .pipe(extReplace('.webp'))
-                .pipe(gulp.dest(`./app/assets/images/project${i}`));
-            }
-    });
+gulp.task('convertProjectImages', ['convertGeneralImages'], function () {
+    for (let i = 0; i <= 5; i++) {
+        gulp.src([`./images/project${i}/*`])
+            .pipe(responsiveImages({
+                '*.{png,jpg,jpeg}': {
+                    format: 'webp'
+                }
+            }, {
+                progressive: true
+            }))
+            .pipe(extReplace('.webp'))
+            .pipe(gulp.dest(`./app/assets/images/project${i}`));
+    }
+});

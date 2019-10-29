@@ -1941,6 +1941,9 @@ svg#bigTriangleColor {
 .portfolio-item__image {
             height: 400px 
     }
+            .portfolio-item__image#project0-portfolio-image {
+                background-image: url('../../assets/images/project0_homepage.webp');
+            }
             .portfolio-item__image#project1-portfolio-image {
                 background-image: url('../../assets/images/project1_homepage.webp');
             }

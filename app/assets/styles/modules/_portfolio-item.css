@@ -16,6 +16,9 @@
         background-size: cover;
         @mixin atMedium {
             height: 400px;
+            &#project0-portfolio-image {
+                background-image: url('../../assets/images/project0_homepage.webp');
+            }
             &#project1-portfolio-image {
                 background-image: url('../../assets/images/project1_homepage.webp');
             }
